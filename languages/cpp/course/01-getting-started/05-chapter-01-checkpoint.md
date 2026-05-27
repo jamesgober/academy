@@ -1,3 +1,17 @@
+<h1 align="center">
+    <img width="99" alt="C++ logo" src="../../../../_assets/logos/cpp.svg">
+    <br>
+    <b>C++</b>
+</h1>
+
+<!-- ===== HEAD NAV ===== -->
+<div align="center">
+
+[Home](../../../../README.md) · [C++](../../README.md) · [Chapter 01](./README.md)
+
+</div>
+
+---
 # Chapter 01 Checkpoint
 
 ## Must-be-able checklist
@@ -11,7 +25,13 @@
 
 Create a tiny program with one intentional syntax error, read the error output,
 fix it, and recompile cleanly.
-
 ---
 
-[← Reading Errors and Warnings](./04-reading-errors-and-warnings.md) · [Chapter 01](./README.md)
+<!-- ===== FOOT NAV ===== -->
+<div align="center">
+
+| Previous | Up | Next |
+|:---------|:--:|-----:|
+| [← Reading Errors and Warnings](./04-reading-errors-and-warnings.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Track Overview →](../../README.md) |
+
+</div>

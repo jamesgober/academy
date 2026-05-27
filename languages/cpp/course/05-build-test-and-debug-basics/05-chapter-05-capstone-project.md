@@ -1,3 +1,17 @@
+<h1 align="center">
+    <img width="99" alt="C++ logo" src="../../../../_assets/logos/cpp.svg">
+    <br>
+    <b>C++</b>
+</h1>
+
+<!-- ===== HEAD NAV ===== -->
+<div align="center">
+
+[Home](../../../../README.md) · [C++](../../README.md) · [Chapter 05](./README.md)
+
+</div>
+
+---
 # Chapter 05 Capstone Project
 
 Build a small C++ project with classes, tests, and ownership-safe resources.
@@ -60,7 +74,13 @@ private:
 2. Run tests.
 3. Run sanitizer build.
 4. Document decisions and known limitations.
-
 ---
 
-[← Sanitizers and Memory-Issue Triage](./04-sanitizers-and-memory-issue-triage.md) · [Chapter 05](./README.md)
+<!-- ===== FOOT NAV ===== -->
+<div align="center">
+
+| Previous | Up | Next |
+|:---------|:--:|-----:|
+| [← Sanitizers and Memory-Issue Triage](./04-sanitizers-and-memory-issue-triage.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Track Overview →](../../README.md) |
+
+</div>

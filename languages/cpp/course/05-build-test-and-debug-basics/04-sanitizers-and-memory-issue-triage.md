@@ -1,3 +1,17 @@
+<h1 align="center">
+    <img width="99" alt="C++ logo" src="../../../../_assets/logos/cpp.svg">
+    <br>
+    <b>C++</b>
+</h1>
+
+<!-- ===== HEAD NAV ===== -->
+<div align="center">
+
+[Home](../../../../README.md) · [C++](../../README.md) · [Chapter 05](./README.md)
+
+</div>
+
+---
 # Sanitizers and Memory-Issue Triage
 
 Use sanitizers during development to catch hidden runtime memory bugs.
@@ -42,7 +56,13 @@ Triage flow:
 2. inspect report stack
 3. fix ownership/lifetime cause
 4. rerun sanitizer
-
 ---
 
-[← Debugging, Errors, and Warning Navigation](./03-debugging-errors-and-warning-navigation.md) · [Chapter 05](./README.md)
+<!-- ===== FOOT NAV ===== -->
+<div align="center">
+
+| Previous | Up | Next |
+|:---------|:--:|-----:|
+| [← Debugging, Errors, and Warning Navigation](./03-debugging-errors-and-warning-navigation.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Chapter 05 Capstone Project →](./05-chapter-05-capstone-project.md) |
+
+</div>

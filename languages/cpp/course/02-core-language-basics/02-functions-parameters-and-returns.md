@@ -1,3 +1,17 @@
+<h1 align="center">
+    <img width="99" alt="C++ logo" src="../../../../_assets/logos/cpp.svg">
+    <br>
+    <b>C++</b>
+</h1>
+
+<!-- ===== HEAD NAV ===== -->
+<div align="center">
+
+[Home](../../../../README.md) · [C++](../../README.md) · [Chapter 02](./README.md)
+
+</div>
+
+---
 # Functions, Parameters, and Returns
 
 Functions package behavior into reusable units with explicit input/output design.
@@ -60,7 +74,13 @@ Use overloads when behaviors are semantically same operation.
 
 Good parameter names reduce debugging time.
 Prefer `maxRetries` over `x`, `sourcePath` over `s` when meaning matters.
-
 ---
 
-[← Types, Variables, and Strings](./01-types-variables-and-strings.md) · [Chapter 02](./README.md)
+<!-- ===== FOOT NAV ===== -->
+<div align="center">
+
+| Previous | Up | Next |
+|:---------|:--:|-----:|
+| [← Types, Variables, and Strings](./01-types-variables-and-strings.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Conditionals: if, else-if, ternary, switch →](./03-conditionals-if-else-if-ternary-switch.md) |
+
+</div>

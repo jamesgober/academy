@@ -36,10 +36,64 @@ Common choices:
 - `clang`
 - Microsoft's C compiler through Visual Studio Build Tools
 
+## Where to get compilers
+
+- MSVC Build Tools (Windows): <https://visualstudio.microsoft.com/visual-cpp-build-tools/>
+- LLVM/Clang downloads: <https://releases.llvm.org/download.html>
+- MSYS2 (Windows package manager with GCC/Clang): <https://www.msys2.org/>
+
 ## Beginner guidance
 
 Use whichever compiler is easiest to install on your machine first.
 The goal is to get a working loop, not to start compiler wars.
+
+## Platform install commands
+
+Windows (MSVC):
+1. Download from <https://visualstudio.microsoft.com/visual-cpp-build-tools/>.
+2. Install the "Desktop development with C++" workload.
+3. Open Developer PowerShell and run:
+
+```bash
+cl
+```
+
+Windows (GCC via MSYS2):
+
+```bash
+pacman -Syu
+pacman -S --needed mingw-w64-ucrt-x86_64-gcc
+gcc --version
+```
+
+macOS (Clang):
+
+```bash
+xcode-select --install
+clang --version
+```
+
+Ubuntu or Debian:
+
+```bash
+sudo apt update
+sudo apt install -y build-essential clang
+gcc --version
+```
+
+Fedora:
+
+```bash
+sudo dnf install -y gcc clang
+gcc --version
+```
+
+Arch:
+
+```bash
+sudo pacman -S --needed gcc clang
+gcc --version
+```
 
 ## Confirm it worked
 
@@ -52,6 +106,15 @@ cl
 ```
 
 At least one should print version information.
+
+## Visual model
+
+```mermaid
+flowchart LR
+    A[Write hello.c] --> B[Compile with gcc or clang or cl]
+    B --> C[Link into executable]
+    C --> D[Run in terminal]
+```
 
 ---
 

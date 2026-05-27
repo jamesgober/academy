@@ -1,3 +1,17 @@
+<h1 align="center">
+    <img width="99" alt="C++ logo" src="../../../../_assets/logos/cpp.svg">
+    <br>
+    <b>C++</b>
+</h1>
+
+<!-- ===== HEAD NAV ===== -->
+<div align="center">
+
+[Home](../../../../README.md) · [C++](../../README.md) · [Chapter 01](./README.md)
+
+</div>
+
+---
 # Reading Errors and Warnings
 
 Errors and warnings are navigation signals, not random terminal noise.
@@ -76,7 +90,13 @@ g++ -std=c++20 -Wall -Wextra -Wpedantic -Werror main.cpp -o app
 ```
 
 Treat warnings as errors while learning. It builds discipline early.
-
 ---
 
-[← Compiling and Running Step by Step](./03-compiling-and-running-step-by-step.md) · [Chapter 01](./README.md)
+<!-- ===== FOOT NAV ===== -->
+<div align="center">
+
+| Previous | Up | Next |
+|:---------|:--:|-----:|
+| [← Compiling and Running Step by Step](./03-compiling-and-running-step-by-step.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Chapter 01 Checkpoint →](./05-chapter-01-checkpoint.md) |
+
+</div>

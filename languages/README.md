@@ -25,11 +25,11 @@ If you've never programmed before, read [Foundations](../foundations/) first.
 |--------|----------|-------|
 | Active | Rust | [Rust](./rust/) |
 | Active | Go | [Go](./go/) |
-| Planned | C | [C](./c/) |
-| Planned | C++ | [C++](./cpp/) |
-| Planned | C# | [C#](./csharp/) |
+| Active | C | [C](./c/) |
+| Active | C++ | [C++](./cpp/) |
+| Active | C# | [C#](./csharp/) |
 
-The next sequence is Go, then C, then C++, then C#.
+Current sequence coverage includes Rust, Go, C, C++, and C#.
 
 ---
 
