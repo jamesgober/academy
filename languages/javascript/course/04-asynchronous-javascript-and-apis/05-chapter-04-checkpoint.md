@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -45,11 +40,5 @@ Add retry logic with a max-attempt counter to one API helper.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Working with HTTP APIs](./04-working-with-http-apis.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Testing, Debugging, and Capstone →](../05-testing-debugging-and-capstone/README.md) |
-
-</div>
+[**Next ->** Chapter Testing, Debugging, and Capstone](../05-testing-debugging-and-capstone/README.md)  
+[**<- Previous** DOM, Events, Rendering, and API Data](./04-working-with-http-apis.md)

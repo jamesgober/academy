@@ -4,11 +4,7 @@
     <b>Rust</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../README.md) · [Track](../README.md) · [Reference Index](./README.md)
-
-</div>
+[Home](../../../README.md) / [Rust](../README.md) / [Reference](./README.md)
 
 ---
 
@@ -50,8 +46,4 @@ cargo run -p cli
 
 ---
 
-<div align="center">
-
-[← Reference Index](./README.md) · [Track](../README.md) · [Home](../../../README.md)
-
-</div>
+[Reference Index](./README.md) / [Rust](../README.md) / [Home](../../../README.md)

@@ -80,10 +80,5 @@ Model a download state enum with variants like `Pending`, `InProgress(u8)`, and
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Lifetimes in Plain Language](./04-lifetimes-in-plain-language.md) | [Chapter 02](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Error Handling with Option and Result →](./06-error-handling-with-option-and-result.md) |
-
-</div>
+[**Next ->** Error Handling with Option and Result](./06-error-handling-with-option-and-result.md)  
+[**<- Previous** Lifetimes in Plain Language](./04-lifetimes-in-plain-language.md)

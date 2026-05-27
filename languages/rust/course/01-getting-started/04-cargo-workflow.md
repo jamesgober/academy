@@ -100,10 +100,5 @@ Run `cargo check` after introducing and then fixing a type mismatch in `main.rs`
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Rust Project Structure](./03-rust-project-layout.md) | [Chapter 01](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Cargo Workspaces and Monorepos →](./05-workspaces-and-monorepos.md) |
-
-</div>
+[**Next ->** Cargo Workspaces and Monorepos](./05-workspaces-and-monorepos.md)  
+[**<- Previous** Rust Project Structure](./03-rust-project-layout.md)

@@ -30,12 +30,17 @@
 An `async fn` returns a future (a state machine) that does nothing until polled
 by an async runtime.
 
-```mermaid
-flowchart LR
-  A[async fn called] --> B[Future created]
-  B --> C[Runtime polls future]
-  C --> D[.await yields when pending]
-  D --> E[Runtime resumes when ready]
+```text
+async fn called
+      |
+      v
+Future created
+      |
+      v
+Runtime polls the future
+      |
+      |-- ready   -> continue
+      `-- pending -> .await yields, runtime resumes later
 ```
 
 ## Why this matters
@@ -66,10 +71,5 @@ stays responsive.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Threads, Shared State, and Channels](./02-threads-shared-state-and-channels.md) | [Chapter 04](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Async Error Handling, Timeouts, and Cancellation →](./04-async-error-timeouts-and-cancellation.md) |
-
-</div>
+[**Next ->** Async Error Handling, Timeouts, and Cancellation](./04-async-error-timeouts-and-cancellation.md)  
+[**<- Previous** Threads, Shared State, and Channels](./02-threads-shared-state-and-channels.md)

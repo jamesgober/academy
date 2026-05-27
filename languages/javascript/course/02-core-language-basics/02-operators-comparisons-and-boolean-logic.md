@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -65,11 +60,5 @@ Rewrite one loose-equality condition to strict equality and verify behavior.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Variables, Types, and Coercion](./01-variables-types-and-coercion.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Conditionals and Switch Patterns →](./03-conditionals-and-switch-patterns.md) |
-
-</div>
+[**Next ->** Conditionals and Switch Patterns](./03-conditionals-and-switch-patterns.md)  
+[**<- Previous** Variables, Types, and Coercion](./01-variables-types-and-coercion.md)

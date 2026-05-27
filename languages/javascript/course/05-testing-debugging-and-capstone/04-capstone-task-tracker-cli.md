@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -81,11 +76,5 @@ Implement one vertical slice: add a task, render it to the page, and persist it 
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Linting, Formatting, and Quality Gates](./03-linting-formatting-and-quality-gates.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Chapter 05 Final Checkpoint →](./05-chapter-05-final-checkpoint.md) |
-
-</div>
+[**Next ->** Chapter 05 Final Checkpoint](./05-chapter-05-final-checkpoint.md)  
+[**<- Previous** Linting, Formatting, and Quality Gates](./03-linting-formatting-and-quality-gates.md)

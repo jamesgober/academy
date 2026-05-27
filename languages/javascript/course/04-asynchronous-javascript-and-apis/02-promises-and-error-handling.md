@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -67,11 +62,5 @@ Create a promise that resolves after 1 second and log success or failure paths.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Asynchronous JavaScript Fundamentals](./01-asynchronous-javascript-fundamentals.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [async and await in Practice →](./03-async-and-await-in-practice.md) |
-
-</div>
+[**Next ->** async and await in Practice](./03-async-and-await-in-practice.md)  
+[**<- Previous** Asynchronous JavaScript Fundamentals](./01-asynchronous-javascript-fundamentals.md)

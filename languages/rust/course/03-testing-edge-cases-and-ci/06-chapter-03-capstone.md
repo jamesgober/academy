@@ -55,10 +55,5 @@ Continue to [Chapter 04 — Concurrency and Async](../04-concurrency-and-async/R
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Debugging Test Failures and Flaky Behavior](./05-debugging-test-failures-and-flaky-behavior.md) | [Chapter 03](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Chapter 04 →](../04-concurrency-and-async/README.md) |
-
-</div>
+[**Next ->** Chapter Concurrency and Async](../04-concurrency-and-async/README.md)  
+[**<- Previous** Debugging Test Failures and Flaky Behavior](./05-debugging-test-failures-and-flaky-behavior.md)

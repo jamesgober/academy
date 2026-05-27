@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -70,11 +65,5 @@ Predict output order for a script with two `setTimeout` calls and verify your pr
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Promises and Error Handling →](./02-promises-and-error-handling.md) |
-
-</div>
+[**Next ->** Promises and Error Handling](./02-promises-and-error-handling.md)  
+[**<- Previous** Chapter Asynchronous JavaScript and APIs](./README.md)

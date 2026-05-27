@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -81,11 +76,5 @@ Write one if-chain and one equivalent switch for the same business rule.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Operators, Comparisons, and Boolean Logic](./02-operators-comparisons-and-boolean-logic.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Loops, Iteration, and Control Flow →](./04-loops-iteration-and-control-flow.md) |
-
-</div>
+[**Next ->** Loops, Iteration, and Control Flow](./04-loops-iteration-and-control-flow.md)  
+[**<- Previous** Operators, Comparisons, and Boolean Logic](./02-operators-comparisons-and-boolean-logic.md)

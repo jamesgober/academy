@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -57,11 +52,17 @@ For browser usage, load module entry points with `type="module"` in HTML script 
 
 ## Visual model
 
-```mermaid
-flowchart LR
-  A[entry file] --> B[imports]
-  B --> C[module code loaded]
-  C --> D[main logic runs]
+```text
+entry file
+    |
+    v
+imports are resolved
+    |
+    v
+module code is loaded
+    |
+    v
+main logic runs
 ```
 
 ---
@@ -78,11 +79,5 @@ Split one script into two modules and import one function into the entry file.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Your First JavaScript Program](./02-your-first-javascript-program.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Reading Errors and Warnings →](./04-reading-errors-and-warnings.md) |
-
-</div>
+[**Next ->** Reading Errors and Warnings](./04-reading-errors-and-warnings.md)  
+[**<- Previous** Your First JavaScript Program](./02-your-first-javascript-program.md)

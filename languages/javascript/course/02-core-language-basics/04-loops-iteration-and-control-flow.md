@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -67,11 +62,5 @@ Refactor one index-based loop to `for...of` and compare readability.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Conditionals and Switch Patterns](./03-conditionals-and-switch-patterns.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Arrays, Objects, and Common Mutations →](./05-arrays-objects-and-common-mutations.md) |
-
-</div>
+[**Next ->** Arrays, Objects, and Common Mutations](./05-arrays-objects-and-common-mutations.md)  
+[**<- Previous** Conditionals and Switch Patterns](./03-conditionals-and-switch-patterns.md)

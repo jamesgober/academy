@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -64,11 +59,17 @@ Open `index.html` in your browser and view output in Developer Tools Console.
 
 ## Visual model
 
-```mermaid
-flowchart LR
-  A[Open browser DevTools] --> B[Run JS in console]
-  B --> C[Create index.html + app.js]
-  C --> D[Load page and inspect output]
+```text
+Open browser DevTools
+        |
+        v
+Run JavaScript in the console
+        |
+        v
+Create index.html + app.js
+        |
+        v
+Load the page and inspect output
 ```
 
 > [!IMPORTANT]
@@ -88,11 +89,5 @@ Create `app.js`, print your name, and verify it appears in browser console.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Your First JavaScript Program →](./02-your-first-javascript-program.md) |
-
-</div>
+[**Next ->** Your First JavaScript Program](./02-your-first-javascript-program.md)  
+[**<- Previous** Chapter Getting Started](./README.md)

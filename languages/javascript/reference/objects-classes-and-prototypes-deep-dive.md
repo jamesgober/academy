@@ -1,71 +1,172 @@
 # Objects, Classes, and Prototypes Deep Dive
 
-## Object categories in frontend JavaScript
+[Home](../../../README.md) / [JavaScript](../README.md) / [Reference](./README.md)
 
-- plain state objects: `const state = { ... }`
-- service objects: methods around API/storage logic
-- class instances: richer domain entities
-- built-in objects: `Date`, `Map`, `Set`, `URL`, `Error`
+---
 
-## Prototype chain essentials
+> Lookup for JavaScript object categories, class syntax, prototype lookup, factories, and composition.
 
-```javascript
-const base = { type: "base" };
-const child = Object.create(base);
-child.name = "child";
+Course lesson: [Objects, Classes, and Prototypes](../course/03-functions-objects-and-modules/03-object-patterns-and-prototypes.md).
 
-console.log(child.type); // inherited
+## Object Categories
+
+| Category | Example | Description | Use for |
+|---|---|---|---|
+| plain object | `{ id: 1 }` | key/value record | state, config, JSON-like data |
+| array | `[1, 2, 3]` | ordered object with array methods | lists |
+| function | `function save() {}` | callable object | behavior |
+| class instance | `new Task("A")` | object created by class | data plus shared methods |
+| `Map` | `new Map()` | key/value collection | non-string keys, frequent add/remove |
+| `Set` | `new Set()` | unique-value collection | dedupe, membership |
+| `Date` | `new Date()` | date/time object | timestamps and formatting inputs |
+| `URL` | `new URL(location.href)` | URL parser/model | query params and links |
+| `Error` | `new Error("Bad")` | failure object | throwing/catching errors |
+| DOM object | `document.body` | browser-provided object | live page interaction |
+| `Promise` | `fetch(url)` | future async result | async work |
+
+## Prototype Lookup
+
+```text
+object itself
+    |
+    v
+object prototype
+    |
+    v
+next prototype
+    |
+    v
+null
 ```
 
-Lookups walk upward through prototype chain until match or `null`.
+If a property is not found on the object, JavaScript checks the prototype chain.
 
-## Class syntax and prototype reality
+```javascript
+const base = { role: "reader" };
+const user = Object.create(base);
+user.name = "Ada";
+
+console.log(user.name); // own property
+console.log(user.role); // inherited property
+```
+
+## Class Syntax
 
 ```javascript
 class Task {
   constructor(title) {
     this.title = title;
+    this.done = false;
   }
 
-  rename(nextTitle) {
-    this.title = nextTitle;
+  toggle() {
+    this.done = !this.done;
   }
 }
 ```
 
-Class methods live on `Task.prototype`, not duplicated per instance.
+| Part | Meaning |
+|---|---|
+| `class Task` | declares a class |
+| `constructor(...)` | runs when `new Task(...)` is called |
+| `this.title` | instance property |
+| `toggle()` | method stored on `Task.prototype` |
+| `new Task("x")` | creates an instance |
 
-## Factory functions
+## Class Features
+
+Public field:
+
+```javascript
+class Counter {
+  count = 0;
+}
+```
+
+Private field:
+
+```javascript
+class Counter {
+  #count = 0;
+
+  value() {
+    return this.#count;
+  }
+}
+```
+
+Static method:
+
+```javascript
+class Task {
+  static fromJSON(raw) {
+    return new Task(raw.title);
+  }
+
+  constructor(title) {
+    this.title = title;
+  }
+}
+```
+
+Inheritance:
+
+```javascript
+class AdminUser extends User {
+  canDelete() {
+    return true;
+  }
+}
+```
+
+Use inheritance sparingly. Favor composition unless the relationship is truly
+"is a" and stays shallow.
+
+## Factory Function
 
 ```javascript
 function createTask(title) {
+  let done = false;
+
   return {
     title,
-    done: false,
     toggle() {
-      this.done = !this.done;
+      done = !done;
+    },
+    isDone() {
+      return done;
     }
   };
 }
 ```
 
-Factories are straightforward and often ideal for small modules.
+Factories are simple and can use closure-private data. Classes are clearer when
+you want shared prototype methods and recognizable type identity.
 
-## Composition versus inheritance
+## Choosing a Pattern
 
-Prefer composition in most frontend apps:
-- combine small focused modules/functions
-- avoid deep inheritance trees
-- easier testing and refactoring
+| Need | Prefer |
+|---|---|
+| serializable app state | plain object/array |
+| model with shared methods | class |
+| closure-private data | factory |
+| utility behavior | named functions or module |
+| unique values | `Set` |
+| key/value lookup where keys are objects | `Map` |
+| DOM updates | DOM element objects from browser APIs |
 
-Use inheritance only when true "is-a" hierarchy stays clear and shallow.
+## Risk Notes
 
-## Mutability guidelines
+| Pattern | Risk |
+|---|---|
+| deep inheritance | hard to reason about and test |
+| mutating shared objects | surprising UI bugs |
+| relying on `this` in callbacks | receiver may be lost |
+| using class instances for API JSON | parsed JSON does not automatically regain methods |
+| changing built-in prototypes | can break other code |
 
-- keep shared state changes explicit
-- prefer immutable updates for app state snapshots
-- avoid hidden side effects in object methods that touch global state
+## Cross References
 
----
-
-[← JavaScript Reference](./README.md)
+- [Arrays and Objects Patterns](./arrays-and-objects-patterns.md)
+- [DOM and Events Patterns](./dom-and-events-patterns.md)
+- [Functions and Closures Cheat Sheet](./functions-and-closures-cheat-sheet.md)

@@ -1,27 +1,26 @@
-<div align="center">
+<h1 align="center">
+    <img width="99" alt="Rust logo" src="../../_assets/logos/rust.svg">
+    <br>
+    <b>Rust</b>
+</h1>
 
-<!-- LOGO: replace with the Rust logo once added to _assets/logos/rust.svg -->
-<img src="../../_assets/logos/rust.svg" alt="Rust" height="96" onerror="this.style.display='none'">
-
-# Rust
-
-[← Languages](../README.md) · [Academy Home](../../README.md)
-
-</div>
+[Home](../../README.md) / [Languages](../README.md) / Rust
 
 ---
 
-A systems programming language focused on safety, speed, and reliability. This
-track takes you from installing Rust to writing real, correct programs — without
-hand-waving the parts that make Rust *Rust* (ownership, borrowing, lifetimes).
+Rust is a systems programming language focused on safety, speed, and reliability.
+This track is being refactored into a beginner-friendly masterclass: setup,
+syntax, ownership, borrowing, lifetimes, modules, exports, testing, project
+design, and practical projects without hand-waving the hard parts.
 
-If you've never programmed at all, read [Foundations](../../foundations/) first.
+If you have never programmed at all, read [Foundations](../../foundations/) first.
 
-## Testing and quality expectations
+## Testing and Quality Expectations
 
 This track follows [Language Testing and Quality Standards](../testing-and-quality-standards.md).
 
 Core expectation for Rust chapters:
+
 - local quality checks and tests are part of normal development, not optional extras
 - CI workflow and branch protection are covered via [GitHub Masterclass](../../platforms/github/)
 - release readiness includes passing checks, version discipline, and changelog updates
@@ -42,10 +41,19 @@ Learn Rust in order.
 
 Look things up fast.
 
-- [Reference Index](./reference/) — syntax and quick lookups.
+- [Reference Index](./reference/) - commands, syntax, Cargo config, modules,
+  types, functions, errors, testing, and ecosystem lookup.
+
+Core references:
+
+- [Cargo Commands](./reference/cargo-commands.md)
+- [Cargo Manifest and Config](./reference/cargo-manifest-and-config.md)
+- [Modules, Visibility, and Exports](./reference/modules-visibility-and-exports.md)
+- [Types, Strings, and Collections](./reference/types-strings-and-collections.md)
+- [Functions, Methods, Generics, and Traits](./reference/functions-methods-generics-and-traits.md)
+- [Errors, Warnings, and Debugging](./reference/errors-warnings-and-debugging.md)
+- [Crates, Libraries, and Ecosystem Lookup](./reference/crates-libraries-and-ecosystem.md)
 
 ---
 
-<div align="center">
-<sub><a href="../README.md">Languages</a> · <a href="../../README.md">Academy Home</a></sub>
-</div>
+[Languages](../README.md) / [Academy Home](../../README.md)

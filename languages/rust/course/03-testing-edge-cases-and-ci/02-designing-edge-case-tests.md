@@ -73,10 +73,5 @@ features.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Rust Testing Foundations](./01-rust-testing-foundations.md) | [Chapter 03](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Advanced Testing Options →](./03-advanced-testing-options.md) |
-
-</div>
+[**Next ->** Advanced Testing Options](./03-advanced-testing-options.md)  
+[**<- Previous** Rust Testing Foundations](./01-rust-testing-foundations.md)

@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -55,11 +50,5 @@ Take one prior exercise, introduce a bug intentionally, and resolve it using the
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Testing Fundamentals](./01-testing-fundamentals.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Linting, Formatting, and Quality Gates →](./03-linting-formatting-and-quality-gates.md) |
-
-</div>
+[**Next ->** Linting, Formatting, and Quality Gates](./03-linting-formatting-and-quality-gates.md)  
+[**<- Previous** Testing Fundamentals](./01-testing-fundamentals.md)

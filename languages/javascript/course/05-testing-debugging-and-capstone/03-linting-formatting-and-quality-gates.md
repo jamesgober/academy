@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -63,11 +58,5 @@ Create one lint rule violation, run lint, then fix and rerun.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Debugging Workflow and Tooling](./02-debugging-workflow-and-tooling.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Capstone: Task Tracker CLI →](./04-capstone-task-tracker-cli.md) |
-
-</div>
+[**Next ->** Capstone: Task Tracker Web App](./04-capstone-task-tracker-cli.md)  
+[**<- Previous** Debugging Workflow and Tooling](./02-debugging-workflow-and-tooling.md)

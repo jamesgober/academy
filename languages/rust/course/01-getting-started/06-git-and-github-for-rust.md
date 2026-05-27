@@ -91,10 +91,5 @@ Create a branch named `chore/add-readme`, improve the README, commit, and push.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Cargo Workspaces and Monorepos](./05-workspaces-and-monorepos.md) | [Chapter 01](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Rust Core Mental Model (Chapter 02) →](../02-rust-core-mental-model/README.md) |
-
-</div>
+[**Next ->** Chapter Rust Core Mental Model](../02-rust-core-mental-model/README.md)  
+[**<- Previous** Cargo Workspaces and Monorepos](./05-workspaces-and-monorepos.md)

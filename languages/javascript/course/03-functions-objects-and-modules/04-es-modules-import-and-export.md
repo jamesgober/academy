@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 03](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 03](./README.md)
 
 ---
 
@@ -79,11 +74,5 @@ Split one utility file into two modules and wire imports from an entry file.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Object Patterns and Prototypes](./03-object-patterns-and-prototypes.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Chapter 03 Checkpoint →](./05-chapter-03-checkpoint.md) |
-
-</div>
+[**Next ->** Chapter 03 Checkpoint](./05-chapter-03-checkpoint.md)  
+[**<- Previous** Objects, Classes, and Prototypes](./03-object-patterns-and-prototypes.md)

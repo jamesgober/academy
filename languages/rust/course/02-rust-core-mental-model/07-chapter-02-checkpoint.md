@@ -57,10 +57,5 @@ Continue to [Chapter 03 — Testing, Edge Cases, and CI](../03-testing-edge-case
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Error Handling with Option and Result](./06-error-handling-with-option-and-result.md) | [Chapter 02](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Chapter 03 →](../03-testing-edge-cases-and-ci/README.md) |
-
-</div>
+[**Next ->** Chapter Testing, Edge Cases, and CI](../03-testing-edge-cases-and-ci/README.md)  
+[**<- Previous** Error Handling with Option and Result](./06-error-handling-with-option-and-result.md)

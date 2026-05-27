@@ -80,10 +80,5 @@ Create two worker threads that send progress messages to main thread via channel
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Concurrency Safety in Rust](./01-concurrency-safety-in-rust.md) | [Chapter 04](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Async and Await Mental Model →](./03-async-and-await-mental-model.md) |
-
-</div>
+[**Next ->** Async and Await Mental Model](./03-async-and-await-mental-model.md)  
+[**<- Previous** Concurrency Safety in Rust](./01-concurrency-safety-in-rust.md)

@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 03](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 03](./README.md)
 
 ---
 
@@ -74,11 +69,5 @@ Write one function with default parameters and one with rest parameters.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Scope, Closures, and Lexical Environments →](./02-scope-closures-and-lexical-environments.md) |
-
-</div>
+[**Next ->** Scope, Closures, and Lexical Environments](./02-scope-closures-and-lexical-environments.md)  
+[**<- Previous** Chapter Functions, Objects, and Modules](./README.md)

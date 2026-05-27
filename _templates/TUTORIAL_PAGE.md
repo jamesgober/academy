@@ -27,12 +27,7 @@ NAV TOKENS (use relative paths from THIS file's location):
     <b>{{LANG}}</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home]({{HOME}}) · [Track]({{TRACK_ROOT}}) · [Chapter]({{CHAPTER_ROOT}})
-
-</div>
+[Home]({{HOME}}) / [{{LANG}}]({{TRACK_ROOT}}) / [Chapter]({{CHAPTER_ROOT}})
 
 ---
 
@@ -79,11 +74,5 @@ NAV TOKENS (use relative paths from THIS file's location):
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← {{PREV_TITLE}}]({{PREV}}) | [Chapter]({{CHAPTER_ROOT}}) · [Track]({{TRACK_ROOT}}) · [Home]({{HOME}}) | [{{NEXT_TITLE}} →]({{NEXT}}) |
-
-</div>
+[**Next ->** {{NEXT_TITLE}}]({{NEXT}})  
+[**<- Previous** {{PREV_TITLE}}]({{PREV}})

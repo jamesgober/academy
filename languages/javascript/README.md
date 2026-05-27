@@ -1,22 +1,33 @@
-<div align="center">
+<h1 align="center">
+    <img width="99" alt="JavaScript logo" src="../../_assets/logos/js.svg">
+    <br>
+    <b>JavaScript</b>
+</h1>
 
-[← Languages](../README.md) · [Academy Home](../../README.md)
-
-</div>
+[Home](../../README.md) / [Languages](../README.md) / JavaScript
 
 ---
 
-# JavaScript
+JavaScript is the programming language of the web browser. This track focuses on
+frontend JavaScript first: browser runtime, DOM reading and writing, events,
+state, rendering, objects/classes/prototypes, modules, async API work, testing,
+debugging, and a practical web app capstone.
 
-JavaScript is the core language of the web and a major language for servers,
-tooling, and automation.
+Node.js appears where it helps with tooling and tests, but the main target is
+browser JavaScript: code that responds to users and changes a live web page.
 
-This track teaches JavaScript from setup and syntax to asynchronous workflows,
-debugging, testing, and a practical capstone project.
+If you have never programmed at all, read [Foundations](../../foundations/) first.
 
-## Testing and quality expectations
+## Testing and Quality Expectations
 
 This track follows [Language Testing and Quality Standards](../testing-and-quality-standards.md).
+
+Core expectation for JavaScript chapters:
+
+- every browser example separates state, rendering, and event handling
+- DOM examples use safe text rendering for user data
+- async examples handle loading, success, and failure states
+- references list methods, parameters, examples, and risk notes
 
 ## Course
 
@@ -30,10 +41,17 @@ This track follows [Language Testing and Quality Standards](../testing-and-quali
 
 ## Reference
 
-- [Reference Index](./reference/)
+- [Reference Index](./reference/) - browser runtime, DOM, events, arrays,
+  objects, classes, prototypes, async, errors, and tooling lookup.
+
+Core references:
+
+- [DOM and Events Patterns](./reference/dom-and-events-patterns.md)
+- [Virtual DOM Intro](./reference/virtual-dom-intro.md)
+- [Arrays and Objects Patterns](./reference/arrays-and-objects-patterns.md)
+- [Objects, Classes, and Prototypes Deep Dive](./reference/objects-classes-and-prototypes-deep-dive.md)
+- [Browser Runtime and Web APIs](./reference/browser-runtime-and-web-apis.md)
 
 ---
 
-<div align="center">
-<sub><a href="../README.md">Languages</a> · <a href="../../README.md">Academy Home</a></sub>
-</div>
+[Languages](../README.md) / [Academy Home](../../README.md)

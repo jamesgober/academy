@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 03](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 03](./README.md)
 
 ---
 
@@ -45,11 +40,5 @@ Refactor one larger file into three modules with clear responsibilities.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← ES Modules: import and export](./04-es-modules-import-and-export.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Asynchronous JavaScript and APIs →](../04-asynchronous-javascript-and-apis/README.md) |
-
-</div>
+[**Next ->** Chapter Asynchronous JavaScript and APIs](../04-asynchronous-javascript-and-apis/README.md)  
+[**<- Previous** ES Modules: import and export](./04-es-modules-import-and-export.md)

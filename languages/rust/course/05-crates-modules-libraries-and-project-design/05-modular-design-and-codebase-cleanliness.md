@@ -45,12 +45,15 @@
 
 ## Visual boundary sketch
 
-```mermaid
-flowchart LR
-  App[Binary crate] --> Domain[Domain library]
-  App --> Cli[CLI parsing]
-  Domain --> Data[Data models]
-  Domain --> Rules[Business rules]
+```text
+Binary crate
+    |
+    |-- CLI parsing and printing
+    |
+    `-- Domain library
+            |
+            |-- data models
+            `-- business rules
 ```
 
 ---
@@ -67,10 +70,5 @@ Draw a module map for one project and identify where the public API should end.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Binary Crates: Applications and Entry Points](./04-binary-crates-applications-and-entry-points.md) | [Chapter 05](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Chapter 05 Project Tutorials →](./06-chapter-05-project-tutorials.md) |
-
-</div>
+[**Next ->** Project Tutorial: Inventory CLI with a Reusable Library](./06-chapter-05-project-tutorials.md)  
+[**<- Previous** Binary Crates: Applications and Entry Points](./04-binary-crates-applications-and-entry-points.md)

@@ -68,10 +68,5 @@ Take one time-dependent test and refactor it to deterministic behavior.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Rust CI Workflows with GitHub Actions](./04-rust-ci-workflows-with-github-actions.md) | [Chapter 03](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Chapter 03 Capstone →](./06-chapter-03-capstone.md) |
-
-</div>
+[**Next ->** Chapter 03 Capstone](./06-chapter-03-capstone.md)  
+[**<- Previous** Rust CI Workflows with GitHub Actions](./04-rust-ci-workflows-with-github-actions.md)

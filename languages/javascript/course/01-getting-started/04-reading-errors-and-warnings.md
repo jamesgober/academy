@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -74,11 +69,5 @@ Create a missing-parenthesis syntax error, read its output, then fix it.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← JavaScript Files, Modules, and Execution Flow](./03-javascript-files-modules-and-execution-flow.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Chapter 01 Checkpoint →](./05-chapter-01-checkpoint.md) |
-
-</div>
+[**Next ->** Chapter 01 Checkpoint](./05-chapter-01-checkpoint.md)  
+[**<- Previous** JavaScript Files, Modules, and Execution Flow](./03-javascript-files-modules-and-execution-flow.md)

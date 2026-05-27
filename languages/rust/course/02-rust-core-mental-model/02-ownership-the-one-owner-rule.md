@@ -48,11 +48,13 @@ fn main() {
 
 Rust tracks ownership at compile time, not runtime GC.
 
-```mermaid
-flowchart LR
-  A[car_name owns String heap ptr] --> B[assignment to copied]
-  B --> C[copied is new owner]
-  C --> D[car_name invalidated]
+```text
+Before assignment:
+car_name ---> String data on the heap
+
+After `let copied = car_name;`:
+copied   ---> String data on the heap
+car_name -X-> cannot be used anymore
 ```
 
 The compiler blocks access through invalid owners.
@@ -100,10 +102,5 @@ why one works after assignment and the other does not.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Variables, Mutability, and Shadowing](./01-variables-mutability-and-shadowing.md) | [Chapter 02](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Borrowing and References →](./03-borrowing-and-references.md) |
-
-</div>
+[**Next ->** Borrowing and References](./03-borrowing-and-references.md)  
+[**<- Previous** Variables, Mutability, and Shadowing](./01-variables-mutability-and-shadowing.md)

@@ -37,11 +37,14 @@ A data race occurs when:
 Rust enforces aliasing rules that make unsynchronized mutable sharing hard to
 express safely.
 
-```mermaid
-flowchart LR
-  A[Shared data] --> B[Multiple readers allowed]
-  A --> C[Single writer exclusive]
-  B --> D[No writer at same time]
+```text
+Shared data
+    |
+    |-- many readers allowed
+    |       `-- no writer at the same time
+    |
+    `-- one writer allowed
+            `-- no readers at the same time
 ```
 
 ## `Send` and `Sync` intuition
@@ -68,10 +71,5 @@ threads and why.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter 04](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Threads, Shared State, and Channels →](./02-threads-shared-state-and-channels.md) |
-
-</div>
+[**Next ->** Threads, Shared State, and Channels](./02-threads-shared-state-and-channels.md)  
+[**<- Previous** Chapter Concurrency and Async](./README.md)

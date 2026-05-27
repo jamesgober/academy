@@ -74,10 +74,5 @@ Take one helper function from a binary project and move it into a library crate.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Modules and Visibility](./02-modules-and-visibility.md) | [Chapter 05](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Binary Crates: Applications and Entry Points →](./04-binary-crates-applications-and-entry-points.md) |
-
-</div>
+[**Next ->** Binary Crates: Applications and Entry Points](./04-binary-crates-applications-and-entry-points.md)  
+[**<- Previous** Modules, Visibility, and Exports](./02-modules-and-visibility.md)

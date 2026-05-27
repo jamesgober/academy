@@ -70,10 +70,5 @@ Refactor a large `main` function into `main.rs` + `lib.rs` split.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Library Crates: When and How to Build Them](./03-library-crates-when-and-how-to-build-them.md) | [Chapter 05](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Modular Design and Codebase Cleanliness →](./05-modular-design-and-codebase-cleanliness.md) |
-
-</div>
+[**Next ->** Modular Design and Codebase Cleanliness](./05-modular-design-and-codebase-cleanliness.md)  
+[**<- Previous** Library Crates: When and How to Build Them](./03-library-crates-when-and-how-to-build-them.md)

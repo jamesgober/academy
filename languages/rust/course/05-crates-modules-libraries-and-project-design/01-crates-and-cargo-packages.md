@@ -34,10 +34,11 @@ It can be a library crate or a binary crate.
 
 A **package** is a Cargo-managed project that can contain one or more crates.
 
-```mermaid
-flowchart LR
-  A[Cargo package] --> B[lib crate]
-  A --> C[bin crate]
+```text
+Cargo package
+    |
+    |-- library crate  -> src/lib.rs
+    `-- binary crate   -> src/main.rs or src/bin/*.rs
 ```
 
 ## Why this matters
@@ -65,10 +66,5 @@ then map a sample project into lib/bin crates.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter 04](../04-concurrency-and-async/README.md) | [Chapter 05](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Modules and Visibility →](./02-modules-and-visibility.md) |
-
-</div>
+[**Next ->** Modules, Visibility, and Exports](./02-modules-and-visibility.md)  
+[**<- Previous** Chapter Concurrency and Async](../04-concurrency-and-async/README.md)

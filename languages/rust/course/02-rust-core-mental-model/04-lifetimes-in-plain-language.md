@@ -30,14 +30,12 @@
 A reference must never outlive the value it points to.
 Lifetimes express that relationship.
 
-```mermaid
-sequenceDiagram
-  participant ScopeA as owner scope
-  participant ScopeB as reference scope
-  ScopeA->>ScopeB: value created
-  Note over ScopeB: reference valid only while owner alive
-  ScopeA-->>ScopeB: owner dropped
-  Note over ScopeB: reference now invalid
+```text
+owner scope:     [ value exists -------------------- ]
+reference scope:       [ reference may be used ]
+
+Rule:
+the reference must end before the owner is dropped.
 ```
 
 ## Typical function case
@@ -84,10 +82,5 @@ lifetimes correctly.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Borrowing and References](./03-borrowing-and-references.md) | [Chapter 02](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Structs, Enums, and Pattern Matching →](./05-structs-enums-and-pattern-matching.md) |
-
-</div>
+[**Next ->** Structs, Enums, and Pattern Matching](./05-structs-enums-and-pattern-matching.md)  
+[**<- Previous** Borrowing and References](./03-borrowing-and-references.md)

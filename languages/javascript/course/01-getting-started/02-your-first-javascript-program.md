@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -65,11 +60,5 @@ Add one more variable and print it in the same template literal.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Setting Up a JavaScript Practice Environment](./01-setting-up-a-javascript-practice-environment.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [JavaScript Files, Modules, and Execution Flow →](./03-javascript-files-modules-and-execution-flow.md) |
-
-</div>
+[**Next ->** JavaScript Files, Modules, and Execution Flow](./03-javascript-files-modules-and-execution-flow.md)  
+[**<- Previous** Setting Up a JavaScript Practice Environment](./01-setting-up-a-javascript-practice-environment.md)

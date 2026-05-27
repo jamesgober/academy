@@ -72,10 +72,5 @@ Add one happy-path test and one failure-path test to a parser function.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter 03](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Designing Edge-Case Tests →](./02-designing-edge-case-tests.md) |
-
-</div>
+[**Next ->** Designing Edge-Case Tests](./02-designing-edge-case-tests.md)  
+[**<- Previous** Chapter Testing, Edge Cases, and CI](./README.md)

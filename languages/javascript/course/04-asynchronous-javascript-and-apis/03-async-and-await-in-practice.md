@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -72,11 +67,5 @@ Refactor one promise chain into `async/await` with equivalent behavior.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Promises and Error Handling](./02-promises-and-error-handling.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Working with HTTP APIs →](./04-working-with-http-apis.md) |
-
-</div>
+[**Next ->** DOM, Events, Rendering, and API Data](./04-working-with-http-apis.md)  
+[**<- Previous** Promises and Error Handling](./02-promises-and-error-handling.md)

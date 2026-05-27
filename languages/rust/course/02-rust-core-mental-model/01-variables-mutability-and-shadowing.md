@@ -81,10 +81,5 @@ transformations, then prints the final value.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter 02](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Ownership: The One-Owner Rule →](./02-ownership-the-one-owner-rule.md) |
-
-</div>
+[**Next ->** Ownership: The One-Owner Rule](./02-ownership-the-one-owner-rule.md)  
+[**<- Previous** Chapter Rust Core Mental Model](./README.md)

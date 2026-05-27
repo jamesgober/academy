@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 03](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 03](./README.md)
 
 ---
 
@@ -75,11 +70,5 @@ Build a `createMultiplier(factor)` closure and test it with two factors.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Functions and Parameters in Depth](./01-functions-and-parameters-in-depth.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Object Patterns and Prototypes →](./03-object-patterns-and-prototypes.md) |
-
-</div>
+[**Next ->** Objects, Classes, and Prototypes](./03-object-patterns-and-prototypes.md)  
+[**<- Previous** Functions and Parameters in Depth](./01-functions-and-parameters-in-depth.md)

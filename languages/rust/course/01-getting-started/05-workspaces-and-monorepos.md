@@ -93,10 +93,5 @@ Create two crates in one workspace: a library and a CLI that depends on it.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Cargo Workflow Essentials](./04-cargo-workflow.md) | [Chapter 01](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Git and GitHub for Rust Projects →](./06-git-and-github-for-rust.md) |
-
-</div>
+[**Next ->** Git and GitHub for Rust Projects](./06-git-and-github-for-rust.md)  
+[**<- Previous** Cargo Workflow Essentials](./04-cargo-workflow.md)

@@ -131,10 +131,5 @@ it's there is useful.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter 01](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Create Your First Cargo Project →](./02-first-cargo-project.md) |
-
-</div>
+[**Next ->** Create Your First Cargo Project](./02-first-cargo-project.md)  
+[**<- Previous** Chapter Getting Started](./README.md)

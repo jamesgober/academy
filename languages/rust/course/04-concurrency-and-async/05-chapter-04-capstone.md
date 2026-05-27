@@ -52,10 +52,5 @@ clean library/application split.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Async Error Handling, Timeouts, and Cancellation](./04-async-error-timeouts-and-cancellation.md) | [Chapter 04](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Chapter 05 →](../05-crates-modules-libraries-and-project-design/README.md) |
-
-</div>
+[**Next ->** Chapter Crates, Modules, Libraries, and Project Design](../05-crates-modules-libraries-and-project-design/README.md)  
+[**<- Previous** Async Error Handling, Timeouts, and Cancellation](./04-async-error-timeouts-and-cancellation.md)

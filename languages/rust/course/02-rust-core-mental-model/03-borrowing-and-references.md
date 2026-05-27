@@ -63,12 +63,14 @@ At one time, you can have:
 
 Not both at the same time.
 
-```mermaid
-flowchart TD
-  A[Owner value] --> B[&T immutable borrows many]
-  A --> C[&mut T mutable borrow one]
-  B --> D[No concurrent &mut]
-  C --> E[No concurrent &T]
+```text
+Owner value
+    |
+    |-- many shared borrows: &T, &T, &T
+    |       `-- no mutable borrow at the same time
+    |
+    `-- one mutable borrow: &mut T
+            `-- no shared borrows at the same time
 ```
 
 This blocks simultaneous read/write aliasing bugs.
@@ -104,10 +106,5 @@ call them in a sequence that satisfies borrow rules.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Ownership: The One-Owner Rule](./02-ownership-the-one-owner-rule.md) | [Chapter 02](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Lifetimes in Plain Language →](./04-lifetimes-in-plain-language.md) |
-
-</div>
+[**Next ->** Lifetimes in Plain Language](./04-lifetimes-in-plain-language.md)  
+[**<- Previous** Ownership: The One-Owner Rule](./02-ownership-the-one-owner-rule.md)

@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -77,11 +72,5 @@ Create three values with different types and convert them explicitly before comp
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Operators, Comparisons, and Boolean Logic →](./02-operators-comparisons-and-boolean-logic.md) |
-
-</div>
+[**Next ->** Operators, Comparisons, and Boolean Logic](./02-operators-comparisons-and-boolean-logic.md)  
+[**<- Previous** Chapter Core Language Basics](./README.md)

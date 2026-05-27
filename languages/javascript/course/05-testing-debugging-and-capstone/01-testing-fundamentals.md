@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -66,11 +61,5 @@ Write tests for one function with both normal and edge cases.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Debugging Workflow and Tooling →](./02-debugging-workflow-and-tooling.md) |
-
-</div>
+[**Next ->** Debugging Workflow and Tooling](./02-debugging-workflow-and-tooling.md)  
+[**<- Previous** Chapter Testing, Debugging, and Capstone](./README.md)

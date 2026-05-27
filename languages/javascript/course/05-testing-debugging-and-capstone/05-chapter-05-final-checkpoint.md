@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -44,11 +39,5 @@ Write a one-page retrospective documenting architecture, tradeoffs, and next imp
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Capstone: Task Tracker CLI](./04-capstone-task-tracker-cli.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Track Overview →](../../README.md) |
-
-</div>
+[**Next ->** JavaScript](../../README.md)  
+[**<- Previous** Capstone: Task Tracker Web App](./04-capstone-task-tracker-cli.md)

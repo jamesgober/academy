@@ -23,12 +23,7 @@ NAV TOKENS (use relative paths from THIS file's location):
 		<b>{{LANG}}</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home]({{HOME}}) · [Track]({{TRACK_ROOT}}) · [Reference Index]({{REFERENCE_ROOT}})
-
-</div>
+[Home]({{HOME}}) / [{{LANG}}]({{TRACK_ROOT}}) / [Reference]({{REFERENCE_ROOT}})
 
 ---
 
@@ -63,9 +58,4 @@ NAV TOKENS (use relative paths from THIS file's location):
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-[← Reference Index]({{REFERENCE_ROOT}}) · [Track]({{TRACK_ROOT}}) · [Home]({{HOME}})
-
-</div>
+[Reference Index]({{REFERENCE_ROOT}}) / [{{LANG}}]({{TRACK_ROOT}}) / [Home]({{HOME}})

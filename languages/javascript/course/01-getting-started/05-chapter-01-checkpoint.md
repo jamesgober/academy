@@ -4,12 +4,7 @@
     <b>JavaScript</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [JavaScript](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [JavaScript](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -42,11 +37,5 @@ Intentionally trigger one syntax and one runtime error, then resolve both.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Reading Errors and Warnings](./04-reading-errors-and-warnings.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Core Language Basics →](../02-core-language-basics/README.md) |
-
-</div>
+[**Next ->** Chapter Core Language Basics](../02-core-language-basics/README.md)  
+[**<- Previous** Reading Errors and Warnings](./04-reading-errors-and-warnings.md)

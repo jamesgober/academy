@@ -62,10 +62,5 @@ edge-heavy, property-based, or fuzzing-ready.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Designing Edge-Case Tests](./02-designing-edge-case-tests.md) | [Chapter 03](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Rust CI Workflows with GitHub Actions →](./04-rust-ci-workflows-with-github-actions.md) |
-
-</div>
+[**Next ->** Rust CI Workflows with GitHub Actions](./04-rust-ci-workflows-with-github-actions.md)  
+[**<- Previous** Designing Edge-Case Tests](./02-designing-edge-case-tests.md)

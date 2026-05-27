@@ -73,10 +73,5 @@ Write a function that divides two numbers from string input and returns
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Structs, Enums, and Pattern Matching](./05-structs-enums-and-pattern-matching.md) | [Chapter 02](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Chapter 02 Checkpoint →](./07-chapter-02-checkpoint.md) |
-
-</div>
+[**Next ->** Chapter 02 Checkpoint](./07-chapter-02-checkpoint.md)  
+[**<- Previous** Structs, Enums, and Pattern Matching](./05-structs-enums-and-pattern-matching.md)

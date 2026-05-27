@@ -81,10 +81,5 @@ passes after fixing it.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Advanced Testing Options](./03-advanced-testing-options.md) | [Chapter 03](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Debugging Test Failures and Flaky Behavior →](./05-debugging-test-failures-and-flaky-behavior.md) |
-
-</div>
+[**Next ->** Debugging Test Failures and Flaky Behavior](./05-debugging-test-failures-and-flaky-behavior.md)  
+[**<- Previous** Advanced Testing Options](./03-advanced-testing-options.md)

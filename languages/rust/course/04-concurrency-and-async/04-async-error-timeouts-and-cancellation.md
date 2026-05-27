@@ -62,10 +62,5 @@ retry, and cancellation behavior.
 
 ---
 
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Async and Await Mental Model](./03-async-and-await-mental-model.md) | [Chapter 04](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Chapter 04 Capstone →](./05-chapter-04-capstone.md) |
-
-</div>
+[**Next ->** Chapter 04 Capstone](./05-chapter-04-capstone.md)  
+[**<- Previous** Async and Await Mental Model](./03-async-and-await-mental-model.md)
