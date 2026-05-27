@@ -1,0 +1,13 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# AI editor context (gitignored per portfolio convention)
+.dev/PROMPT.md
+.dev/DIRECTIVES.md

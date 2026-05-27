@@ -1,0 +1,48 @@
+<div align="center">
+
+[Home](../README.md) · [Getting Started](./README.md)
+
+</div>
+
+---
+
+# macOS Setup
+
+> Install a code editor and get ready to write code on macOS.
+
+**You will learn:**
+- How to install Visual Studio Code
+- How to confirm it works
+- Where to go next
+
+---
+
+## 1. Install Visual Studio Code
+
+1. Go to <https://code.visualstudio.com>.
+2. Click **Download for macOS** (it auto-detects Apple Silicon vs. Intel).
+3. Open the downloaded `.zip`, then drag **Visual Studio Code** into your
+   **Applications** folder.
+
+<!-- SCREENSHOT: VS Code download page, macOS button highlighted -->
+<!-- SCREENSHOT: dragging VS Code into Applications -->
+
+## 2. Confirm it works
+
+Open **Launchpad** or **Spotlight** (Cmd + Space), type **Visual Studio Code**,
+and press Enter. If it opens, you're set.
+
+---
+
+## Next
+
+- Install a language toolchain from a [language course](../languages/).
+- Organize your projects: [Setting Up Your Dev Folder](./dev-folder-setup.md).
+
+---
+
+<div align="center">
+
+[← Getting Started](./README.md) · [Home](../README.md)
+
+</div>
