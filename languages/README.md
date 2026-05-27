@@ -19,13 +19,17 @@ coverage. See [Language Testing and Quality Standards](./testing-and-quality-sta
 
 If you've never programmed before, read [Foundations](../foundations/) first.
 
-## Available tracks
+## Available and upcoming tracks
 
-| Language | Track |
-|----------|-------|
-| Rust | [Rust](./rust/) |
+| Status | Language | Track |
+|--------|----------|-------|
+| Active | Rust | [Rust](./rust/) |
+| Active | Go | [Go](./go/) |
+| Planned | C | [C](./c/) |
+| Planned | C++ | [C++](./cpp/) |
+| Planned | C# | [C#](./csharp/) |
 
-*(More languages will be added over time.)*
+The next sequence is Go, then C, then C++, then C#.
 
 ---
 
