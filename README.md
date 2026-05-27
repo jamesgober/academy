@@ -19,12 +19,13 @@ program even *is* — and builds upward through real, working languages. Every
 page is structured the same way, so once you learn how to read one lesson you
 know how to read them all.
 
-It is organized into four parts:
+It is organized into five parts:
 
 | Part | What it covers |
 |------|----------------|
 | [Foundations](./foundations/) | Language-agnostic concepts: what is a variable, a function, a class, a loop. The vocabulary of programming. |
 | [Getting Started](./getting-started/) | Setting up your machine to write code — per platform (Windows, macOS, Linux) — plus how to organize a dev folder. |
+| [Platforms](./platforms/) | Tool and ecosystem courses that apply across languages. Start with [GitHub](./platforms/github/). |
 | [Languages](./languages/) | Full courses and quick references for individual languages. Start with [Rust](./languages/rust/). |
 | [Templates](./_templates/) | The authoring templates used to build every page in this repository. |
 
@@ -38,6 +39,9 @@ top to bottom. Don't skip ahead to a language until the words *variable*,
 **Ready to write code?** Go to [Getting Started](./getting-started/) and follow
 the guide for your operating system. You'll install an editor, a language
 toolchain, and set up a place to keep your projects.
+
+**Need professional workflow skills?** Take a platform track under
+[Platforms](./platforms/). Start with the [GitHub Masterclass](./platforms/github/).
 
 **Know the basics, want a language?** Jump straight into a course under
 [Languages](./languages/). Each language has two halves: a **course** (learn it

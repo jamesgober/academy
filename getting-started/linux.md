@@ -54,12 +54,18 @@ code --version
 If it prints a version number, you're set. You can also launch it from your
 desktop's application menu.
 
+> [!TIP]
+> When working from a project folder, run `code .` to open the whole folder in VS Code.
+
 ---
 
 ## Next
 
-- Install a language toolchain from a [language course](../languages/).
+- Learn terminal workflow: [Terminal on Linux](./terminal-linux.md)
+- Learn folder navigation: [Filesystem Navigation](./filesystem-navigation.md)
+- Learn editor workflow: [VS Code Basics](./vscode-basics.md)
 - Organize your projects: [Setting Up Your Dev Folder](./dev-folder-setup.md).
+- Install a language toolchain from a [language course](../languages/).
 
 ---
 

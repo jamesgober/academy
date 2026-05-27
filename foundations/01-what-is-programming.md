@@ -106,6 +106,6 @@ interpreter carried out your instruction. That's the entire loop, in miniature.
 
 | Previous | Up | Next |
 |:---------|:--:|-----:|
-| ← — | [Foundations](./README.md) · [Home](../README.md) | Variables & Types → *(coming soon)* |
+| [← Foundations Start](./README.md) | [Foundations](./README.md) · [Home](../README.md) | [Variables and Types →](./02-variables-and-types.md) |
 
 </div>

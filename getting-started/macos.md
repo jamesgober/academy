@@ -32,12 +32,18 @@
 Open **Launchpad** or **Spotlight** (Cmd + Space), type **Visual Studio Code**,
 and press Enter. If it opens, you're set.
 
+> [!TIP]
+> From Terminal, use `code .` to open your current folder directly in VS Code.
+
 ---
 
 ## Next
 
-- Install a language toolchain from a [language course](../languages/).
+- Learn terminal workflow: [Terminal on macOS](./terminal-macos.md)
+- Learn folder navigation: [Filesystem Navigation](./filesystem-navigation.md)
+- Learn editor workflow: [VS Code Basics](./vscode-basics.md)
 - Organize your projects: [Setting Up Your Dev Folder](./dev-folder-setup.md).
+- Install a language toolchain from a [language course](../languages/).
 
 ---
 

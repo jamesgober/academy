@@ -36,12 +36,19 @@ Microsoft. It's where you'll write and edit your code.
 Open the Start menu, type **Visual Studio Code**, and press Enter. If the editor
 opens, you're done with this step.
 
+> [!TIP]
+> If you selected "Add to PATH" during install, you can open projects from
+> PowerShell with `code .`.
+
 ---
 
 ## Next
 
-- Install a language toolchain from a [language course](../languages/).
+- Learn terminal workflow: [Terminal on Windows (PowerShell)](./terminal-windows-powershell.md)
+- Learn folder navigation: [Filesystem Navigation](./filesystem-navigation.md)
+- Learn editor workflow: [VS Code Basics](./vscode-basics.md)
 - Organize your projects: [Setting Up Your Dev Folder](./dev-folder-setup.md).
+- Install a language toolchain from a [language course](../languages/).
 
 ---
 

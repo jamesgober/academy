@@ -1,3 +1,9 @@
+<h1 align="center">
+    <img width="99" alt="Rust logo" src="../../../../_assets/logos/rust.svg">
+    <br>
+    <b>Rust</b>
+</h1>
+
 <div align="center">
 
 [Home](../../../../README.md) · [Rust](../../README.md) · [Chapter 01](./README.md)
@@ -16,8 +22,16 @@
 - How to install Rust on your platform
 - How to confirm the install worked
 
-**Before this page, you should know:** how to open a terminal, and ideally
-[what a compiler is](../../../../foundations/01-what-is-programming.md).
+**Before this page, you should know:**
+- [Terminal Basics](../../../../getting-started/terminal-basics.md)
+- [Filesystem Navigation](../../../../getting-started/filesystem-navigation.md)
+- Ideally [What Is Programming?](../../../../foundations/01-what-is-programming.md)
+
+> [!NOTE]
+> This page assumes you can open a terminal and run commands. If that part feels shaky, read the linked getting-started pages first.
+
+> [!TIP]
+> On Windows, use [PowerShell](../../../../getting-started/terminal-windows-powershell.md) as your default terminal while learning.
 
 ---
 
@@ -56,6 +70,10 @@ Download and run the installer from <https://rustup.rs>. It will check for the
 Visual Studio C++ build tools (Rust needs them to link programs) and walk you
 through installing them if they're missing. Accept the defaults.
 
+> [!IMPORTANT]
+> Keep the default install options unless you have a specific reason to change them.
+> Defaults are tested and documented by the Rust team.
+
 <!-- SCREENSHOT: rustup-init running on Windows -->
 
 ## Confirm it worked
@@ -74,6 +92,26 @@ If you instead get "command not found," close every terminal window and open a
 new one — the installer updates your `PATH`, but only new terminals see the
 change.
 
+> [!WARNING]
+> Running install commands in an old terminal session is the most common cause of
+> false "it didn't install" errors.
+
+## Set up VS Code for Rust (recommended)
+
+Once Rust is installed, configure your editor for completion, navigation, and
+debugging support.
+
+1. Open VS Code in your project folder (`code .`).
+2. Install these extensions:
+  - `rust-lang.rust-analyzer`
+  - `vadimcn.vscode-lldb`
+  - `tamasfe.even-better-toml`
+3. Optionally install `usernamehw.errorlens` for clearer inline diagnostics.
+
+> [!TIP]
+> Keep your extension list minimal at first. Add tools only when they solve a
+> specific pain point.
+
 ---
 
 ## Recap
@@ -83,6 +121,7 @@ change.
 - macOS/Linux install with a single `curl` command; Windows uses the installer
   from rustup.rs.
 - Confirm with `cargo --version` and `rustc --version` in a new terminal.
+- Configure VS Code with `rust-analyzer`, `CodeLLDB`, and TOML support.
 
 ## Try it yourself
 
@@ -96,6 +135,6 @@ it's there is useful.
 
 | Previous | Up | Next |
 |:---------|:--:|-----:|
-| ← — | [Chapter 01](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | Your First Program → *(coming soon)* |
+| [← Chapter Start](./README.md) | [Chapter 01](./README.md) · [Rust](../../README.md) · [Home](../../../../README.md) | [Create Your First Cargo Project →](./02-first-cargo-project.md) |
 
 </div>

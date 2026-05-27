@@ -15,7 +15,12 @@
 - A folder layout that works on any platform
 - How to navigate it quickly from a terminal
 
-**Before this page, you should know:** how to open a terminal on your platform.
+**Before this page, you should know:**
+- [Terminal Basics](./terminal-basics.md)
+- Your OS terminal quick start:
+	[PowerShell](./terminal-windows-powershell.md) /
+	[macOS Terminal](./terminal-macos.md) /
+	[Linux Terminal](./terminal-linux.md)
 
 ---
 
@@ -24,6 +29,10 @@
 If your projects are scattered across the Desktop, Downloads, and three random
 folders, you'll waste time hunting for them and your tools won't know where to
 look. One dedicated root folder fixes that permanently.
+
+> [!IMPORTANT]
+> Most setup bugs in beginner projects are path mistakes, not code mistakes.
+> A clean folder structure prevents both.
 
 ## The layout
 
@@ -75,6 +84,10 @@ cd C:\Dev\projects
 
 Tip: open the whole folder in your editor at once with `code .` (the `.` means
 "the current folder"). That's the fastest way to start working.
+
+> [!TIP]
+> Run `Get-Location` (PowerShell) or `pwd` (macOS/Linux) before creating files.
+> It confirms you are in the folder you think you are.
 
 ---
 

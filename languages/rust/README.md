@@ -17,6 +17,15 @@ hand-waving the parts that make Rust *Rust* (ownership, borrowing, lifetimes).
 
 If you've never programmed at all, read [Foundations](../../foundations/) first.
 
+## Testing and quality expectations
+
+This track follows [Language Testing and Quality Standards](../testing-and-quality-standards.md).
+
+Core expectation for Rust chapters:
+- local quality checks and tests are part of normal development, not optional extras
+- CI workflow and branch protection are covered via [GitHub Masterclass](../../platforms/github/)
+- release readiness includes passing checks, version discipline, and changelog updates
+
 ## Course
 
 Learn Rust in order.
@@ -24,8 +33,10 @@ Learn Rust in order.
 | Chapter | Title |
 |---------|-------|
 | 01 | [Getting Started](./course/01-getting-started/) |
-
-*(More chapters coming.)*
+| 02 | [Rust Core Mental Model](./course/02-rust-core-mental-model/) |
+| 03 | [Testing, Edge Cases, and CI](./course/03-testing-edge-cases-and-ci/) |
+| 04 | [Concurrency and Async](./course/04-concurrency-and-async/) |
+| 05 | [Crates, Modules, Libraries, and Project Design](./course/05-crates-modules-libraries-and-project-design/) |
 
 ## Reference
 

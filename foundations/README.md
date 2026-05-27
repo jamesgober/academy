@@ -21,11 +21,13 @@ sense.
 | # | Lesson | What you'll learn |
 |---|--------|-------------------|
 | 01 | [What Is Programming?](./01-what-is-programming.md) | What a program is and what really happens when code runs. |
-| 02 | Variables & Types *(coming soon)* | How programs store and label data. |
-| 03 | Functions *(coming soon)* | Packaging instructions you can reuse. |
-| 04 | Making Decisions *(coming soon)* | `if`, branching, and logic. |
-| 05 | Repeating Work *(coming soon)* | Loops and iteration. |
-| 06 | Classes & Objects *(coming soon)* | Grouping data and behavior together. |
+| 02 | [Variables and Types](./02-variables-and-types.md) | How programs store values, and why type-awareness prevents bugs. |
+| 03 | [Functions](./03-functions.md) | Packaging reusable logic with inputs and outputs. |
+| 04 | [Making Decisions](./04-making-decisions.md) | How conditional logic controls program flow. |
+| 05 | [Repeating Work](./05-repeating-work.md) | Loops, iteration patterns, and avoiding infinite loops. |
+| 06 | [Objects in Programming](./06-objects-in-programming.md) | What an object is, and how one class can produce many different instances. |
+| 07 | [Classes and Inheritance Basics](./07-classes-and-inheritance-basics.md) | Class, subclass, and extension with a game-based analogy. |
+| 08 | [Foundations Capstone Checkpoint](./08-foundations-capstone-checkpoint.md) | End-to-end checkpoint covering core programming vocabulary and logic flow. |
 
 ---
 
