@@ -50,12 +50,54 @@ Guidance:
 - avoid swallowing exceptions silently
 - rethrow when caller should handle or log globally
 
+## Where to catch exceptions
+
+Catch close to boundaries:
+- API boundary (request/response mapping)
+- UI boundary (user-facing error output)
+- background job boundary (retry and logging)
+
+Avoid broad catch blocks deep inside domain logic unless you are adding context and rethrowing.
+
 ## Throwing exceptions
 
 ```csharp
 if (amount < 0)
     throw new ArgumentOutOfRangeException(nameof(amount));
 ```
+
+Use standard exception types first:
+- `ArgumentException` family for invalid input
+- `InvalidOperationException` for invalid object/state transitions
+- `NotSupportedException` for unsupported paths
+
+## Preserve context when rethrowing
+
+Preferred:
+
+```csharp
+catch (Exception)
+{
+    throw;
+}
+```
+
+Avoid this because it resets stack trace:
+
+```csharp
+catch (Exception ex)
+{
+    throw ex;
+}
+```
+
+## Failure-design checklist
+
+1. Validate early at boundaries.
+2. Throw precise exception types.
+3. Catch where translation/logging is needed.
+4. Include enough context in logs to reproduce.
+5. Add tests for both success and failure paths.
 
 ---
 

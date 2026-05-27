@@ -31,6 +31,9 @@
 ```csharp
 if (score >= 90) grade = "A";
 
+if (isArchived)
+    return;
+
 if (score >= 80)
     grade = "B";
 else if (score >= 70)
@@ -56,6 +59,39 @@ string sizeLabel = size switch
 };
 ```
 
+Switch statement form is also valid when you need statement blocks:
+
+```csharp
+switch (command)
+{
+    case "start":
+        Start();
+        break;
+    case "stop":
+        Stop();
+        break;
+    default:
+        Console.WriteLine("Unknown command");
+        break;
+}
+```
+
+## Nested conditionals
+
+Nested branches are sometimes needed, but keep them shallow:
+
+```csharp
+if (user != null)
+{
+    if (user.IsActive)
+        GrantAccess();
+    else
+        DenyAccess();
+}
+```
+
+If nesting grows, extract helper methods with meaningful names.
+
 ## Pattern matching example
 
 ```csharp
@@ -68,6 +104,13 @@ string Describe(object value) => value switch
     _ => "Unknown"
 };
 ```
+
+## Common control-flow mistakes
+
+- Using ternary for large logic blocks
+- Copy/paste if-chains that should be switch expressions
+- Missing default case behavior
+- Deep nesting that hides business intent
 
 ---
 

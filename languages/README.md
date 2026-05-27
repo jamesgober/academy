@@ -28,8 +28,9 @@ If you've never programmed before, read [Foundations](../foundations/) first.
 | Active | C | [C](./c/) |
 | Active | C++ | [C++](./cpp/) |
 | Active | C# | [C#](./csharp/) |
+| Active | JavaScript | [JavaScript](./javascript/) |
 
-Current sequence coverage includes Rust, Go, C, C++, and C#.
+Current sequence coverage includes Rust, Go, C, C++, C#, and JavaScript.
 
 ---
 

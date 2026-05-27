@@ -51,6 +51,19 @@ static void Log(string message, string level = "Info")
 {
     Console.WriteLine($"[{level}] {message}");
 }
+
+static bool IsInRange(in int value, int min, int max)
+{
+    return value >= min && value <= max;
+}
+
+static decimal Sum(params decimal[] values)
+{
+    decimal total = 0;
+    foreach (var value in values)
+        total += value;
+    return total;
+}
 ```
 
 Use:
@@ -58,6 +71,43 @@ Use:
 - `ref` only when caller variable must change
 - `out` for try-pattern methods
 - optional parameters for simple defaults
+- `in` for readonly pass-by-reference semantics
+- `params` for variable argument count APIs
+
+## Return style guidelines
+
+Prefer returning values instead of mutating input parameters when possible:
+
+```csharp
+static decimal ApplyDiscount(decimal price, decimal percent)
+{
+    return price - (price * percent);
+}
+```
+
+Mutation-based APIs are harder to reason about, especially in larger teams.
+
+## Overloads versus optional parameters
+
+Both are valid, but use them intentionally:
+
+- Overloads when behavior meaningfully differs.
+- Optional parameters when behavior is the same and only defaults vary.
+
+Example overload pair:
+
+```csharp
+static string FormatUser(string first, string last) => $"{first} {last}";
+static string FormatUser(string first, string last, string title) => $"{title} {first} {last}";
+```
+
+## Parameter decision checklist
+
+1. Start with value parameters.
+2. Add return type for primary result.
+3. Use `out` only for try-pattern or multi-result need.
+4. Avoid `ref` unless required by API intent.
+5. Keep signatures short and readable.
 
 ---
 

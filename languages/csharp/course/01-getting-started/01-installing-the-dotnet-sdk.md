@@ -39,6 +39,35 @@ dotnet --list-sdks
 
 You should see installed SDK versions and runtime details.
 
+If `dotnet --list-sdks` returns no SDKs, you likely installed only the runtime.
+
+## OS-specific quick paths
+
+Windows:
+- Use the official installer from Microsoft.
+- Reopen terminal after installation.
+
+macOS:
+- Install the SDK package from Microsoft.
+- Reopen terminal and verify the SDK list.
+
+Linux:
+- Follow the distro-specific repo instructions from Microsoft docs.
+- Install SDK package, not just runtime package.
+
+## Verify with one real project
+
+Run this to prove your toolchain is fully usable:
+
+```bash
+dotnet new console -n sdk-check
+cd sdk-check
+dotnet build
+dotnet run
+```
+
+Expected result: a successful build and terminal output from the template app.
+
 Windows note:
 - Restart terminal after install so PATH updates are applied.
 
@@ -47,6 +76,20 @@ macOS note:
 
 Linux note:
 - Prefer Microsoft docs for distro-specific repository setup.
+
+## Common failures and fixes
+
+- `dotnet: command not found`
+Cause: PATH/session issue.
+Fix: close all terminals and open a new one.
+
+- `No .NET SDKs were found`
+Cause: runtime-only install.
+Fix: install SDK from official downloads page.
+
+- Build works in one terminal but not another
+Cause: mixed shell environments.
+Fix: standardize on one shell while learning.
 
 ## Visual model
 

@@ -37,6 +37,11 @@ order-tracker/
     └── OrderTracker.Core.Tests/
 ```
 
+Recommended layering:
+- `OrderTracker.Core`: domain models, services, validation
+- `OrderTracker.App`: console input/output orchestration
+- `OrderTracker.Core.Tests`: behavior tests for domain layer
+
 ## Features
 
 - create orders
@@ -45,12 +50,49 @@ order-tracker/
 - save and load from JSON
 - validate input and report clear errors
 
+## Suggested domain sketch
+
+```csharp
+public record OrderItem(string Sku, int Quantity, decimal UnitPrice);
+
+public class Order
+{
+    public int Id { get; }
+    public List<OrderItem> Items { get; } = new();
+
+    public Order(int id) => Id = id;
+    public decimal Total() => Items.Sum(i => i.Quantity * i.UnitPrice);
+}
+```
+
+## Delivery milestones
+
+1. Build order model and total calculation.
+2. Add commands to create order and add items.
+3. Persist orders to JSON file.
+4. Add tests for totals and input validation.
+5. Add logging around load/save and failures.
+
+## Expected output examples
+
+- `Order created: 1001`
+- `Item added: SKU-22 x3`
+- `Current total: 74.97`
+- `Saved 1 order(s) to orders.json`
+
 ## Completion checklist
 
 - `dotnet build` clean
 - `dotnet test` passing
 - no unresolved warnings you do not understand
 - one short architecture note explaining type choices
+
+## Test plan baseline
+
+- total calculation with 1+ line items
+- validation: reject zero or negative quantities
+- JSON round-trip: save then load retains totals
+- invalid input path emits clear error message
 
 ---
 
