@@ -1,61 +1,141 @@
 # Browser Runtime and Web APIs
 
-## Runtime model
+[Home](../../../README.md) / [JavaScript](../README.md) / [Reference](./README.md)
 
-Frontend JavaScript runs in a browser environment with access to browser-provided APIs.
+---
 
-Core global objects:
-- `window`
-- `document`
-- `location`
-- `history`
-- `navigator`
+> Lookup for browser globals, timers, fetch, storage, URL APIs, workers, and runtime boundaries.
 
-## Timing APIs
+Course lessons:
+
+- [Setting Up a JavaScript Practice Environment](../course/01-getting-started/01-setting-up-a-javascript-practice-environment.md)
+- [DOM, Events, Rendering, and API Data](../course/04-asynchronous-javascript-and-apis/04-working-with-http-apis.md)
+
+## Browser Runtime Globals
+
+| Global | What it represents |
+|---|---|
+| `window` | browser window/global object |
+| `document` | DOM document |
+| `location` | current URL |
+| `history` | session navigation history |
+| `navigator` | browser/device information |
+| `localStorage` | persistent string key/value storage |
+| `sessionStorage` | tab-session string key/value storage |
+| `fetch` | network request API |
+
+Node.js does not provide `document` or the browser DOM by default.
+
+## Timers
 
 ```javascript
-const id = setTimeout(() => console.log("later"), 500);
-clearTimeout(id);
+const timeoutId = setTimeout(() => {
+  console.log("later");
+}, 500);
 
-const interval = setInterval(() => console.log("tick"), 1000);
-clearInterval(interval);
+clearTimeout(timeoutId);
+
+const intervalId = setInterval(() => {
+  console.log("tick");
+}, 1000);
+
+clearInterval(intervalId);
 ```
 
-## Storage APIs
+Timers are not exact scheduling guarantees. The event loop must be free before a
+timer callback can run.
+
+## Fetch
+
+```javascript
+const response = await fetch("/api/items", {
+  method: "GET",
+  headers: {
+    Accept: "application/json"
+  }
+});
+
+if (!response.ok) {
+  throw new Error(`HTTP ${response.status}`);
+}
+
+const data = await response.json();
+```
+
+POST JSON:
+
+```javascript
+await fetch("/api/tasks", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ title: "Learn fetch" })
+});
+```
+
+## URL and Query Params
+
+```javascript
+const url = new URL("/api/tasks", window.location.origin);
+url.searchParams.set("status", "open");
+url.searchParams.set("search", "dom");
+```
+
+Use `URL` and `URLSearchParams` instead of string-building query params by hand.
+
+## Storage
 
 ```javascript
 localStorage.setItem("theme", "dark");
 const theme = localStorage.getItem("theme");
-
-sessionStorage.setItem("tokenHint", "abc");
+localStorage.removeItem("theme");
 ```
 
-Guidance:
-- `localStorage` persists across sessions
-- `sessionStorage` lasts for tab session
-
-## Network API
+JSON:
 
 ```javascript
-const response = await fetch("/api/items");
-const data = await response.json();
+localStorage.setItem("tasks", JSON.stringify(tasks));
+const tasks = JSON.parse(localStorage.getItem("tasks") ?? "[]");
 ```
 
-Always check `response.ok` before parsing.
+Risk notes:
 
-## URL and query params
+- storage values are strings
+- parsing can fail
+- users can clear storage
+- storage is not secure for secrets
+- browser settings may limit storage
+
+## FormData
 
 ```javascript
-const url = new URL(window.location.href);
-const page = url.searchParams.get("page") ?? "1";
+const formData = new FormData(form);
+const title = String(formData.get("title") ?? "").trim();
 ```
 
-## Browser API safety checklist
+Validate values because form fields may be missing or empty.
 
-1. Guard against unavailable features in older browsers.
-2. Handle storage and network failures.
-3. Keep API logic separate from rendering logic.
+## Web Workers
 
----
+```javascript
+const worker = new Worker("./worker.js", { type: "module" });
 
-[← JavaScript Reference](./README.md)
+worker.postMessage([1, 2, 3]);
+worker.addEventListener("message", (event) => {
+  console.log(event.data);
+});
+```
+
+Worker limitations:
+
+- no direct DOM access
+- communication uses messages
+- useful for CPU-heavy work
+- extra complexity for small tasks
+
+## Cross References
+
+- [DOM and Events Patterns](./dom-and-events-patterns.md)
+- [Async and Promise Patterns](./async-and-promise-patterns.md)
+- [Virtual DOM Intro](./virtual-dom-intro.md)

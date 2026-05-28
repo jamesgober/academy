@@ -295,6 +295,123 @@ async function loadAndRenderTodo() {
 }
 ```
 
+## Fetch with Headers
+
+Headers are metadata sent with a request or response. They describe content type,
+authorization, caching, and other request details.
+
+```javascript
+async function createTask(task) {
+  const response = await fetch("/api/tasks", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(task)
+  });
+
+  if (!response.ok) {
+    throw new Error(`Could not create task: HTTP ${response.status}`);
+  }
+
+  return response.json();
+}
+```
+
+Use `Content-Type: application/json` when sending JSON. Do not manually set
+authentication headers unless the API documentation tells you exactly what to
+send.
+
+## Query Parameters
+
+Query parameters are values in the URL after `?`.
+
+```javascript
+function buildTaskSearchUrl({ search, status }) {
+  const url = new URL("/api/tasks", window.location.origin);
+
+  if (search) {
+    url.searchParams.set("search", search);
+  }
+
+  if (status && status !== "all") {
+    url.searchParams.set("status", status);
+  }
+
+  return url;
+}
+```
+
+Use `URL` and `URLSearchParams` instead of string-building query URLs by hand.
+They handle escaping spaces and special characters correctly.
+
+## FormData
+
+`FormData` reads a form into key/value pairs.
+
+```javascript
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const title = String(formData.get("title") ?? "").trim();
+
+  if (title === "") {
+    message.textContent = "Enter a task title.";
+    return;
+  }
+});
+```
+
+Use `FormData` when a form has several fields. Remember that values may be
+`string`, `File`, or `null`, so validate before using them.
+
+## Browser Storage
+
+`localStorage` and `sessionStorage` store string values in the browser.
+
+| API | Lifetime | Use for |
+|---|---|---|
+| `localStorage` | persists after browser closes | small user preferences, simple app state |
+| `sessionStorage` | cleared when tab session ends | temporary per-tab state |
+
+Save JSON:
+
+```javascript
+function saveTasks(tasks) {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+```
+
+Load JSON safely:
+
+```javascript
+function loadTasks() {
+  const raw = localStorage.getItem("tasks");
+
+  if (raw === null) {
+    return [];
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+```
+
+Failure cases to understand:
+
+- storage only stores strings
+- JSON parsing can fail
+- users can clear storage
+- private browsing or browser settings can limit storage
+- storage is not secure for secrets
+
+Never store passwords, API secrets, or sensitive tokens in course examples.
+
 ## Tiny Virtual DOM Intro with Live Element Creation
 
 Virtual DOM means "describe the UI as plain JavaScript objects, compare or
@@ -366,6 +483,12 @@ data, then rendered into the real DOM.
 - Use event delegation for dynamic lists.
 - Keep fetch functions separate from render functions.
 - Show loading, success, empty, and error states.
+
+## Reference Links
+
+- [DOM and Events Patterns](../../reference/dom-and-events-patterns.md)
+- [Browser Runtime and Web APIs](../../reference/browser-runtime-and-web-apis.md)
+- [Virtual DOM Intro](../../reference/virtual-dom-intro.md)
 
 ---
 

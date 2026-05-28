@@ -12,6 +12,7 @@ core data structures.
 | 03 | [Conditionals and Switch Patterns](./03-conditionals-and-switch-patterns.md) |
 | 04 | [Loops, Iteration, and Control Flow](./04-loops-iteration-and-control-flow.md) |
 | 05 | [Arrays, Objects, and Common Mutations](./05-arrays-objects-and-common-mutations.md) |
+| 06 | [Chapter 02 Checkpoint](./06-chapter-02-checkpoint.md) |
 
 ---
 

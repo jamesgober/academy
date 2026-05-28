@@ -35,6 +35,7 @@ reference when you need to remember the shape, parameters, tradeoffs, or command
 | [Ownership and Borrowing Cheat Sheet](./ownership-and-borrowing-cheat-sheet.md) | Move, clone, borrow, mutable borrow, lifetimes, and common borrow-checker fixes. |
 | [Errors, Warnings, and Debugging](./errors-warnings-and-debugging.md) | Reading compiler output, warnings, `Result`, `Option`, `panic!`, backtraces, and Clippy. |
 | [Testing and CI Cheat Sheet](./testing-and-ci-cheat-sheet.md) | Unit tests, integration tests, examples, doctests, and CI quality commands. |
+| [Practical Rust Patterns](./practical-rust-patterns.md) | CLI, files, parsing, reports, workers/threads, docs, macros, features, and project polish. |
 
 ## Risk Notes
 

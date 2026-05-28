@@ -380,5 +380,5 @@ Make each function return a new value instead of mutating the original array.
 
 ---
 
-[**Next ->** Functions, Objects, and Modules](../03-functions-objects-and-modules/README.md)  
+[**Next ->** Chapter 02 Checkpoint](./06-chapter-02-checkpoint.md)  
 [**<- Previous** Loops, Iteration, and Control Flow](./04-loops-iteration-and-control-flow.md)

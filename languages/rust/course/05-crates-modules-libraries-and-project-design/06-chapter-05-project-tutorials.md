@@ -318,5 +318,5 @@ Build next:
 
 ---
 
-[**Next ->** Rust Reference](../../reference/README.md)  
+[**Next ->** Practical Rust Mastery](../06-practical-rust-mastery/README.md)  
 [**<- Previous** Modular Design and Codebase Cleanliness](./05-modular-design-and-codebase-cleanliness.md)

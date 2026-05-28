@@ -30,6 +30,13 @@ module/export coverage, Cargo configuration examples, and practical references.
 - Updated Rust course footers so the next link appears above the previous link,
   with bold labels and arrows.
 - Added Rust prelude coverage to the modules/visibility lesson and reference.
+- Added Chapter 06, Practical Rust Mastery, with full lessons for function
+  signature design, ownership-aware parameters, strings, collections, traits,
+  generics, iterators, closures, files, CLI input, environment variables,
+  macros, attributes, documentation, Cargo features, polish, and a final Study
+  Log CLI capstone.
+- Added a practical Rust patterns reference for CLI, parsing, files, iterators,
+  worker threads, macros, attributes, and quality commands.
 
 ## Validation
 
@@ -40,10 +47,10 @@ BROKEN_LINK_COUNT=0
 ODD_FENCE_COUNT=0
 MERMAID_BLOCK_COUNT=0
 
-Lessons        : 30
-CourseWords    : 11563
-AvgLessonWords : 385
-ReferencePages : 11
-ReferenceWords : 4191
-AvgRefWords    : 381
+Lessons        : 36
+CourseWords    : 16824
+AvgLessonWords : 467
+ReferencePages : 12
+ReferenceWords : 4687
+AvgRefWords    : 391
 ```

@@ -21,7 +21,34 @@
 
 ## Checkpoint mini challenge
 
-Create `math.js` with two exported functions and an `app.js` that imports and uses both.
+Create this folder:
+
+```text
+js-setup-checkpoint/
+|-- index.html
+`-- src/
+    |-- app.js
+    `-- math.js
+```
+
+Requirements:
+
+- `index.html` loads `src/app.js` with `type="module"`
+- `math.js` exports `add` and `multiply`
+- `app.js` imports both functions
+- the page renders the result into a DOM element
+- the Console has no errors
+
+## Hints
+
+- Browser module imports need file extensions: `./math.js`.
+- Use a local server if module loading fails from `file://`.
+- Use `document.querySelector` and check for `null`.
+
+## Solution Direction
+
+`app.js` should import functions, calculate values, then set `textContent` on a
+real page element. Do not only use `console.log`.
 
 ---
 

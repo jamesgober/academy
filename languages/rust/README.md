@@ -36,6 +36,7 @@ Learn Rust in order.
 | 03 | [Testing, Edge Cases, and CI](./course/03-testing-edge-cases-and-ci/) |
 | 04 | [Concurrency and Async](./course/04-concurrency-and-async/) |
 | 05 | [Crates, Modules, Libraries, and Project Design](./course/05-crates-modules-libraries-and-project-design/) |
+| 06 | [Practical Rust Mastery](./course/06-practical-rust-mastery/) |
 
 ## Reference
 
