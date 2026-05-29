@@ -4,38 +4,40 @@
     <b>Rust</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Rust](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [Rust](../../README.md)
 
 ---
 
-# Chapter 05 — Crates, Modules, Libraries, and Project Design
+# Chapter 05: Crates, Modules, Libraries, And Project Design
 
-Learn how to structure Rust code cleanly: crates, modules, visibility, library
-crates, binary crates, and modular project design.
+This chapter teaches how Rust projects are organized: packages, crates, modules,
+visibility, library APIs, binary entry points, and clean boundaries.
+
+By the end, you will be able to:
+
+- Explain package, crate, and module differences
+- Read and design `Cargo.toml` layouts
+- Export modules across files with `mod`, `pub`, `use`, and `pub use`
+- Understand the Rust prelude
+- Split reusable library logic from application wiring
+- Keep public APIs smaller than internal file structure
+
+> [!IMPORTANT]
+> Clean Rust architecture starts with small modules, clear public APIs, and
+> deliberate crate boundaries.
 
 ## Lessons
 
-| # | Lesson |
-|---|--------|
-| 01 | [Crates and Cargo Packages](./01-crates-and-cargo-packages.md) |
-| 02 | [Modules and Visibility](./02-modules-and-visibility.md) |
-| 03 | [Library Crates: When and How to Build Them](./03-library-crates-when-and-how-to-build-them.md) |
-| 04 | [Binary Crates: Applications and Entry Points](./04-binary-crates-applications-and-entry-points.md) |
-| 05 | [Modular Design and Codebase Cleanliness](./05-modular-design-and-codebase-cleanliness.md) |
-| 06 | [Chapter 05 Project Tutorials](./06-chapter-05-project-tutorials.md) |
-
-> [!IMPORTANT]
-> Clean architecture in Rust starts with small modules, clear public APIs, and
-> deliberate crate boundaries.
+| # | Lesson | Main skill |
+|---|---|---|
+| 01 | [Crates And Cargo Packages](./01-crates-and-cargo-packages.md) | Understand package and crate structure |
+| 02 | [Modules, Visibility, And Exports](./02-modules-and-visibility.md) | Use cross-file modules and re-exports |
+| 03 | [Library Crates: When And How To Build Them](./03-library-crates-when-and-how-to-build-them.md) | Design reusable APIs |
+| 04 | [Binary Crates: Applications And Entry Points](./04-binary-crates-applications-and-entry-points.md) | Keep apps thin and testable |
+| 05 | [Modular Design And Codebase Cleanliness](./05-modular-design-and-codebase-cleanliness.md) | Refactor boundaries cleanly |
+| 06 | [Project Tutorial: Inventory CLI With A Reusable Library](./06-chapter-05-project-tutorials.md) | Build a structured Rust project |
 
 ---
 
-<div align="center">
-
-[← Chapter 04](../04-concurrency-and-async/README.md) · [Home](../../../../README.md)
-
-</div>
+[**Next ->** Crates And Cargo Packages](./01-crates-and-cargo-packages.md)  
+[**<- Previous** Chapter 04: Concurrency And Async](../04-concurrency-and-async/README.md)

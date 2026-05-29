@@ -10,39 +10,116 @@
 
 # Cargo Workspaces Reference
 
-> Quick lookup. For explanation, see [Cargo Workspaces and Monorepos](../course/01-getting-started/05-workspaces-and-monorepos.md).
-
-## At a glance
-
-| Item | Syntax | Purpose |
-|------|--------|---------|
-| Workspace root | `[workspace]` | Defines shared workspace |
-| Members | `members = ["..."]` | Lists crates in workspace |
-| Resolver | `resolver = "2"` | Modern dependency resolution |
+> Quick lookup for multi-package Rust repositories. For the full lesson, see
+> [Cargo Workspaces And Monorepos](../course/01-getting-started/05-workspaces-and-monorepos.md).
 
 ---
 
-## Minimal workspace root file
+## Minimal Workspace
 
 ```toml
 [workspace]
-members = ["apps/cli", "crates/core-lib"]
-resolver = "2"
+members = [
+    "crates/study-core",
+    "apps/study-cli",
+]
+resolver = "3"
 ```
 
-## Workspace-level commands
+Use `resolver = "3"` for Rust 2024 workspaces. Rust 2021 workspaces commonly
+use `resolver = "2"`.
 
-```bash
-cargo check --workspace
-cargo test --workspace
-cargo run -p cli
+---
+
+## Common Layout
+
+```text
+study-suite/
+  Cargo.toml
+  Cargo.lock
+  crates/
+    study-core/
+      Cargo.toml
+      src/lib.rs
+  apps/
+    study-cli/
+      Cargo.toml
+      src/main.rs
 ```
 
-> [!IMPORTANT]
-> Run workspace commands from the workspace root directory.
+Recommended direction:
 
-> [!WARNING]
-> Monorepos add structure complexity. Avoid workspaces for single-crate beginner projects.
+```text
+apps/study-cli -> crates/study-core
+```
+
+Avoid circular package design.
+
+---
+
+## Local Path Dependency
+
+`apps/study-cli/Cargo.toml`:
+
+```toml
+[dependencies]
+study-core = { path = "../../crates/study-core" }
+```
+
+Rust import:
+
+```rust
+use study_core::normalize_topic;
+```
+
+Package names can contain hyphens. Rust identifiers use underscores.
+
+---
+
+## Workspace Commands
+
+| Command | Meaning |
+|---|---|
+| `cargo check --workspace` | Check all members |
+| `cargo test --workspace` | Test all members |
+| `cargo build --workspace` | Build all members |
+| `cargo run -p study-cli` | Run package named `study-cli` |
+| `cargo test -p study-core` | Test one package |
+| `cargo clippy --workspace --all-targets --all-features -- -D warnings` | Strict lint all members |
+
+Run workspace commands from the root folder.
+
+---
+
+## Workspace Dependencies
+
+Root `Cargo.toml`:
+
+```toml
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+```
+
+Member `Cargo.toml`:
+
+```toml
+[dependencies]
+serde = { workspace = true }
+```
+
+Use this when multiple members should share one dependency version.
+
+---
+
+## Notices
+
+| Situation | Recommendation |
+|---|---|
+| One tiny beginner project | Use one package, not a workspace |
+| CLI plus reusable core library | Workspace may help |
+| Many members using same dependency | Consider `[workspace.dependencies]` |
+| `cargo run` does not know what to run | Use `cargo run -p package-name` |
+| Workspace commands ignore a crate | Add it to `members` |
 
 ---
 

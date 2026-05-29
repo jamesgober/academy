@@ -8,50 +8,176 @@
 
 ---
 
-# Environment Variables and Cargo Config
+# Environment Variables And Cargo Config Reference
 
-> Quick lookup for Rust runtime environment variables and Cargo build knobs.
+> Lookup for runtime environment variables, Cargo environment variables, and
+> `.cargo/config.toml` settings.
 
-## Common runtime environment variables
+Related lessons:
 
-Use these from application code with `std::env`.
+- [Installing Rust](../course/01-getting-started/01-installing-rust.md)
+- [Cargo Workflow Essentials](../course/01-getting-started/04-cargo-workflow.md)
+- [Files, CLI Input, Environment, And Useful Programs](../course/06-practical-rust-mastery/04-files-cli-input-environment-and-useful-programs.md)
 
-| Variable | Typical purpose |
-|----------|-----------------|
-| `PATH` | Find executables on the system |
-| `HOME` / `USERPROFILE` | Locate the user's home directory |
-| `RUST_LOG` | Control logging verbosity in apps that use logging crates |
-| `APP_ENV` | Application-specific environment mode |
+---
 
-## Common Cargo and Rust build variables
-
-| Variable | Typical purpose |
-|----------|-----------------|
-| `CARGO_HOME` | Cargo cache/config location |
-| `CARGO_TARGET_DIR` | Override build output directory |
-| `RUSTFLAGS` | Pass extra compiler flags |
-| `RUSTDOCFLAGS` | Pass extra rustdoc flags |
-| `CARGO_NET_OFFLINE` | Force Cargo offline mode |
-
-## Practical guidance
-
-- Prefer environment variables for configuration that changes per machine or deployment.
-- Keep secrets out of source control.
-- Use `cargo run` or `cargo test` with env vars when you need local overrides.
-
-## Examples
-
-```bash
-set RUST_LOG=debug
-set CARGO_TARGET_DIR=target-local
-cargo test
-```
+## Read Environment Variables In Rust
 
 ```rust
 use std::env;
 
-let mode = env::var("APP_ENV").unwrap_or_else(|_| "development".to_string());
+fn app_mode() -> String {
+    env::var("APP_ENV").unwrap_or_else(|_| "development".to_string())
+}
 ```
+
+Fallible version:
+
+```rust
+use std::env;
+
+fn required_api_key() -> Result<String, env::VarError> {
+    env::var("API_KEY")
+}
+```
+
+`std::env::var` returns `Result<String, VarError>` because the variable may be
+missing or invalid Unicode.
+
+---
+
+## Set Variables For One Command
+
+PowerShell:
+
+```powershell
+$env:APP_ENV = "development"
+cargo run
+```
+
+Bash:
+
+```bash
+APP_ENV=development cargo run
+```
+
+PowerShell variable values remain in that shell session until changed or removed:
+
+```powershell
+Remove-Item Env:APP_ENV
+```
+
+---
+
+## Common Runtime Variables
+
+| Variable | Typical purpose | Notice |
+|---|---|---|
+| `PATH` | Search path for commands | Setup-sensitive |
+| `HOME` / `USERPROFILE` | User home directory | OS differs |
+| `APP_ENV` | App-specific mode | You define meaning |
+| `RUST_LOG` | Logging level for apps using logging crates | Requires logging setup |
+| `NO_COLOR` | Disable colored output | Convention, not Rust-specific |
+
+Never commit secrets such as API keys into source control.
+
+---
+
+## Cargo And Rust Variables
+
+| Variable | Purpose | Example |
+|---|---|---|
+| `CARGO_HOME` | Cargo cache/config location | Custom tool cache |
+| `RUSTUP_HOME` | rustup toolchain location | Custom toolchain storage |
+| `CARGO_TARGET_DIR` | Build output directory | Shared or temporary target dir |
+| `RUSTFLAGS` | Extra compiler flags | CI or special builds |
+| `RUSTDOCFLAGS` | Extra rustdoc flags | Docs warnings |
+| `CARGO_NET_OFFLINE` | Offline dependency mode | `true` |
+| `RUST_BACKTRACE` | Panic backtraces | `1` or `full` |
+
+Example:
+
+```bash
+RUST_BACKTRACE=1 cargo test failing_case
+```
+
+PowerShell:
+
+```powershell
+$env:RUST_BACKTRACE = "1"
+cargo test failing_case
+```
+
+---
+
+## `.cargo/config.toml`
+
+Project-local config path:
+
+```text
+.cargo/config.toml
+```
+
+Example:
+
+```toml
+[alias]
+q = "check"
+t = "test"
+
+[build]
+target-dir = "target-local"
+
+[env]
+APP_ENV = "development"
+```
+
+Then:
+
+```bash
+cargo q
+cargo t
+```
+
+Use aliases sparingly in teaching material. Normal Cargo commands are clearer
+for beginners.
+
+---
+
+## Toolchain Pinning
+
+`rust-toolchain.toml`:
+
+```toml
+[toolchain]
+channel = "stable"
+components = ["rustfmt", "clippy"]
+```
+
+Use when a project needs contributors and CI to use the same toolchain channel
+and components.
+
+Risk:
+
+```text
+Over-pinning can make updates harder.
+Under-pinning can make builds differ across machines.
+```
+
+For learning projects, stable is usually enough.
+
+---
+
+## Configuration Decision Model
+
+| Need | Prefer |
+|---|---|
+| Value changes per machine | Environment variable |
+| Secret value | Secret manager or environment variable, never Git |
+| Cargo command shortcut | `.cargo/config.toml` alias |
+| Shared dependency/build behavior | `Cargo.toml` |
+| Shared toolchain channel | `rust-toolchain.toml` |
+| One-off debugging | Temporary shell variable |
 
 ---
 

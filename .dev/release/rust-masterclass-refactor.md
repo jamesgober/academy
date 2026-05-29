@@ -51,6 +51,14 @@ module/export coverage, Cargo configuration examples, and practical references.
 - Deepened Chapter 05 around package/crate/module structure, `Cargo.toml`,
   library APIs, binary entry points, multiple binaries, side-effect boundaries,
   module cleanliness, re-exports, and refactoring messy Rust codebases.
+- Polished Chapter 01 into a true onboarding chapter with install verification,
+  PATH troubleshooting, editor setup, Cargo command meanings, workspace setup,
+  Git/README/PR habits, and beginner-safe quality gates.
+- Normalized chapter README navigation to slash breadcrumbs and next-first
+  footer links, removing stale centered dot navigation and encoding artifacts.
+- Expanded the thinnest Rust references for ownership/borrowing, testing/CI,
+  Cargo workspaces, and environment/config with examples, command parameters,
+  notices, tradeoffs, and cross-links back to lessons.
 
 ## Validation
 
@@ -63,10 +71,10 @@ MERMAID_BLOCK_COUNT=0
 
 Lessons        : 36
 CourseFiles    : 42
-CourseWords    : 36221
-AvgLessonWords : 1006
+CourseWords    : 38757
+AvgLessonWords : 1077
 ReferencePages : 13
-ReferenceWords : 4363
-AvgRefWords    : 336
-TotalWords     : 40584
+ReferenceWords : 5623
+AvgRefWords    : 433
+TotalWords     : 44380
 ```

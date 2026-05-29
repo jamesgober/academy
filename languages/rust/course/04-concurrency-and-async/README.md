@@ -4,33 +4,36 @@
     <b>Rust</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Rust](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [Rust](../../README.md)
 
 ---
 
-# Chapter 04 — Concurrency and Async
+# Chapter 04: Concurrency And Async
 
-Understand how Rust handles parallel and asynchronous workloads with safety
-constraints that prevent many common runtime bugs.
+This chapter explains how Rust handles work that happens at the same time:
+threads for parallel work, channels for message passing, shared state with
+locks, and async for high-concurrency waiting.
+
+By the end, you will be able to:
+
+- Explain data races in plain language
+- Read `Send` and `Sync` as safety capabilities
+- Spawn and join threads
+- Use `Arc<Mutex<T>>` when shared mutable state is appropriate
+- Use channels to send results between workers
+- Explain futures, runtimes, `.await`, timeouts, cancellation, and retries
 
 ## Lessons
 
-| # | Lesson |
-|---|--------|
-| 01 | [Concurrency Safety in Rust](./01-concurrency-safety-in-rust.md) |
-| 02 | [Threads, Shared State, and Channels](./02-threads-shared-state-and-channels.md) |
-| 03 | [Async and Await Mental Model](./03-async-and-await-mental-model.md) |
-| 04 | [Async Error Handling, Timeouts, and Cancellation](./04-async-error-timeouts-and-cancellation.md) |
-| 05 | [Chapter 04 Capstone](./05-chapter-04-capstone.md) |
+| # | Lesson | Main skill |
+|---|---|---|
+| 01 | [Concurrency Safety In Rust](./01-concurrency-safety-in-rust.md) | Understand data-race prevention |
+| 02 | [Threads, Shared State, And Channels](./02-threads-shared-state-and-channels.md) | Coordinate worker threads |
+| 03 | [Async And Await Mental Model](./03-async-and-await-mental-model.md) | Understand futures and runtimes |
+| 04 | [Async Error Handling, Timeouts, And Cancellation](./04-async-error-timeouts-and-cancellation.md) | Design reliable async flows |
+| 05 | [Chapter 04 Capstone](./05-chapter-04-capstone.md) | Build a threaded job dispatcher |
 
 ---
 
-<div align="center">
-
-[← Chapter 03](../03-testing-edge-cases-and-ci/README.md) · [Home](../../../../README.md)
-
-</div>
+[**Next ->** Concurrency Safety In Rust](./01-concurrency-safety-in-rust.md)  
+[**<- Previous** Chapter 03: Testing, Edge Cases, And CI](../03-testing-edge-cases-and-ci/README.md)

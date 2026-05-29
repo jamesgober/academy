@@ -4,49 +4,46 @@
     <b>Rust</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Rust](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [Rust](../../README.md)
 
 ---
 
-# Chapter 01 — Getting Started
+# Chapter 01: Getting Started
 
-Install Rust, set up a real project layout, and learn Cargo workflows before
-you start learning Rust syntax. By the end of this chapter, you will have a
-clean project setup, a repeatable development loop, and a collaboration-ready
-GitHub workflow.
+This chapter gets your machine, editor, project folder, Cargo workflow, and Git
+habits ready before Rust syntax gets difficult.
+
+By the end, you will be able to:
+
+- Install and verify Rust with `rustup`, `rustc`, and `cargo`
+- Create and run a Cargo project
+- Explain the files Cargo creates
+- Use a daily workflow: format, check, test, run
+- Understand when a workspace is useful
+- Commit a clean Rust project to Git
 
 > [!IMPORTANT]
-> If terminal commands are new to you, start with [Terminal Basics](../../../../getting-started/terminal-basics.md) and your OS page before continuing.
+> If terminal commands are new to you, start with [Terminal Basics](../../../../getting-started/terminal-basics.md)
+> and your operating-system terminal page before continuing.
 
 > [!NOTE]
-> If Git/GitHub workflow is new to you, complete the [GitHub Masterclass](../../../../platforms/github/) before moving deeper into Rust projects.
-
-> [!NOTE]
-> This chapter intentionally front-loads setup and tooling. That makes the next
-> chapters about writing Rust code much easier to follow.
+> If Git/GitHub workflow is new to you, complete the [GitHub Masterclass](../../../../platforms/github/)
+> before moving deeper into Rust projects.
 
 ## Lessons
 
-| # | Lesson |
-|---|--------|
-| 01 | [Installing Rust](./01-installing-rust.md) |
-| 02 | [Create Your First Cargo Project](./02-first-cargo-project.md) |
-| 03 | [Rust Project Structure](./03-rust-project-layout.md) |
-| 04 | [Cargo Workflow Essentials](./04-cargo-workflow.md) |
-| 05 | [Cargo Workspaces and Monorepos](./05-workspaces-and-monorepos.md) |
-| 06 | [Git and GitHub for Rust Projects](./06-git-and-github-for-rust.md) |
+| # | Lesson | You build or practice |
+|---|---|---|
+| 01 | [Installing Rust](./01-installing-rust.md) | Install Rust, verify tools, configure editor |
+| 02 | [Create Your First Cargo Project](./02-first-cargo-project.md) | Build and run `hello-rust` |
+| 03 | [Rust Project Structure](./03-rust-project-layout.md) | Understand `src/`, `tests/`, `examples/`, and `target/` |
+| 04 | [Cargo Workflow Essentials](./04-cargo-workflow.md) | Learn the daily command loop |
+| 05 | [Cargo Workspaces and Monorepos](./05-workspaces-and-monorepos.md) | Create a two-crate workspace |
+| 06 | [Git and GitHub for Rust Projects](./06-git-and-github-for-rust.md) | Prepare a collaboration-ready repo |
 
-After this chapter, continue to [Chapter 02 — Rust Core Mental Model](../02-rust-core-mental-model/)
-where you start writing and reading real Rust code.
+After this chapter, continue to [Chapter 02: Rust Core Mental Model](../02-rust-core-mental-model/).
 
 ---
 
-<div align="center">
-
-[← Rust](../../README.md) · [Home](../../../../README.md)
-
-</div>
+[**Next ->** Installing Rust](./01-installing-rust.md)  
+[**<- Previous** Rust](../../README.md)
