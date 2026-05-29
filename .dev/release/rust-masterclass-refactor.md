@@ -37,6 +37,20 @@ module/export coverage, Cargo configuration examples, and practical references.
   Log CLI capstone.
 - Added a practical Rust patterns reference for CLI, parsing, files, iterators,
   worker threads, macros, attributes, and quality commands.
+- Deepened Chapter 02 from Rust core summaries into full beginner lessons on
+  variables, ownership, borrowing, lifetimes, structs, enums, pattern matching,
+  `Option`, `Result`, and a garage intake checkpoint project.
+- Deepened Chapter 03 into a real testing workshop covering unit tests,
+  integration tests, doc tests, edge cases, ignored tests, panic tests,
+  property/fuzz/snapshot testing tradeoffs, CI, failure debugging, flaky tests,
+  and a tested Study Log library capstone.
+- Deepened Chapter 04 into a practical concurrency and async chapter covering
+  data races, `Send`, `Sync`, `thread::spawn`, `JoinHandle`, `Arc<Mutex<T>>`,
+  channels, async futures, Tokio runtime basics, `.await`, timeouts,
+  cancellation, retries, and a threaded job dispatcher capstone.
+- Deepened Chapter 05 around package/crate/module structure, `Cargo.toml`,
+  library APIs, binary entry points, multiple binaries, side-effect boundaries,
+  module cleanliness, re-exports, and refactoring messy Rust codebases.
 
 ## Validation
 
@@ -48,9 +62,11 @@ ODD_FENCE_COUNT=0
 MERMAID_BLOCK_COUNT=0
 
 Lessons        : 36
-CourseWords    : 16824
-AvgLessonWords : 467
-ReferencePages : 12
-ReferenceWords : 4687
-AvgRefWords    : 391
+CourseFiles    : 42
+CourseWords    : 36221
+AvgLessonWords : 1006
+ReferencePages : 13
+ReferenceWords : 4363
+AvgRefWords    : 336
+TotalWords     : 40584
 ```

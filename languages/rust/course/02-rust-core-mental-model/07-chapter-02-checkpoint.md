@@ -4,58 +4,118 @@
     <b>Rust</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Rust](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Rust](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
 # Chapter 02 Checkpoint
 
-> Confirm you can reason with Rust's core model before moving to testing and CI.
+> Prove you can reason with Rust's core model before testing, async, and project architecture.
 
-## Must-be-able checklist
+## Must-Be-Able Checklist
 
-- Explain ownership and moves without hand-waving.
-- Explain why mutable borrowing is exclusive.
-- Read a simple lifetime signature and describe constraints.
-- Use structs/enums and `match` to model state.
-- Return and propagate errors with `Result` and `?`.
+- Explain the difference between copy and move.
+- Point to the owner of a `String`.
+- Choose `&str`, `String`, `&T`, or `&mut T` for a function parameter.
+- Explain why shared and mutable borrows cannot overlap freely.
+- Explain what a lifetime annotation says.
+- Build structs with private fields and public methods.
+- Use enums to represent one-of-many states.
+- Use `match` and `if let`.
+- Use `Option`, `Result`, `?`, `ok_or`, and `map_err`.
+- Avoid `unwrap` in normal app flow.
 
-## Practice task
+## Capstone: Garage Intake Module
 
-Build a small "garage intake" module:
-- input: car model and optional speed string
+Build a small module that processes raw car intake records.
+
+Raw input:
+
+```rust
+struct IntakeRequest {
+    model: String,
+    speed_raw: String,
+}
+```
+
+Clean accepted data:
+
+```rust
+struct Car {
+    model: String,
+    max_speed: u32,
+}
+```
+
+Status:
+
+```rust
+enum IntakeStatus {
+    Accepted(Car),
+    Rejected { model: String, reason: String },
+}
+```
+
+Requirements:
+
+- trim model names
+- reject empty model names
 - parse speed with `Result`
-- represent status as enum (`Accepted`, `Rejected(reason)`)
-- process list of cars and print status messages
+- reject speed `0`
+- avoid unnecessary cloning
+- format one output line per request
 
-## Expected output characteristics
+## Suggested Functions
 
-Your solution should:
-- print a status line for each input car
-- use enums to distinguish accepted and rejected cases
-- avoid unnecessary cloning while passing values through the flow
+```rust
+fn normalize_model(model: &str) -> Option<String>
+fn parse_speed(raw: &str) -> Result<u32, IntakeError>
+fn process_request(request: IntakeRequest) -> IntakeStatus
+fn format_status(status: &IntakeStatus) -> String
+```
 
-## Reviewer checklist
+Create your own `IntakeError` enum.
 
-- Can the learner explain the garage intake flow from input to output?
-- Are ownership and borrowing choices justified?
-- Is the error path understandable without extra explanation?
+## Hints
 
-> [!IMPORTANT]
-> If ownership/borrowing still feels mysterious, revisit lessons 02-04 before
-> continuing. The next chapter assumes comfort with these rules.
+- Use `ok_or` to convert missing model into an error.
+- Use `map_err` to convert parse errors.
+- `process_request` may take ownership of `IntakeRequest`.
+- `format_status` should borrow because it only reads.
+- If you clone, write a comment explaining why the second owned value is needed.
+
+## Solution Direction
+
+Your flow should look like this:
+
+```text
+raw request
+    |
+    v
+trim and validate model
+    |
+    v
+parse and validate speed
+    |
+    |-- success -> Accepted(Car)
+    `-- failure -> Rejected { model, reason }
+```
+
+## Reviewer Checklist
+
+- Can the learner explain where ownership moves?
+- Are borrowed parameters used for read-only formatting and validation?
+- Are invalid states represented with enums instead of loose booleans?
+- Are errors named and understandable?
+- Does the code compile without unnecessary `clone()` calls?
 
 ---
 
 ## Next
 
-Continue to [Chapter 03 — Testing, Edge Cases, and CI](../03-testing-edge-cases-and-ci/README.md).
+Continue to [Chapter 03 - Testing, Edge Cases, and CI](../03-testing-edge-cases-and-ci/README.md).
 
 ---
 
-[**Next ->** Chapter Testing, Edge Cases, and CI](../03-testing-edge-cases-and-ci/README.md)  
+[**Next ->** Testing, Edge Cases, and CI](../03-testing-edge-cases-and-ci/README.md)  
 [**<- Previous** Error Handling with Option and Result](./06-error-handling-with-option-and-result.md)

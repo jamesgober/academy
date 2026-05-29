@@ -4,72 +4,181 @@
     <b>Rust</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Rust](../../README.md) · [Chapter 03](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Rust](../../README.md) / [Chapter 03](./README.md)
 
 ---
 
 # Designing Edge-Case Tests
 
-> Most production bugs hide in edge cases, not happy paths.
+> Good tests do not only prove the happy path; they guard the weird corners where bugs breed.
 
 **You will learn:**
-- Edge-case categories
-- Boundary-value test strategy
-- Invariant-based thinking
+- how to identify edge-case categories
+- how to test boundaries
+- how to test invariants
+- how to table-test multiple cases
+- how to test parser and validation logic like a professional
 
 **Before this page, you should know:** [Rust Testing Foundations](./01-rust-testing-foundations.md)
 
 ---
 
-## Edge-case categories
+## Edge-Case Categories
 
-- empty input
-- max/min boundary values
-- invalid format
-- duplicate/ordering assumptions
-- overflow/underflow scenarios
+| Category | Examples |
+|---|---|
+| empty input | `""`, empty list, missing file |
+| whitespace | `"   "`, `"\n\t"` |
+| boundary values | `0`, `1`, max allowed, one above max |
+| invalid format | `"abc"` where number expected |
+| duplicates | same topic repeated |
+| ordering | sorted output, stable grouping |
+| large values | huge minutes, long strings |
+| Unicode | non-ASCII text |
+| failure paths | parse error, file error, permission error |
 
-## Boundary test example
+You do not need infinite tests. You need the right tests around decisions.
+
+## Boundary Tests
 
 ```rust
-fn is_valid_score(score: u32) -> bool {
-    score <= 100
+const MAX_DAILY_MINUTES: u32 = 24 * 60;
+
+fn is_valid_minutes(minutes: u32) -> bool {
+    minutes > 0 && minutes <= MAX_DAILY_MINUTES
 }
 
 #[test]
-fn boundary_scores() {
-    assert!(is_valid_score(0));
-    assert!(is_valid_score(100));
-    assert!(!is_valid_score(101));
+fn minute_boundaries() {
+    assert!(!is_valid_minutes(0));
+    assert!(is_valid_minutes(1));
+    assert!(is_valid_minutes(MAX_DAILY_MINUTES));
+    assert!(!is_valid_minutes(MAX_DAILY_MINUTES + 1));
 }
 ```
 
-## Invariant tests
+Boundaries matter because bugs often happen one step below or above a rule.
 
-An invariant is a rule that must always hold.
+## Table-Style Tests
 
-Example:
-- "cart total should never be negative"
+Rust does not need a special framework for table tests.
 
-> [!IMPORTANT]
-> Write the invariant as a sentence before writing the test.
+```rust
+#[test]
+fn topic_normalization_cases() {
+    let cases = [
+        ("Rust", Some("Rust")),
+        ("  Rust  ", Some("Rust")),
+        ("", None),
+        ("   ", None),
+        ("\t\n", None),
+    ];
+
+    for (input, expected) in cases {
+        assert_eq!(
+            normalize_topic(input).as_deref(),
+            expected,
+            "input should normalize correctly: {input:?}"
+        );
+    }
+}
+```
+
+`as_deref()` turns `Option<String>` into `Option<&str>` for easier comparison.
+
+## Invariants
+
+An invariant is a rule that should always be true.
+
+For `StudyEntry`:
+
+```text
+topic is never empty
+minutes is greater than zero
+minutes is not more than one day
+```
+
+Test the constructor because the constructor protects those invariants.
+
+```rust
+#[test]
+fn constructor_protects_invariants() {
+    assert!(StudyEntry::new("Rust", 1).is_ok());
+    assert!(StudyEntry::new("", 1).is_err());
+    assert!(StudyEntry::new("Rust", 0).is_err());
+    assert!(StudyEntry::new("Rust", 24 * 60 + 1).is_err());
+}
+```
+
+## Parser Tests
+
+Parser tests should cover good lines and bad lines.
+
+```rust
+#[test]
+fn parses_valid_line() {
+    let entry = parse_entry_line("Rust,45").unwrap();
+
+    assert_eq!(entry.topic(), "Rust");
+    assert_eq!(entry.minutes(), 45);
+}
+
+#[test]
+fn rejects_missing_minutes() {
+    assert_eq!(
+        parse_entry_line("Rust").unwrap_err(),
+        ParseEntryError::MissingMinutes
+    );
+}
+
+#[test]
+fn rejects_invalid_minutes() {
+    assert_eq!(
+        parse_entry_line("Rust,abc").unwrap_err(),
+        ParseEntryError::InvalidMinutes
+    );
+}
+```
+
+Do not test only valid examples. Parsers live at messy input boundaries.
+
+## Regression Tests
+
+A regression test is a test for a bug that already happened.
+
+If a user reports that `" Rust , 45 "` failed, add a test:
+
+```rust
+#[test]
+fn trims_topic_and_minutes_from_line() {
+    let entry = parse_entry_line(" Rust , 45 ").unwrap();
+
+    assert_eq!(entry.topic(), "Rust");
+    assert_eq!(entry.minutes(), 45);
+}
+```
+
+Regression tests keep old bugs from quietly returning.
+
+## Reference Links
+
+- [Testing and CI Cheat Sheet](../../reference/testing-and-ci-cheat-sheet.md)
+- [Practical Rust Patterns](../../reference/practical-rust-patterns.md)
 
 ---
 
 ## Recap
 
-- Edge cases should be explicit test design, not afterthoughts.
-- Boundary tests are simple and high-impact.
-- Invariants convert design rules into enforceable tests.
+- Edge cases live around boundaries, bad input, empty input, and invariants.
+- Table-style tests make repeated cases readable.
+- Parser tests must include invalid input.
+- Regression tests preserve fixes.
 
-## Try it yourself
+## Try It Yourself
 
-Take one existing function and write 5 edge-case tests before adding new
-features.
+Write table-style tests for `parse_entry_line`. Include valid input, trimmed
+input, missing comma, empty topic, zero minutes, non-numeric minutes, and a topic
+containing Unicode text.
 
 ---
 

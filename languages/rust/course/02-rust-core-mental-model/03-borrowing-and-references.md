@@ -4,105 +4,309 @@
     <b>Rust</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Rust](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Rust](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
 # Borrowing and References
 
-> Borrowing lets you use data without taking ownership.
+> Borrowing lets code use a value without becoming responsible for owning or dropping it.
 
 **You will learn:**
-- Immutable and mutable references
-- Borrowing rules and aliasing safety
-- How borrowing prevents data races
+- what `&T` and `&mut T` mean
+- why shared reads and exclusive writes cannot overlap
+- how dereferencing works
+- how to narrow borrow scopes
+- how to design functions that borrow instead of move
+- how to fix common borrow-checker errors
 
 **Before this page, you should know:** [Ownership: The One-Owner Rule](./02-ownership-the-one-owner-rule.md)
 
 ---
 
-## Borrowing without owning
+## Borrowing Without Owning
+
+```rust
+fn print_topic(topic: &str) {
+    println!("topic: {topic}");
+}
+
+fn main() {
+    let topic = String::from("borrowing");
+
+    print_topic(&topic);
+    println!("still owned by main: {topic}");
+}
+```
+
+`&topic` creates a shared reference. A reference points at a value without taking
+ownership.
+
+```text
+topic owns String
+    |
+    v
+heap text
+    ^
+    |
+borrowed &topic reads it temporarily
+```
+
+The owner is still `topic`.
+
+## Prefer `&str` Over `&String`
+
+This works:
 
 ```rust
 fn print_name(name: &String) {
-    println!("{}", name);
-}
-
-fn main() {
-    let car = String::from("Banshee");
-    print_name(&car);
-    println!("{}", car); // still valid
+    println!("{name}");
 }
 ```
 
-`&car` creates a reference; ownership stays in `car`.
-
-## Mutable borrow
+But this is more flexible:
 
 ```rust
-fn boost(speed: &mut i32) {
-    *speed += 10;
+fn print_name(name: &str) {
+    println!("{name}");
+}
+```
+
+`&str` accepts string literals, `String`, and string slices.
+
+```rust
+let owned = String::from("Rust");
+
+print_name("literal");
+print_name(&owned);
+print_name(&owned[0..2]);
+```
+
+Use `&String` only when you specifically need `String` methods that are not
+available on `str`, which is uncommon.
+
+## Mutable Borrowing
+
+A mutable borrow gives temporary exclusive write access.
+
+```rust
+fn add_minutes(minutes: &mut u32, extra: u32) {
+    *minutes += extra;
 }
 
 fn main() {
-    let mut speed = 50;
-    boost(&mut speed);
-    println!("{}", speed);
+    let mut minutes = 30;
+    add_minutes(&mut minutes, 15);
+
+    println!("{minutes}");
 }
 ```
 
-## Borrowing rule that matters
+`*minutes` dereferences the reference. Dereference means "go to the value this
+reference points to."
 
-At one time, you can have:
-- any number of immutable references, or
-- exactly one mutable reference
+## Why Mutable Borrows Are Exclusive
 
-Not both at the same time.
+At one time, Rust allows either:
+
+- many shared references, or
+- one mutable reference
+
+Not both.
 
 ```text
-Owner value
-    |
-    |-- many shared borrows: &T, &T, &T
-    |       `-- no mutable borrow at the same time
-    |
-    `-- one mutable borrow: &mut T
-            `-- no shared borrows at the same time
+Safe:
+value <- &T
+value <- &T
+value <- &T
+
+Safe:
+value <- &mut T
+
+Not safe:
+value <- &T
+value <- &mut T at same time
 ```
 
-This blocks simultaneous read/write aliasing bugs.
+This prevents code from reading a value while another part of the code changes
+it behind its back.
 
-> [!WARNING]
-> Most beginner borrow-checker errors are overlapping references with scopes
-> that are wider than intended.
+## Borrow Scope
 
-> [!NOTE]
-> Common compiler translation:
-> - `E0499` usually means you attempted multiple mutable borrows at once.
-> - Fix by narrowing the scope of the first borrow or restructuring the code
->   so only one mutable reference exists at a time.
+Borrow scope is how long the borrow is used.
+
+```rust
+fn main() {
+    let mut topic = String::from("Rust");
+
+    let first = &topic;
+    println!("{first}");
+
+    let second = &mut topic;
+    second.push_str(" borrowing");
+
+    println!("{topic}");
+}
+```
+
+This works because the shared borrow `first` is no longer used after its
+`println!`. Modern Rust can often see that the borrow ends before the variable's
+textual scope ends.
+
+If a borrow lasts too long, add a block:
+
+```rust
+fn main() {
+    let mut topic = String::from("Rust");
+
+    {
+        let first = &topic;
+        println!("{first}");
+    }
+
+    let second = &mut topic;
+    second.push_str(" borrowing");
+}
+```
+
+## Common Error: Two Mutable Borrows
+
+```rust
+fn main() {
+    let mut topic = String::from("Rust");
+
+    let a = &mut topic;
+    let b = &mut topic;
+
+    println!("{a} {b}");
+}
+```
+
+Rust reports something like:
+
+```text
+error[E0499]: cannot borrow `topic` as mutable more than once at a time
+```
+
+Beginner translation: "Two parts of the program are trying to have exclusive
+write access at the same time."
+
+Fix by sequencing the work:
+
+```rust
+fn main() {
+    let mut topic = String::from("Rust");
+
+    {
+        let a = &mut topic;
+        a.push_str(" ownership");
+    }
+
+    {
+        let b = &mut topic;
+        b.push_str(" borrowing");
+    }
+
+    println!("{topic}");
+}
+```
+
+## Borrowing Struct Fields
+
+Rust can borrow different fields separately in many cases.
+
+```rust
+struct StudyEntry {
+    topic: String,
+    minutes: u32,
+}
+
+fn main() {
+    let mut entry = StudyEntry {
+        topic: String::from("Rust"),
+        minutes: 30,
+    };
+
+    let topic = &entry.topic;
+    let minutes = &mut entry.minutes;
+
+    *minutes += 15;
+    println!("{topic}: {minutes}");
+}
+```
+
+This works because `topic` and `minutes` are different fields.
+
+## Borrowing in Real API Design
+
+```rust
+#[derive(Debug)]
+struct StudyEntry {
+    topic: String,
+    minutes: u32,
+}
+
+fn print_entry(entry: &StudyEntry) {
+    println!("{}: {} minutes", entry.topic, entry.minutes);
+}
+
+fn add_time(entry: &mut StudyEntry, extra: u32) {
+    entry.minutes += extra;
+}
+
+fn main() {
+    let mut entry = StudyEntry {
+        topic: String::from("Rust"),
+        minutes: 30,
+    };
+
+    print_entry(&entry);
+    add_time(&mut entry, 15);
+    print_entry(&entry);
+}
+```
+
+The function signatures tell the story:
+
+- `print_entry(&StudyEntry)` reads only
+- `add_time(&mut StudyEntry)` mutates
+
+## Decision Table
+
+| Function need | Parameter |
+|---|---|
+| read text | `&str` |
+| read struct | `&StudyEntry` |
+| mutate struct | `&mut StudyEntry` |
+| read list | `&[StudyEntry]` |
+| store value | owned `StudyEntry` or `String` |
+
+## Reference Links
+
+- [Ownership and Borrowing Cheat Sheet](../../reference/ownership-and-borrowing-cheat-sheet.md)
+- [Functions, Methods, Generics, and Traits](../../reference/functions-methods-generics-and-traits.md)
+- [Errors, Warnings, and Debugging](../../reference/errors-warnings-and-debugging.md)
 
 ---
 
 ## Recap
 
-- Borrowing lets code use data without ownership transfer.
-- `&T` is shared immutable access.
-- `&mut T` is exclusive mutable access.
+- `&T` gives shared read access.
+- `&mut T` gives exclusive write access.
+- Shared and mutable borrows cannot overlap freely.
+- Dereferencing with `*` accesses the referenced value.
+- Narrow borrow scopes when the compiler says a borrow lasts too long.
+- Borrowing is the normal fix when ownership transfer is unnecessary.
 
-## Try it yourself
+## Try It Yourself
 
-Write two functions: one reads `&String`, another updates `&mut String`, and
-call them in a sequence that satisfies borrow rules.
+Create a `StudyEntry` and write:
 
-## Reviewer checklist
+- `print_entry(entry: &StudyEntry)`
+- `add_minutes(entry: &mut StudyEntry, extra: u32)`
+- `topic(entry: &StudyEntry) -> &str`
 
-- Can the learner explain why `&T` and `&mut T` cannot overlap freely?
-- Can they describe the difference between owner and borrower?
-- Can they locate the scope that should be narrowed in a borrow-check failure?
+Call them in a valid order and explain why the borrows do not conflict.
 
 ---
 
