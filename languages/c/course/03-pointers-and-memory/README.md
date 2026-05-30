@@ -1,18 +1,14 @@
-<h1 align="center">
+﻿<h1 align="center">
 	<img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
 	<br>
 	<b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md)
 
 ---
 
-# Chapter 03 — Pointers and Memory
+# Chapter 03 : Pointers and Memory
 
 Learn the first hard part of C carefully: addresses, pointers, dereferencing,
 and the basic memory model. This chapter should make pointers understandable,
@@ -31,12 +27,14 @@ not mystical.
 | 07 | [Avoiding Leaks, Dangling Pointers, and Double Free](./07-avoiding-leaks-dangling-pointers-and-double-free.md) |
 | 08 | [Chapter 03 Checkpoint](./08-chapter-03-checkpoint.md) |
 
-After this chapter, continue to [Chapter 04 — Structs, Arrays, and Strings](../04-structs-arrays-and-strings/README.md).
+After this chapter, continue to [Chapter 04 : Structs, Arrays, and Strings](../04-structs-arrays-and-strings/README.md).
 
 ---
 
 <div align="center">
 
-[← C Course](../README.md) · [C](../../README.md) · [Home](../../../../README.md)
+[C Course](../README.md)  /  [C](../../README.md)  /  [Home](../../../../README.md)
 
 </div>
+
+

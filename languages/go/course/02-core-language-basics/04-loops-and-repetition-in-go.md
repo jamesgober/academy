@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -78,10 +74,7 @@ Write a loop that prints the numbers `1` through `5`.
 
 ---
 
-<div align="center">
+[**Next ->** Arrays, Slices, and Maps in Plain Language](./05-arrays-slices-and-maps-in-plain-language.md)
+[**<- Previous** Conditionals and Comparison](./03-conditionals-and-comparison.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Conditionals and Comparison](./03-conditionals-and-comparison.md) | [Chapter 02](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Arrays, Slices, and Maps in Plain Language →](./05-arrays-slices-and-maps-in-plain-language.md) |
 
-</div>

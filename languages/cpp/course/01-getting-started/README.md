@@ -1,4 +1,4 @@
-# Chapter 01 — Getting Started
+﻿# Chapter 01 : Getting Started
 
 Install a C++ compiler, build your first program, and learn how to read compile
 errors and warnings instead of guessing.
@@ -15,4 +15,5 @@ errors and warnings instead of guessing.
 
 ---
 
-[← C++ Course](../README.md) · [C++](../../README.md)
+[C++ Course](../README.md)  /  [C++](../../README.md)
+

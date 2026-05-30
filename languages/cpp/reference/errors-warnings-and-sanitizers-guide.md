@@ -1,4 +1,4 @@
-# Errors, Warnings, and Sanitizers Guide
+﻿# Errors, Warnings, and Sanitizers Guide
 
 ## Error reading pattern
 
@@ -56,4 +56,5 @@ g++ -std=c++20 -g -O1 -fsanitize=address -fno-omit-frame-pointer main.cpp -o app
 
 ---
 
-[← Reference Index](./README.md) · [C++](../README.md)
+[Reference Index](./README.md)  /  [C++](../README.md)
+

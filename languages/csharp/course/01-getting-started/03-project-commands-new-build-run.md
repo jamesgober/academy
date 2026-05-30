@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -66,11 +61,7 @@ Create a second console project and run `new`, `build`, and `run` in order.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Reading Errors and Warnings](./04-reading-errors-and-warnings.md)  
+[**<- Previous** Your First C# Program](./02-your-first-csharp-program.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Your First C# Program](./02-your-first-csharp-program.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Reading Errors and Warnings →](./04-reading-errors-and-warnings.md) |
 
-</div>

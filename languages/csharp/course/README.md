@@ -14,4 +14,4 @@ Learn C# from environment setup to production-style patterns.
 
 ---
 
-[← C#](../README.md) · [Academy Home](../../README.md)
+[C#](../README.md) / [Academy Home](../../README.md)

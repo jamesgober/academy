@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -64,10 +60,7 @@ Write a function named `triple` that returns three times an integer input.
 
 ---
 
-<div align="center">
+[**Next ->** Conditionals and Comparison](./03-conditionals-and-comparison.md)
+[**<- Previous** Variables, Values, and Basic Types](./01-variables-values-and-basic-types.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Variables, Values, and Basic Types](./01-variables-values-and-basic-types.md) | [Chapter 02](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Conditionals and Comparison →](./03-conditionals-and-comparison.md) |
 
-</div>

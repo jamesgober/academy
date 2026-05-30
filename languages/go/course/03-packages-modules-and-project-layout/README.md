@@ -1,18 +1,14 @@
-<h1 align="center">
+﻿<h1 align="center">
 	<img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
 	<br>
 	<b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md)
 
 ---
 
-# Chapter 03 — Packages, Modules, and Project Layout
+# Chapter 03 : Packages, Modules, and Project Layout
 
 Learn how Go projects are organized: packages, imports, exported names,
 modules, interfaces, and how to keep a growing codebase understandable.
@@ -28,12 +24,14 @@ modules, interfaces, and how to keep a growing codebase understandable.
 | 05 | [Project Layout and Module Boundaries](./05-project-layout-and-module-boundaries.md) |
 | 06 | [Chapter 03 Checkpoint](./06-chapter-03-checkpoint.md) |
 
-After this chapter, continue to [Chapter 04 — Testing and Tooling](../04-testing-and-tooling/README.md).
+After this chapter, continue to [Chapter 04 : Testing and Tooling](../04-testing-and-tooling/README.md).
 
 ---
 
 <div align="center">
 
-[← Go Course](../README.md) · [Go](../../README.md) · [Home](../../../../README.md)
+[Go Course](../README.md)  /  [Go](../../README.md)  /  [Home](../../../../README.md)
 
 </div>
+
+

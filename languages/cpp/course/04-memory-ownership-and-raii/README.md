@@ -1,4 +1,4 @@
-# Chapter 04 — Memory, Ownership, and RAII
+﻿# Chapter 04 : Memory, Ownership, and RAII
 
 Learn stack vs heap, raw pointers vs references, smart pointers, and RAII-based
 resource lifetime management.
@@ -15,4 +15,5 @@ resource lifetime management.
 
 ---
 
-[← C++ Course](../README.md) · [C++](../../README.md)
+[C++ Course](../README.md)  /  [C++](../../README.md)
+

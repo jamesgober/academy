@@ -1,4 +1,4 @@
-# Chapter 05 — Build, Test, and Debug Basics
+﻿# Chapter 05 : Build, Test, and Debug Basics
 
 Learn strict compiler flags, tests, debugger basics, sanitizer workflows, and
 release-quality checks for C++ projects.
@@ -15,4 +15,5 @@ release-quality checks for C++ projects.
 
 ---
 
-[← C++ Course](../README.md) · [C++](../../README.md)
+[C++ Course](../README.md)  /  [C++](../../README.md)
+

@@ -1,4 +1,4 @@
-# C Course
+﻿# C Course
 
 Learn C in order.
 
@@ -18,4 +18,5 @@ Learn C in order.
 
 ---
 
-[← C](../README.md) · [Academy Home](../../README.md)
+[C](../README.md)  /  [Academy Home](../../README.md)
+

@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -56,10 +52,7 @@ Introduce one small bug, then describe how you would isolate it in four steps.
 
 ---
 
-<div align="center">
+[**Next ->** Address Sanitizer and Leak Detection](./03-address-sanitizer-and-leak-detection.md)
+[**<- Previous** Compiler Warnings and Strict Build Flags](./01-compiler-warnings-and-strict-build-flags.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Compiler Warnings and Strict Build Flags](./01-compiler-warnings-and-strict-build-flags.md) | [Chapter 05](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Address Sanitizer and Leak Detection →](./03-address-sanitizer-and-leak-detection.md) |
 
-</div>

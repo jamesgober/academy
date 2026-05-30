@@ -1,18 +1,14 @@
-<h1 align="center">
+﻿<h1 align="center">
 	<img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
 	<br>
 	<b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md)
 
 ---
 
-# Chapter 05 — Concurrency and Practical Applications
+# Chapter 05 : Concurrency and Practical Applications
 
 Learn the first layer of Go concurrency without mystifying it: goroutines,
 channels, synchronization risks, and how to use these tools in small projects.
@@ -33,6 +29,8 @@ After this chapter, return to the reference or move into the next language track
 
 <div align="center">
 
-[← Go Course](../README.md) · [Go](../../README.md) · [Home](../../../../README.md)
+[Go Course](../README.md)  /  [Go](../../README.md)  /  [Home](../../../../README.md)
 
 </div>
+
+

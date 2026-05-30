@@ -1,8 +1,4 @@
-<div align="center">
-
-[Home](../../../README.md) · [Go](../README.md)
-
-</div>
+﻿[Home](../../../README.md) / [Go](../README.md)
 
 ---
 
@@ -33,6 +29,8 @@
 
 <div align="center">
 
-[← Go](../README.md) · [Home](../../../README.md)
+[Go](../README.md)  /  [Home](../../../README.md)
 
 </div>
+
+

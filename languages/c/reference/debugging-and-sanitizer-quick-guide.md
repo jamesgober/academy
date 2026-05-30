@@ -1,4 +1,4 @@
-# Debugging and Sanitizer Quick Guide
+﻿# Debugging and Sanitizer Quick Guide
 
 Quick workflow for memory-issue investigation in C.
 
@@ -32,4 +32,5 @@ gcc -g -O1 -fsanitize=address -fno-omit-frame-pointer main.c -o app
 
 ---
 
-[← Reference Index](./README.md) · [C](../README.md)
+[Reference Index](./README.md)  /  [C](../README.md)
+

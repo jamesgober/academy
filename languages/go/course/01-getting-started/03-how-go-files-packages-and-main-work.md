@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -34,9 +30,9 @@ That means this is normal:
 
 ```text
 hello-go/
-├── main.go
-├── message.go
-└── printer.go
+|-- main.go
+|-- message.go
+`-- printer.go
 ```
 
 All three files can say:
@@ -94,10 +90,8 @@ call it from `main.go`.
 
 ---
 
-<div align="center">
+[**Next ->** Go Command Workflow](./04-go-command-workflow.md)
+[**<- Previous** Your First Go Program](./02-your-first-go-program.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Your First Go Program](./02-your-first-go-program.md) | [Chapter 01](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Go Command Workflow →](./04-go-command-workflow.md) |
 
-</div>
+

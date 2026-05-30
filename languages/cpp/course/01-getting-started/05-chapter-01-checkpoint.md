@@ -1,15 +1,11 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C++ logo" src="../../../../_assets/logos/cpp.svg">
     <br>
     <b>C++</b>
 </h1>
 
 <!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C++](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C++](../../README.md) / [Chapter 01](./README.md)
 
 ---
 # Chapter 01 Checkpoint
@@ -30,8 +26,8 @@ fix it, and recompile cleanly.
 <!-- ===== FOOT NAV ===== -->
 <div align="center">
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Reading Errors and Warnings](./04-reading-errors-and-warnings.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Track Overview →](../../README.md) |
+[**Next ->** [Track Overview](../../README.md)]
+[**<- Previous** [Reading Errors and Warnings](./04-reading-errors-and-warnings.md)]
 
 </div>
+

@@ -1,4 +1,4 @@
-# Go Course
+﻿# Go Course
 
 Learn Go in order.
 
@@ -18,4 +18,5 @@ Learn Go in order.
 
 ---
 
-[← Go](../README.md) · [Academy Home](../../README.md)
+[Go](../README.md)  /  [Academy Home](../../README.md)
+

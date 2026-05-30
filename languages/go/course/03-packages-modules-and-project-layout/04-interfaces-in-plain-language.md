@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 03](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 03](./README.md)
 
 ---
 
@@ -62,10 +58,7 @@ Define a `Runner` interface and two structs that satisfy it in different ways.
 
 ---
 
-<div align="center">
+[**Next ->** Project Layout and Module Boundaries](./05-project-layout-and-module-boundaries.md)
+[**<- Previous** Structs and Methods in Go](./03-structs-and-methods-in-go.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Structs and Methods in Go](./03-structs-and-methods-in-go.md) | [Chapter 03](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Project Layout and Module Boundaries →](./05-project-layout-and-module-boundaries.md) |
 
-</div>

@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -73,11 +68,7 @@ Rewrite one `for` loop into `foreach`, then explain which version is easier to r
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Chapter 02 Checkpoint](./05-chapter-02-checkpoint.md)  
+[**<- Previous** Conditionals, Switch, and Pattern Matching](./03-conditionals-switch-and-pattern-matching.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Conditionals, Switch, and Pattern Matching](./03-conditionals-switch-and-pattern-matching.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Chapter 02 Checkpoint →](./05-chapter-02-checkpoint.md) |
 
-</div>

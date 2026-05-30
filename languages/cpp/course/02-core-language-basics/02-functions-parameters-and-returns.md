@@ -1,15 +1,11 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C++ logo" src="../../../../_assets/logos/cpp.svg">
     <br>
     <b>C++</b>
 </h1>
 
 <!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C++](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C++](../../README.md) / [Chapter 02](./README.md)
 
 ---
 # Functions, Parameters, and Returns
@@ -79,8 +75,8 @@ Prefer `maxRetries` over `x`, `sourcePath` over `s` when meaning matters.
 <!-- ===== FOOT NAV ===== -->
 <div align="center">
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Types, Variables, and Strings](./01-types-variables-and-strings.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Conditionals: if, else-if, ternary, switch →](./03-conditionals-if-else-if-ternary-switch.md) |
+[**Next ->** [Conditionals: if, else-if, ternary, switch](./03-conditionals-if-else-if-ternary-switch.md)]
+[**<- Previous** [Types, Variables, and Strings](./01-types-variables-and-strings.md)]
 
 </div>
+

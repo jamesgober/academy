@@ -1,18 +1,14 @@
-<h1 align="center">
+﻿<h1 align="center">
 	<img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
 	<br>
 	<b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md)
 
 ---
 
-# Chapter 04 — Structs, Arrays, and Strings
+# Chapter 04 : Structs, Arrays, and Strings
 
 Learn how C models grouped data and sequences in memory: structs, arrays, and
 character arrays used as strings. This chapter emphasizes safe boundaries and
@@ -29,8 +25,10 @@ clear size handling.
 | 05 | [Struct and Array Design Patterns](./05-struct-and-array-design-patterns.md) |
 | 06 | [Chapter 04 Checkpoint](./06-chapter-04-checkpoint.md) |
 
-After this chapter, continue to [Chapter 05 — Build, Test, and Debug Basics](../05-build-test-and-debug-basics/README.md).
+After this chapter, continue to [Chapter 05 : Build, Test, and Debug Basics](../05-build-test-and-debug-basics/README.md).
 
 ---
 
-[← C Course](../README.md) · [C](../../README.md) · [Home](../../../../README.md)
+[C Course](../README.md)  /  [C](../../README.md)  /  [Home](../../../../README.md)
+
+

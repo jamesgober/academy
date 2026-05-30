@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -70,11 +65,7 @@ Create variables using `int`, `decimal`, and `string`, then print them in one in
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Methods, Parameters, and Returns](./02-methods-parameters-and-returns.md)  
+[**<- Previous** Chapter Start](./README.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Methods, Parameters, and Returns →](./02-methods-parameters-and-returns.md) |
 
-</div>

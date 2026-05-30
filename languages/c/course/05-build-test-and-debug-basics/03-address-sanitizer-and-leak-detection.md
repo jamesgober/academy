@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -64,10 +60,7 @@ Create a tiny leak intentionally, run with sanitizer, and explain the report in 
 
 ---
 
-<div align="center">
+[**Next ->** Memory-Issue Triage Workflow](./04-memory-issue-triage-workflow.md)
+[**<- Previous** Runtime Debugging Basics](./02-runtime-debugging-basics.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Runtime Debugging Basics](./02-runtime-debugging-basics.md) | [Chapter 05](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Memory-Issue Triage Workflow →](./04-memory-issue-triage-workflow.md) |
 
-</div>

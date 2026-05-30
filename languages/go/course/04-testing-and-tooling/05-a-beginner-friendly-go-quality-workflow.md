@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -59,10 +55,7 @@ Write the three-command workflow on a scratch note and run it every time you cha
 
 ---
 
-<div align="center">
+[**Next ->** Chapter 04 Capstone](./06-chapter-04-capstone.md)
+[**<- Previous** Formatting, Vetting, and Documentation Tools](./04-formatting-vetting-and-documentation-tools.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Formatting, Vetting, and Documentation Tools](./04-formatting-vetting-and-documentation-tools.md) | [Chapter 04](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Chapter 04 Capstone →](./06-chapter-04-capstone.md) |
 
-</div>

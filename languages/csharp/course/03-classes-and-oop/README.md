@@ -1,4 +1,4 @@
-# Chapter 03 — Classes and OOP
+# Chapter 03 : Classes and OOP
 
 Learn how C# models software with classes, properties, constructors,
 interfaces, and composition.
@@ -15,4 +15,4 @@ interfaces, and composition.
 
 ---
 
-[← C# Course](../README.md) · [C#](../../README.md)
+[C# Course](../README.md) / [C#](../../README.md)

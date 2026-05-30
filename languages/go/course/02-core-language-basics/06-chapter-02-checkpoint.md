@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -49,14 +45,11 @@ Your solution should:
 
 ## Next
 
-Continue to [Chapter 03 — Packages, Modules, and Project Layout](../03-packages-modules-and-project-layout/README.md).
+Continue to [Chapter 03 : Packages, Modules, and Project Layout](../03-packages-modules-and-project-layout/README.md).
 
 ---
 
-<div align="center">
+[**Next ->** Chapter 03](../03-packages-modules-and-project-layout/README.md)
+[**<- Previous** Arrays, Slices, and Maps in Plain Language](./05-arrays-slices-and-maps-in-plain-language.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Arrays, Slices, and Maps in Plain Language](./05-arrays-slices-and-maps-in-plain-language.md) | [Chapter 02](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Chapter 03 →](../03-packages-modules-and-project-layout/README.md) |
 
-</div>

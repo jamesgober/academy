@@ -1,18 +1,14 @@
-<h1 align="center">
+﻿<h1 align="center">
 	<img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
 	<br>
 	<b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md)
 
 ---
 
-# Chapter 04 — Testing and Tooling
+# Chapter 04 : Testing and Tooling
 
 Learn how to verify Go code, read failures, use table-driven tests, and keep a
 simple quality loop with formatting, vetting, and package documentation.
@@ -28,12 +24,14 @@ simple quality loop with formatting, vetting, and package documentation.
 | 05 | [A Beginner-Friendly Go Quality Workflow](./05-a-beginner-friendly-go-quality-workflow.md) |
 | 06 | [Chapter 04 Capstone](./06-chapter-04-capstone.md) |
 
-After this chapter, continue to [Chapter 05 — Concurrency and Practical Applications](../05-concurrency-and-practical-applications/README.md).
+After this chapter, continue to [Chapter 05 : Concurrency and Practical Applications](../05-concurrency-and-practical-applications/README.md).
 
 ---
 
 <div align="center">
 
-[← Go Course](../README.md) · [Go](../../README.md) · [Home](../../../../README.md)
+[Go Course](../README.md)  /  [Go](../../README.md)  /  [Home](../../../../README.md)
 
 </div>
+
+

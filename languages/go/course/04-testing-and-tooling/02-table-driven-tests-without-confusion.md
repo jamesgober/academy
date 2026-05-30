@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -63,10 +59,7 @@ Convert a one-case test into a two-case table-driven test.
 
 ---
 
-<div align="center">
+[**Next ->** Reading Test Failures and Debugging Faster](./03-reading-test-failures-and-debugging-faster.md)
+[**<- Previous** Reading and Writing Basic Tests](./01-reading-and-writing-basic-tests.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Reading and Writing Basic Tests](./01-reading-and-writing-basic-tests.md) | [Chapter 04](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Reading Test Failures and Debugging Faster →](./03-reading-test-failures-and-debugging-faster.md) |
 
-</div>

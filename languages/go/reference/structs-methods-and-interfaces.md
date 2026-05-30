@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../README.md) · [Track](../README.md) · [Reference Index](./README.md)
-
-</div>
+[Home](../../../README.md) / [Go](../README.md) / [Reference](./README.md)
 
 ---
 
@@ -37,6 +33,9 @@
 
 <div align="center">
 
-[← Reference Index](./README.md) · [Track](../README.md) · [Home](../../../README.md)
+[Reference Index](./README.md)  /  [Go](../README.md)  /  [Home](../../../README.md)
 
 </div>
+
+
+

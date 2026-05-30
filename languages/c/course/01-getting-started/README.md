@@ -1,18 +1,14 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md)
 
 ---
 
-# Chapter 01 — Getting Started
+# Chapter 01 : Getting Started
 
 Install a C compiler, write your first program, compile it manually, and learn
 what source code, compiler output, and executable files actually are.
@@ -27,12 +23,14 @@ what source code, compiler output, and executable files actually are.
 | 04 | [What Source Files and Executables Are](./04-what-source-files-and-executables-are.md) |
 | 05 | [Warnings, Errors, and Beginner Workflow](./05-warnings-errors-and-beginner-workflow.md) |
 
-After this chapter, continue to [Chapter 02 — Syntax and Control Flow](../02-syntax-and-control-flow/README.md).
+After this chapter, continue to [Chapter 02 : Syntax and Control Flow](../02-syntax-and-control-flow/README.md).
 
 ---
 
 <div align="center">
 
-[← C Course](../README.md) · [C](../../README.md) · [Home](../../../../README.md)
+[C Course](../README.md)  /  [C](../../README.md)  /  [Home](../../../../README.md)
 
 </div>
+
+

@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 03](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 03](./README.md)
 
 ---
 
@@ -42,14 +38,11 @@ Design a small vehicle tracker project:
 
 ## Next
 
-Continue to [Chapter 04 — Testing and Tooling](../04-testing-and-tooling/README.md).
+Continue to [Chapter 04 : Testing and Tooling](../04-testing-and-tooling/README.md).
 
 ---
 
-<div align="center">
+[**Next ->** Chapter 04](../04-testing-and-tooling/README.md)
+[**<- Previous** Project Layout and Module Boundaries](./05-project-layout-and-module-boundaries.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Project Layout and Module Boundaries](./05-project-layout-and-module-boundaries.md) | [Chapter 03](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Chapter 04 →](../04-testing-and-tooling/README.md) |
 
-</div>

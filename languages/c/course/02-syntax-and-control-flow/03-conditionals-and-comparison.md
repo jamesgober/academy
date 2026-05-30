@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -71,10 +67,7 @@ Write a small check that prints `warm` if a temperature is above `20` and `cold`
 
 ---
 
-<div align="center">
+[**Next ->** Loops and Repetition](./04-loops-and-repetition.md)
+[**<- Previous** Functions, Parameters, and Return Values](./02-functions-parameters-and-return-values.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Functions, Parameters, and Return Values](./02-functions-parameters-and-return-values.md) | [Chapter 02](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Loops and Repetition →](./04-loops-and-repetition.md) |
 
-</div>

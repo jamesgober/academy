@@ -1,4 +1,4 @@
-# Functions and Parameters Cheat Sheet
+﻿# Functions and Parameters Cheat Sheet
 
 ## Parameter styles
 
@@ -39,4 +39,5 @@ Overloads should differ by meaningful parameter semantics, not by tiny ambiguous
 
 ---
 
-[← Reference Index](./README.md) · [C++](../README.md)
+[Reference Index](./README.md)  /  [C++](../README.md)
+

@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -126,11 +121,7 @@ Implement a switch expression that maps HTTP status codes to labels.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Loops and Iteration Patterns](./04-loops-and-iteration-patterns.md)  
+[**<- Previous** Methods, Parameters, and Returns](./02-methods-parameters-and-returns.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Methods, Parameters, and Returns](./02-methods-parameters-and-returns.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Loops and Iteration Patterns →](./04-loops-and-iteration-patterns.md) |
 
-</div>

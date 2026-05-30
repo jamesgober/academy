@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -86,10 +82,7 @@ Make a small test fail on purpose, then explain the failure message in plain lan
 
 ---
 
-<div align="center">
+[**Next ->** Formatting, Vetting, and Documentation Tools](./04-formatting-vetting-and-documentation-tools.md)
+[**<- Previous** Table-Driven Tests Without Confusion](./02-table-driven-tests-without-confusion.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Table-Driven Tests Without Confusion](./02-table-driven-tests-without-confusion.md) | [Chapter 04](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Formatting, Vetting, and Documentation Tools →](./04-formatting-vetting-and-documentation-tools.md) |
 
-</div>

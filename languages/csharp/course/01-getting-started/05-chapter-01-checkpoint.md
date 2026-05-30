@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -44,11 +39,7 @@ Create a new project named `checkpoint-one`, run it, then intentionally add one 
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Core Language Basics](../02-core-language-basics/README.md)  
+[**<- Previous** Reading Errors and Warnings](./04-reading-errors-and-warnings.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Reading Errors and Warnings](./04-reading-errors-and-warnings.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Core Language Basics →](../02-core-language-basics/README.md) |
 
-</div>

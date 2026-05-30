@@ -1,4 +1,4 @@
-# Conditionals and Loops Patterns
+﻿# Conditionals and Loops Patterns
 
 ## Conditionals
 
@@ -46,4 +46,5 @@ Use explicit names instead of default `i` when it improves readability.
 
 ---
 
-[← Reference Index](./README.md) · [C++](../README.md)
+[Reference Index](./README.md)  /  [C++](../README.md)
+

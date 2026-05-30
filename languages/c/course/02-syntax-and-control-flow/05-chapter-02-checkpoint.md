@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -42,14 +38,11 @@ Build a small "garage queue" program that:
 
 ## Next
 
-Continue to [Chapter 03 — Pointers and Memory](../03-pointers-and-memory/README.md).
+Continue to [Chapter 03 : Pointers and Memory](../03-pointers-and-memory/README.md).
 
 ---
 
-<div align="center">
+[**Next ->** Chapter 03](../03-pointers-and-memory/README.md)
+[**<- Previous** Loops and Repetition](./04-loops-and-repetition.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Loops and Repetition](./04-loops-and-repetition.md) | [Chapter 02](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Chapter 03 →](../03-pointers-and-memory/README.md) |
 
-</div>

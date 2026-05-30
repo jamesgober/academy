@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -73,11 +68,7 @@ Change output to include your name and rerun the project.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Project Commands: new, build, run](./03-project-commands-new-build-run.md)  
+[**<- Previous** Installing the .NET SDK](./01-installing-the-dotnet-sdk.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Installing the .NET SDK](./01-installing-the-dotnet-sdk.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Project Commands: new, build, run →](./03-project-commands-new-build-run.md) |
 
-</div>

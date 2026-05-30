@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -54,10 +50,7 @@ Compile one small program with and without strict flags and compare output.
 
 ---
 
-<div align="center">
+[**Next ->** Runtime Debugging Basics](./02-runtime-debugging-basics.md)
+[**<- Previous** Chapter 04](../04-structs-arrays-and-strings/README.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter 04](../04-structs-arrays-and-strings/README.md) | [Chapter 05](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Runtime Debugging Basics →](./02-runtime-debugging-basics.md) |
 
-</div>

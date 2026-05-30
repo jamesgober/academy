@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -74,11 +69,7 @@ Introduce a typo in a variable name, build, then resolve the resulting `CS0103`.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Chapter 01 Checkpoint](./05-chapter-01-checkpoint.md)  
+[**<- Previous** Project Commands: new, build, run](./03-project-commands-new-build-run.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Project Commands: new, build, run](./03-project-commands-new-build-run.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Chapter 01 Checkpoint →](./05-chapter-01-checkpoint.md) |
 
-</div>

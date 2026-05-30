@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -47,11 +42,7 @@ Take a previous exercise and refactor variable and loop names to be more descrip
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Classes and OOP](../03-classes-and-oop/README.md)  
+[**<- Previous** Loops and Iteration Patterns](./04-loops-and-iteration-patterns.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Loops and Iteration Patterns](./04-loops-and-iteration-patterns.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Classes and OOP →](../03-classes-and-oop/README.md) |
 
-</div>

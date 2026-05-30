@@ -1,4 +1,4 @@
-# Chapter 02 — Core Language Basics
+# Chapter 02 : Core Language Basics
 
 Build strong fundamentals: types, methods, parameters, conditionals, loops, and
 how to reason about control flow.
@@ -15,4 +15,4 @@ how to reason about control flow.
 
 ---
 
-[← C# Course](../README.md) · [C#](../../README.md)
+[C# Course](../README.md) / [C#](../../README.md)

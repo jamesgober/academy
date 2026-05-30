@@ -17,4 +17,4 @@ diagnosis.
 
 ---
 
-[← C#](../README.md) · [Academy Home](../../README.md)
+[C#](../README.md) / [Academy Home](../../README.md)

@@ -1,4 +1,4 @@
-# Chapter 02 — Core Language Basics
+﻿# Chapter 02 : Core Language Basics
 
 Learn variables, types, functions, conditions, and loops with enough detail to
 read normal C++ code confidently.
@@ -15,4 +15,5 @@ read normal C++ code confidently.
 
 ---
 
-[← C++ Course](../README.md) · [C++](../../README.md)
+[C++ Course](../README.md)  /  [C++](../../README.md)
+

@@ -1,15 +1,11 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C++ logo" src="../../../../_assets/logos/cpp.svg">
     <br>
     <b>C++</b>
 </h1>
 
 <!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C++](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C++](../../README.md) / [Chapter 02](./README.md)
 
 ---
 # Loops and Iteration Patterns
@@ -38,8 +34,8 @@ for (const auto& item : items) {
 <!-- ===== FOOT NAV ===== -->
 <div align="center">
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Conditionals: if, else-if, ternary, switch](./03-conditionals-if-else-if-ternary-switch.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Chapter 02 Checkpoint →](./05-chapter-02-checkpoint.md) |
+[**Next ->** [Chapter 02 Checkpoint](./05-chapter-02-checkpoint.md)]
+[**<- Previous** [Conditionals: if, else-if, ternary, switch](./03-conditionals-if-else-if-ternary-switch.md)]
 
 </div>
+

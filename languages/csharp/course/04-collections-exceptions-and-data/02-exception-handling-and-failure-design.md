@@ -4,76 +4,209 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
-# Exception Handling and Failure Design
+# Exception Handling And Failure Design
 
-> Error handling is part of design, not cleanup work after coding.
+> Error handling is part of design. Good code does not merely hope everything
+> works; it decides which failures are expected, where to report them, and which
+> bugs should stop the program loudly.
 
 **You will learn:**
-- How to use `try/catch/finally`
-- When to throw exceptions
-- How to preserve context for debugging
+- What exceptions are for
+- How `try`, `catch`, and `finally` work
+- When to throw
+- When to return `false` or `null`
+- How to preserve stack traces
+- Where exceptions should be caught
+- How to design user-friendly failure paths
 
-**Before this page, you should know:** methods and return values.
+**Before this page, you should know:** [Generic Collections In Practice](./01-generic-collections-in-practice.md)
 
 ---
 
-## Handling failures
+## Exceptions In Plain Language
+
+An exception means:
+
+```text
+Normal execution cannot continue from here.
+```
+
+Examples:
+
+- required argument is invalid
+- file does not exist
+- JSON is malformed
+- network request fails
+- object is in the wrong state for the requested operation
+
+Exceptions are not evil. Silent failure is worse.
+
+---
+
+## Basic `try` / `catch`
 
 ```csharp
 try
 {
-    var amount = decimal.Parse(input);
-    ProcessPayment(amount);
+    decimal amount = decimal.Parse(input);
+    Console.WriteLine($"Amount: {amount}");
 }
-catch (FormatException ex)
+catch (FormatException)
 {
-    Console.WriteLine($"Invalid amount: {ex.Message}");
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Unexpected error: {ex.Message}");
-    throw;
+    Console.WriteLine("Please enter a valid number.");
 }
 ```
 
-Guidance:
-- catch specific exceptions first
-- avoid swallowing exceptions silently
-- rethrow when caller should handle or log globally
+The `try` block contains code that may fail.
 
-## Where to catch exceptions
+The `catch` block handles a specific failure.
 
-Catch close to boundaries:
-- API boundary (request/response mapping)
-- UI boundary (user-facing error output)
-- background job boundary (retry and logging)
+---
 
-Avoid broad catch blocks deep inside domain logic unless you are adding context and rethrowing.
-
-## Throwing exceptions
+## Catch Specific Exceptions First
 
 ```csharp
-if (amount < 0)
-    throw new ArgumentOutOfRangeException(nameof(amount));
+try
+{
+    string text = File.ReadAllText("orders.json");
+    Console.WriteLine(text);
+}
+catch (FileNotFoundException)
+{
+    Console.WriteLine("No saved orders yet.");
+}
+catch (UnauthorizedAccessException)
+{
+    Console.WriteLine("You do not have permission to read that file.");
+}
+catch (IOException ex)
+{
+    Console.WriteLine($"File problem: {ex.Message}");
+}
+```
+
+Specific catches let you give useful messages.
+
+Avoid starting with:
+
+```csharp
+catch (Exception)
+```
+
+because it catches everything, including bugs you may not understand yet.
+
+---
+
+## Throwing Exceptions
+
+Throw when a method cannot honestly do what it promised.
+
+```csharp
+public sealed class OrderItem
+{
+    public OrderItem(string sku, int quantity)
+    {
+        if (string.IsNullOrWhiteSpace(sku))
+        {
+            throw new ArgumentException("SKU is required.", nameof(sku));
+        }
+
+        if (quantity <= 0)
+        {
+            throw new ArgumentOutOfRangeException(
+                nameof(quantity),
+                "Quantity must be positive."
+            );
+        }
+
+        Sku = sku;
+        Quantity = quantity;
+    }
+
+    public string Sku { get; }
+    public int Quantity { get; }
+}
 ```
 
 Use standard exception types first:
-- `ArgumentException` family for invalid input
-- `InvalidOperationException` for invalid object/state transitions
-- `NotSupportedException` for unsupported paths
 
-## Preserve context when rethrowing
+| Situation | Exception |
+|---|---|
+| bad argument value | `ArgumentException` |
+| number outside allowed range | `ArgumentOutOfRangeException` |
+| null argument when not allowed | `ArgumentNullException` |
+| object state does not allow operation | `InvalidOperationException` |
+| feature/path intentionally unsupported | `NotSupportedException` |
 
-Preferred:
+---
+
+## Return Values For Expected Outcomes
+
+Not every failure should be an exception.
+
+If missing data is normal, return `null`:
+
+```csharp
+public Product? FindBySku(string sku)
+{
+    return _productsBySku.TryGetValue(sku, out Product? product)
+        ? product
+        : null;
+}
+```
+
+If an operation may naturally fail, return `bool`:
+
+```csharp
+public bool TryAdd(Product product)
+{
+    return _productsBySku.TryAdd(product.Sku, product);
+}
+```
+
+Rule:
+
+```text
+Use exceptions for broken promises.
+Use return values for expected alternate outcomes.
+```
+
+---
+
+## `finally`
+
+`finally` runs whether the `try` succeeds or fails.
+
+```csharp
+FileStream? stream = null;
+
+try
+{
+    stream = File.OpenRead("orders.json");
+}
+finally
+{
+    stream?.Dispose();
+}
+```
+
+In modern C#, prefer `using` for disposable resources:
+
+```csharp
+using FileStream stream = File.OpenRead("orders.json");
+```
+
+But understanding `finally` helps you read older code.
+
+---
+
+## Preserve Stack Trace
+
+Good:
 
 ```csharp
 catch (Exception)
@@ -82,7 +215,7 @@ catch (Exception)
 }
 ```
 
-Avoid this because it resets stack trace:
+Bad:
 
 ```csharp
 catch (Exception ex)
@@ -91,33 +224,141 @@ catch (Exception ex)
 }
 ```
 
-## Failure-design checklist
+`throw;` preserves the original stack trace.
 
-1. Validate early at boundaries.
-2. Throw precise exception types.
-3. Catch where translation/logging is needed.
-4. Include enough context in logs to reproduce.
-5. Add tests for both success and failure paths.
+`throw ex;` resets it and makes debugging harder.
+
+---
+
+## Where To Catch Exceptions
+
+Catch exceptions at boundaries:
+
+- console app command loop
+- web API controller or middleware
+- background job runner
+- file import/export workflow
+- test expecting a failure
+
+Avoid catching deep inside domain logic unless you can actually recover or add
+useful context.
+
+Boundary example:
+
+```csharp
+try
+{
+    OrderItem item = new OrderItem(sku, quantity);
+    order.AddItem(item);
+}
+catch (ArgumentException ex)
+{
+    Console.WriteLine($"Could not add item: {ex.Message}");
+}
+```
+
+---
+
+## Real Example: Parse Command
+
+```csharp
+public static bool TryReadPositiveInt(string text, out int value)
+{
+    value = 0;
+
+    if (!int.TryParse(text, out int parsed))
+    {
+        return false;
+    }
+
+    if (parsed <= 0)
+    {
+        return false;
+    }
+
+    value = parsed;
+    return true;
+}
+```
+
+Use:
+
+```csharp
+if (!TryReadPositiveInt(input, out int quantity))
+{
+    Console.WriteLine("Quantity must be a positive whole number.");
+    return;
+}
+```
+
+This is better than throwing for normal bad user input.
+
+---
+
+## Common Mistakes
+
+### Mistake 1: Swallowing Exceptions
+
+```csharp
+catch
+{
+}
+```
+
+Now the program hides the failure and continues with mystery state.
+
+### Mistake 2: Catching Too Broad Too Early
+
+```csharp
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+```
+
+This may hide programming bugs. Catch specific exceptions when you know how to
+handle them.
+
+### Mistake 3: Exceptions For Simple User Input
+
+Use `TryParse` for user-entered values instead of making exceptions part of the
+normal path.
+
+---
+
+## Chapter Checkpoint
+
+You should now be able to answer:
+
+- What does an exception mean?
+- When should you throw?
+- When should you return `false` or `null`?
+- Why catch specific exceptions first?
+- What does `finally` do?
+- Why is `throw;` different from `throw ex;`?
+- Where should app-level exceptions usually be caught?
 
 ---
 
 ## Recap
 
-- Catch expected failures, surface actionable messages.
-- Throw argument exceptions for invalid method input.
-- Preserve stack trace by rethrowing correctly.
+- Exceptions represent broken promises or unrecoverable local failures.
+- Return values are better for expected alternate outcomes.
+- Catch specific exceptions close to application boundaries.
+- Do not swallow exceptions silently.
+- Use `throw;` to preserve stack traces.
+- Use `TryParse` for normal user input failure.
 
-## Try it yourself
+## Try It Yourself
 
-Wrap one parsing operation in a `try/catch` and report a user-friendly error.
+Write a command parser that reads quantity input:
+
+- blank input fails gracefully
+- non-number input fails gracefully
+- zero or negative input fails gracefully
+- positive input succeeds
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
-
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Generic Collections in Practice](./01-generic-collections-in-practice.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [LINQ Query Patterns →](./03-linq-query-patterns.md) |
-
-</div>
+[**Next ->** LINQ Query Patterns](./03-linq-query-patterns.md)  
+[**<- Previous** Generic Collections In Practice](./01-generic-collections-in-practice.md)

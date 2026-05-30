@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -64,10 +60,7 @@ Create one `int`, one `char`, and one `float`, then print them with `printf`.
 
 ---
 
-<div align="center">
+[**Next ->** Functions, Parameters, and Return Values](./02-functions-parameters-and-return-values.md)
+[**<- Previous** Chapter 01](../01-getting-started/README.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter 01](../01-getting-started/README.md) | [Chapter 02](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Functions, Parameters, and Return Values →](./02-functions-parameters-and-return-values.md) |
 
-</div>

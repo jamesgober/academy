@@ -4,53 +4,167 @@
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../README.md) · [Track](../README.md) · [Reference Index](./README.md)
-
-</div>
+[Home](../../../README.md) / [Go](../README.md) / [Reference](./README.md)
 
 ---
 
-# Packages, Modules, and Layout Cheat Sheet
+# Packages, Modules, And Layout Cheat Sheet
 
-> Fast lookup for Go project structure terms.
+> Fast lookup for Go project structure, module boundaries, package names, and
+> import rules.
 
-## Core terms
+## Related Lessons
 
-- **file**: one `.go` source file
-- **package**: a group of Go files that belong together
-- **module**: the dependency and project boundary defined by `go.mod`
-- **`package main`**: runnable application package
-- **non-`main` package**: reusable code package
+- [Go Modules And Dependencies](../course/01-getting-started/05-go-modules-and-dependencies.md)
+- [Packages And Imports](../course/03-packages-modules-and-project-layout/01-packages-and-imports.md)
+- [Exported And Unexported Names](../course/03-packages-modules-and-project-layout/02-exported-and-unexported-names.md)
+- [Structs And Methods In Go](../course/03-packages-modules-and-project-layout/03-structs-and-methods-in-go.md)
+- [Project Layout And Module Boundaries](../course/03-packages-modules-and-project-layout/05-project-layout-and-module-boundaries.md)
 
-## Quick structure example
+---
+
+## Core Terms
+
+| Term | Meaning |
+|---|---|
+| file | one `.go` source file |
+| package | files in one folder that compile together |
+| module | dependency/project boundary defined by `go.mod` |
+| `package main` | runnable application package |
+| non-main package | reusable package |
+| exported name | starts with uppercase, visible to other packages |
+| unexported name | starts with lowercase, private to package |
+
+---
+
+## Module Example
 
 ```text
-hello-go/
-├── go.mod
-├── main.go
-└── greeting/
-    └── message.go
+garage-app/
+  go.mod
+  main.go
+  garage/
+    status.go
 ```
 
-## Beginner reminders
+`go.mod`:
 
-- files in one folder usually share one package name
-- package names should be short and clear
-- `main` is for runnable apps, not reusable libraries
-- `go.mod` belongs near the project root
+```go
+module example.com/garage-app
 
-## Quick diagnostic prompts
+go 1.22
+```
 
-- is this folder supposed to be runnable or reusable?
-- does every file in this folder use the correct package name?
-- did I initialize a module yet?
+Import:
+
+```go
+import "example.com/garage-app/garage"
+```
 
 ---
 
-<div align="center">
+## Layout Choices
 
-[← Reference Index](./README.md) · [Track](../README.md) · [Home](../../../README.md)
+Tiny app:
 
-</div>
+```text
+app/
+  go.mod
+  main.go
+```
+
+App with domain package:
+
+```text
+app/
+  go.mod
+  main.go
+  orders/
+    order.go
+    order_test.go
+```
+
+App with private internals:
+
+```text
+app/
+  go.mod
+  main.go
+  internal/
+    config/
+      config.go
+```
+
+---
+
+## `internal`
+
+Packages inside `internal` can only be imported by code inside the parent tree.
+
+Use when:
+
+- implementation should stay private
+- external modules should not depend on the package
+
+Do not use it everywhere. Beginners can wait until privacy matters.
+
+---
+
+## Package Naming
+
+Prefer:
+
+```text
+garage
+orders
+config
+worker
+store
+```
+
+Avoid vague names:
+
+```text
+utils
+helpers
+common
+misc
+```
+
+---
+
+## Export Checklist
+
+Export a name when another package needs it:
+
+```go
+func Status(v Vehicle) string
+```
+
+Keep helpers unexported:
+
+```go
+func speedBand(speed int) string
+```
+
+Risk notice:
+
+```text
+Exported names become part of your package's public API. Keep the API small.
+```
+
+---
+
+## Architecture Smells
+
+- giant `main.go`
+- package named `utils`
+- interface before there are multiple implementations
+- circular imports
+- package with too many exported names
+- tests that require console input
+- huge project layout copied into a tiny app
+
+---
+
+[Reference Index](./README.md) / [Go](../README.md) / [Home](../../../README.md)

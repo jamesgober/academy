@@ -1,4 +1,4 @@
-# C++ Reference
+﻿# C++ Reference
 
 Quick lookup for C++ syntax, classes, memory management, and build/debug tools.
 
@@ -16,4 +16,5 @@ Quick lookup for C++ syntax, classes, memory management, and build/debug tools.
 
 ---
 
-[← C++](../README.md) · [Academy Home](../../README.md)
+[C++](../README.md)  /  [Academy Home](../../README.md)
+

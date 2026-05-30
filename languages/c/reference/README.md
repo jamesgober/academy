@@ -1,4 +1,4 @@
-# C Reference
+﻿# C Reference
 
 Quick lookup for syntax, build commands, pointer usage, and memory-safety practices.
 
@@ -14,4 +14,5 @@ Quick lookup for syntax, build commands, pointer usage, and memory-safety practi
 
 ---
 
-[← C](../README.md) · [Academy Home](../../README.md)
+[C](../README.md)  /  [Academy Home](../../README.md)
+

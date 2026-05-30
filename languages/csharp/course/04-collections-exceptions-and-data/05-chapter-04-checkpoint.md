@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -45,11 +40,7 @@ Take one existing list-based routine and refactor it to use dictionary lookup an
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Async, Testing, and Capstone](../05-async-testing-and-capstone/README.md)  
+[**<- Previous** Files and JSON Basics](./04-files-and-json-basics.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Files and JSON Basics](./04-files-and-json-basics.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Async, Testing, and Capstone →](../05-async-testing-and-capstone/README.md) |
 
-</div>

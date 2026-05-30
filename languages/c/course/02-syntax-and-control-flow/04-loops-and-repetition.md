@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -67,10 +63,7 @@ Write a loop that prints the numbers `1` through `5`.
 
 ---
 
-<div align="center">
+[**Next ->** Chapter 02 Checkpoint](./05-chapter-02-checkpoint.md)
+[**<- Previous** Conditionals and Comparison](./03-conditionals-and-comparison.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Conditionals and Comparison](./03-conditionals-and-comparison.md) | [Chapter 02](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Chapter 02 Checkpoint →](./05-chapter-02-checkpoint.md) |
 
-</div>

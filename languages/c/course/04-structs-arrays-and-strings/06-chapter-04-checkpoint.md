@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -41,14 +37,11 @@ Build a small "garage records" model:
 
 ## Next
 
-Continue to [Chapter 05 — Build, Test, and Debug Basics](../05-build-test-and-debug-basics/README.md).
+Continue to [Chapter 05 : Build, Test, and Debug Basics](../05-build-test-and-debug-basics/README.md).
 
 ---
 
-<div align="center">
+[**Next ->** Chapter 05](../05-build-test-and-debug-basics/README.md)
+[**<- Previous** Struct and Array Design Patterns](./05-struct-and-array-design-patterns.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Struct and Array Design Patterns](./05-struct-and-array-design-patterns.md) | [Chapter 04](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Chapter 05 →](../05-build-test-and-debug-basics/README.md) |
 
-</div>

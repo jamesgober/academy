@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -56,10 +52,7 @@ List the files in your project folder before and after compiling, then identify 
 
 ---
 
-<div align="center">
+[**Next ->** Warnings, Errors, and Beginner Workflow](./05-warnings-errors-and-beginner-workflow.md)
+[**<- Previous** Compiling and Running Step by Step](./03-compiling-and-running-step-by-step.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Compiling and Running Step by Step](./03-compiling-and-running-step-by-step.md) | [Chapter 01](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Warnings, Errors, and Beginner Workflow →](./05-warnings-errors-and-beginner-workflow.md) |
 
-</div>

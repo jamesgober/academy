@@ -1,4 +1,4 @@
-# Chapter 04 — Collections, Exceptions, and Data
+# Chapter 04 : Collections, Exceptions, and Data
 
 Work with real data using generic collections, LINQ, exception handling, and
 JSON/file IO patterns.
@@ -15,4 +15,4 @@ JSON/file IO patterns.
 
 ---
 
-[← C# Course](../README.md) · [C#](../../README.md)
+[C# Course](../README.md) / [C#](../../README.md)

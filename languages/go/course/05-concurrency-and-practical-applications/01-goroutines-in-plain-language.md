@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -58,10 +54,7 @@ Then explain why the main program might end before the goroutine finishes.
 
 ---
 
-<div align="center">
+[**Next ->** Channels and Message Passing](./02-channels-and-message-passing.md)
+[**<- Previous** Chapter 04](../04-testing-and-tooling/README.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter 04](../04-testing-and-tooling/README.md) | [Chapter 05](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Channels and Message Passing →](./02-channels-and-message-passing.md) |
 
-</div>

@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -57,10 +53,7 @@ Make a one-page checklist for your own C project and run it once end to end.
 
 ---
 
-<div align="center">
+[**Next ->** Chapter 05 Capstone](./06-chapter-05-capstone.md)
+[**<- Previous** Memory-Issue Triage Workflow](./04-memory-issue-triage-workflow.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Memory-Issue Triage Workflow](./04-memory-issue-triage-workflow.md) | [Chapter 05](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Chapter 05 Capstone →](./06-chapter-05-capstone.md) |
 
-</div>

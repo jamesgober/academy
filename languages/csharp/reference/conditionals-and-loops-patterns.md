@@ -75,4 +75,5 @@ Use descriptive loop variable names when logic is non-trivial.
 
 ---
 
-[← C# Reference](./README.md)
+[C# Reference](./README.md)
+

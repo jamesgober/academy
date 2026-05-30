@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -123,11 +118,7 @@ Write one method that returns a computed value and one `Try...` method using `ou
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Conditionals, Switch, and Pattern Matching](./03-conditionals-switch-and-pattern-matching.md)  
+[**<- Previous** Types, Variables, and Strings](./01-types-variables-and-strings.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Types, Variables, and Strings](./01-types-variables-and-strings.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Conditionals, Switch, and Pattern Matching →](./03-conditionals-switch-and-pattern-matching.md) |
 
-</div>

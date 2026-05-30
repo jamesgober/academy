@@ -1,18 +1,14 @@
-<h1 align="center">
+﻿<h1 align="center">
 	<img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
 	<br>
 	<b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md)
 
 ---
 
-# Chapter 01 — Getting Started
+# Chapter 01 : Getting Started
 
 Install Go, run your first program, understand how Go files and packages fit
 together, and build a clean daily command loop before the language gets more
@@ -37,12 +33,14 @@ complex.
 | 05 | [Go Modules and Dependencies](./05-go-modules-and-dependencies.md) |
 | 06 | [Testing, Formatting, and Documentation Basics](./06-testing-formatting-and-documentation-basics.md) |
 
-After this chapter, continue to [Chapter 02 — Core Language Basics](../02-core-language-basics/README.md).
+After this chapter, continue to [Chapter 02 : Core Language Basics](../02-core-language-basics/README.md).
 
 ---
 
 <div align="center">
 
-[← Go Course](../README.md) · [Go](../../README.md) · [Home](../../../../README.md)
+[Go Course](../README.md)  /  [Go](../../README.md)  /  [Home](../../../../README.md)
 
 </div>
+
+

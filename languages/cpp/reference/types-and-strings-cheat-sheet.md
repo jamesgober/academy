@@ -1,4 +1,4 @@
-# Types and Strings Cheat Sheet
+﻿# Types and Strings Cheat Sheet
 
 - integers: `int`, `long long`, fixed-width `std::int32_t`
 - floating point: `float`, `double`
@@ -9,4 +9,5 @@
 
 ---
 
-[← Reference Index](./README.md) · [C++](../README.md)
+[Reference Index](./README.md)  /  [C++](../README.md)
+

@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -61,10 +57,7 @@ Compile your first program, then intentionally remove a semicolon and recompile 
 
 ---
 
-<div align="center">
+[**Next ->** What Source Files and Executables Are](./04-what-source-files-and-executables-are.md)
+[**<- Previous** Your First C Program](./02-your-first-c-program.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Your First C Program](./02-your-first-c-program.md) | [Chapter 01](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [What Source Files and Executables Are →](./04-what-source-files-and-executables-are.md) |
 
-</div>

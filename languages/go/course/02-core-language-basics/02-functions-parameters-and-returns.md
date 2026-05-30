@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -120,10 +116,7 @@ value.
 
 ---
 
-<div align="center">
+[**Next ->** Conditionals and Comparison](./03-conditionals-and-comparison.md)
+[**<- Previous** Variables, Values, and Types](./01-variables-values-and-types.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Variables, Values, and Types](./01-variables-values-and-types.md) | [Chapter 02](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Conditionals and Comparison →](./03-conditionals-and-comparison.md) |
 
-</div>

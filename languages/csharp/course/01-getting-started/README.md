@@ -1,4 +1,4 @@
-# Chapter 01 — Getting Started
+# Chapter 01 : Getting Started
 
 Install .NET, create your first project, run it from the terminal, and learn to
 read errors and warnings without panic.
@@ -15,4 +15,4 @@ read errors and warnings without panic.
 
 ---
 
-[← C# Course](../README.md) · [C#](../../README.md)
+[C# Course](../README.md) / [C#](../../README.md)

@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -41,14 +37,11 @@ Your project should show:
 
 ## Next
 
-Continue to [Chapter 05 — Concurrency and Practical Applications](../05-concurrency-and-practical-applications/README.md).
+Continue to [Chapter 05 : Concurrency and Practical Applications](../05-concurrency-and-practical-applications/README.md).
 
 ---
 
-<div align="center">
+[**Next ->** Chapter 05](../05-concurrency-and-practical-applications/README.md)
+[**<- Previous** A Beginner-Friendly Go Quality Workflow](./05-a-beginner-friendly-go-quality-workflow.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← A Beginner-Friendly Go Quality Workflow](./05-a-beginner-friendly-go-quality-workflow.md) | [Chapter 04](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Chapter 05 →](../05-concurrency-and-practical-applications/README.md) |
 
-</div>

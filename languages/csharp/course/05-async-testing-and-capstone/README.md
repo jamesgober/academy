@@ -1,4 +1,4 @@
-# Chapter 05 — Async, Testing, and Capstone
+# Chapter 05 : Async, Testing, and Capstone
 
 Finish with async/await, test discipline, debugging workflow, and a practical
 capstone project.
@@ -15,4 +15,4 @@ capstone project.
 
 ---
 
-[← C# Course](../README.md) · [C#](../../README.md)
+[C# Course](../README.md) / [C#](../../README.md)

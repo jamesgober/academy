@@ -34,4 +34,5 @@ Prefer interpolation over concatenation for readability.
 
 ---
 
-[← C# Reference](./README.md)
+[C# Reference](./README.md)
+

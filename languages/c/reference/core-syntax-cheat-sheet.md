@@ -1,4 +1,4 @@
-# Core Syntax Cheat Sheet
+﻿# Core Syntax Cheat Sheet
 
 Quick lookup for C fundamentals.
 
@@ -47,4 +47,5 @@ while (count < 10) {
 
 ---
 
-[← Reference Index](./README.md) · [C](../README.md)
+[Reference Index](./README.md)  /  [C](../README.md)
+

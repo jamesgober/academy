@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -60,10 +56,7 @@ Compile a tiny program with warnings enabled and write down what the compiler is
 
 ---
 
-<div align="center">
+[**Next ->** Chapter 02](../02-syntax-and-control-flow/README.md)
+[**<- Previous** What Source Files and Executables Are](./04-what-source-files-and-executables-are.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← What Source Files and Executables Are](./04-what-source-files-and-executables-are.md) | [Chapter 01](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Chapter 02 →](../02-syntax-and-control-flow/README.md) |
 
-</div>

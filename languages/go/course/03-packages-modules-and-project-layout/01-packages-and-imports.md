@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 03](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 03](./README.md)
 
 ---
 
@@ -60,10 +56,7 @@ Make one small package with a helper function, then import and call it from `mai
 
 ---
 
-<div align="center">
+[**Next ->** Exported and Unexported Names](./02-exported-and-unexported-names.md)
+[**<- Previous** Chapter 02](../02-core-language-basics/README.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter 02](../02-core-language-basics/README.md) | [Chapter 03](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Exported and Unexported Names →](./02-exported-and-unexported-names.md) |
 
-</div>

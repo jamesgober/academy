@@ -1,15 +1,11 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C++ logo" src="../../../../_assets/logos/cpp.svg">
     <br>
     <b>C++</b>
 </h1>
 
 <!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C++](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C++](../../README.md) / [Chapter 01](./README.md)
 
 ---
 # Installing a C++ Compiler
@@ -136,7 +132,7 @@ At least one should print version info.
 
 ## Visual model
 
-```mermaid
+```text
 flowchart LR
 	A[Write main.cpp] --> B[Compile with g++ or clang++ or cl]
 	B --> C[Link to executable]
@@ -151,8 +147,8 @@ flowchart LR
 <!-- ===== FOOT NAV ===== -->
 <div align="center">
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Your First C++ Program →](./02-your-first-cpp-program.md) |
+[**Next ->** [Your First C++ Program](./02-your-first-cpp-program.md)]
+[**<- Previous** [Chapter Start](./README.md)]
 
 </div>
+

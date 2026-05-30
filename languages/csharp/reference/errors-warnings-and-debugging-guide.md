@@ -1,55 +1,148 @@
-# Errors, Warnings, and Debugging Guide
+# Errors, Warnings, And Debugging Guide
 
-## Diagnostic format
+[C# Reference](./README.md)
+
+---
+
+## Related Lessons
+
+- [Reading Errors And Warnings](../course/01-getting-started/04-reading-errors-and-warnings.md)
+- [Exception Handling And Failure Design](../course/04-collections-exceptions-and-data/02-exception-handling-and-failure-design.md)
+- [Unit Testing With xUnit](../course/05-async-testing-and-capstone/02-unit-testing-with-xunit.md)
+- [Debugging And Logging Workflow](../course/05-async-testing-and-capstone/03-debugging-and-logging-workflow.md)
+
+---
+
+## Diagnostic Format
 
 ```text
 Program.cs(10,13): error CS0103: The name 'x' does not exist in the current context
 ```
 
 Read:
-1. file and location
-2. severity
-3. diagnostic ID
-4. message
 
-## Common IDs
-
-- `CS0103`: unknown name/symbol
-- `CS1002`: syntax issue, usually missing `;`
-- `CS8618`: non-nullable member not initialized
-- `CS8602`: possible null dereference
-- `CS1503`: argument type mismatch
-- `CS7036`: required argument missing
-- `CS0246`: type/namespace not found
-
-## Warning policy
-
-Warnings are not cosmetic. Nullability warnings often predict runtime failures.
-
-Treat warnings as backlog items at minimum, and as blockers for critical paths.
-
-## First-pass compiler triage
-
-1. Fix topmost syntax or missing-symbol error.
-2. Rebuild.
-3. Repeat until errors are zero.
-4. Triage warnings by category (nullability, style, obsolete APIs).
-
-## Debug workflow
-
-1. Reproduce reliably.
-2. Fix first error first.
-3. Use breakpoints and variable inspection.
-4. Add logs with context IDs.
-5. Add tests after fix.
-
-## Repro checklist for bug reports
-
-- exact input values
-- environment details (OS, SDK version)
-- expected behavior versus actual behavior
-- first failing stack trace section
+| Part | Meaning |
+|---|---|
+| `Program.cs` | file |
+| `10` | line |
+| `13` | column |
+| `error` | severity |
+| `CS0103` | diagnostic ID |
+| message | what failed |
 
 ---
 
-[← C# Reference](./README.md)
+## Common Compiler Diagnostics
+
+| ID | Common meaning | Typical fix |
+|---|---|---|
+| `CS0103` | name does not exist | fix typo, scope, or declaration |
+| `CS1002` | missing `;` | add semicolon or fix syntax before it |
+| `CS0246` | type/namespace not found | add using, reference, or package |
+| `CS1503` | argument type mismatch | pass correct type or convert intentionally |
+| `CS7036` | required argument missing | pass required constructor/method argument |
+| `CS8618` | non-nullable property not initialized | initialize in constructor or mark nullable |
+| `CS8602` | possible null dereference | null-check before use |
+
+---
+
+## Nullability Warnings
+
+Example:
+
+```csharp
+Product? product = catalog.FindBySku("KB-100");
+Console.WriteLine(product.Name); // warning
+```
+
+Fix:
+
+```csharp
+if (product is not null)
+{
+    Console.WriteLine(product.Name);
+}
+```
+
+Notice:
+
+```text
+Nullability warnings often predict real runtime crashes.
+```
+
+---
+
+## Stack Trace Reading
+
+```text
+System.ArgumentOutOfRangeException: Quantity must be positive.
+   at OrderTracker.Core.OrderItem..ctor(...)
+   at OrderTracker.App.Program.Main()
+```
+
+Read:
+
+```text
+exception type
+message
+where it was thrown
+how the program got there
+```
+
+---
+
+## Debugging Workflow
+
+1. Reproduce reliably.
+2. Record expected versus actual behavior.
+3. Read the first error or exception.
+4. Shrink the input.
+5. Set breakpoints near the boundary.
+6. Inspect parameters and object state.
+7. Fix the root cause.
+8. Add a regression test.
+9. Rerun `dotnet build` and `dotnet test`.
+
+---
+
+## Logging Checklist
+
+Good logs include:
+
+- operation name
+- relevant id, file path, or command
+- success/failure status
+- exception details when appropriate
+- no secrets
+
+Structured logging pattern:
+
+```csharp
+logger.LogInformation(
+    "Order {OrderId} saved to {Path}",
+    orderId,
+    path
+);
+```
+
+---
+
+## Bug Report Template
+
+```md
+## Expected
+
+## Actual
+
+## Steps To Reproduce
+
+## Input
+
+## Environment
+
+## First Error Or Stack Trace
+```
+
+---
+
+[C# Reference](./README.md)

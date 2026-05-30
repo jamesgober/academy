@@ -48,4 +48,5 @@ Tuple returns are often cleaner than multiple `out` parameters when meaning is c
 
 ---
 
-[← C# Reference](./README.md)
+[C# Reference](./README.md)
+

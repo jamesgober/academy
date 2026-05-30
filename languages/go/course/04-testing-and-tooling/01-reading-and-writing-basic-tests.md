@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -62,10 +58,7 @@ Write a function that adds two numbers and a test that verifies one case.
 
 ---
 
-<div align="center">
+[**Next ->** Table-Driven Tests Without Confusion](./02-table-driven-tests-without-confusion.md)
+[**<- Previous** Chapter 03](../03-packages-modules-and-project-layout/README.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter 03](../03-packages-modules-and-project-layout/README.md) | [Chapter 04](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Table-Driven Tests Without Confusion →](./02-table-driven-tests-without-confusion.md) |
 
-</div>

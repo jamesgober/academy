@@ -1,15 +1,11 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C++ logo" src="../../../../_assets/logos/cpp.svg">
     <br>
     <b>C++</b>
 </h1>
 
 <!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C++](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C++](../../README.md) / [Chapter 02](./README.md)
 
 ---
 # Conditionals: if, else-if, ternary, switch
@@ -88,8 +84,8 @@ Always handle default unless project rules intentionally forbid it.
 <!-- ===== FOOT NAV ===== -->
 <div align="center">
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Functions, Parameters, and Returns](./02-functions-parameters-and-returns.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Loops and Iteration Patterns →](./04-loops-and-iteration-patterns.md) |
+[**Next ->** [Loops and Iteration Patterns](./04-loops-and-iteration-patterns.md)]
+[**<- Previous** [Functions, Parameters, and Returns](./02-functions-parameters-and-returns.md)]
 
 </div>
+

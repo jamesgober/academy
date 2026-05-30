@@ -1,4 +1,4 @@
-# Chapter 03 — Classes and Objects
+﻿# Chapter 03 : Classes and Objects
 
 Learn class design, access control, constructors/destructors, and inheritance
 patterns that are common in production C++.
@@ -15,4 +15,5 @@ patterns that are common in production C++.
 
 ---
 
-[← C++ Course](../README.md) · [C++](../../README.md)
+[C++ Course](../README.md)  /  [C++](../../README.md)
+

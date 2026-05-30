@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 05](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 05](./README.md)
 
 ---
 
@@ -60,10 +56,7 @@ Pick one bug type and write a three-line "symptom -> cause -> fix" summary.
 
 ---
 
-<div align="center">
+[**Next ->** Quality Workflow and Release Checklist](./05-quality-workflow-and-release-checklist.md)
+[**<- Previous** Address Sanitizer and Leak Detection](./03-address-sanitizer-and-leak-detection.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Address Sanitizer and Leak Detection](./03-address-sanitizer-and-leak-detection.md) | [Chapter 05](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Quality Workflow and Release Checklist →](./05-quality-workflow-and-release-checklist.md) |
 
-</div>

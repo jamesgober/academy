@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -87,10 +83,7 @@ three with `fmt.Println`.
 
 ---
 
-<div align="center">
+[**Next ->** Functions, Parameters, and Returns](./02-functions-parameters-and-returns.md)
+[**<- Previous** Chapter 01](../01-getting-started/README.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter 01](../01-getting-started/README.md) | [Chapter 02](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Functions, Parameters, and Returns →](./02-functions-parameters-and-returns.md) |
 
-</div>

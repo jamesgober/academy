@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -93,7 +88,7 @@ Fix: standardize on one shell while learning.
 
 ## Visual model
 
-```mermaid
+```text
 flowchart LR
   A[Install .NET SDK] --> B[Open New Terminal]
   B --> C[dotnet --info]
@@ -117,11 +112,7 @@ Run `dotnet --version` and write down the SDK version you installed.
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Your First C# Program](./02-your-first-csharp-program.md)  
+[**<- Previous** Chapter Start](./README.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Your First C# Program →](./02-your-first-csharp-program.md) |
 
-</div>

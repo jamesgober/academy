@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -95,10 +91,7 @@ Change the text to print your name and one thing you want to build with Go.
 
 ---
 
-<div align="center">
+[**Next ->** How Go Files, Packages, and `main` Work](./03-how-go-files-packages-and-main-work.md)
+[**<- Previous** Installing Go](./01-installing-go.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Installing Go](./01-installing-go.md) | [Chapter 01](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [How Go Files, Packages, and `main` Work →](./03-how-go-files-packages-and-main-work.md) |
 
-</div>

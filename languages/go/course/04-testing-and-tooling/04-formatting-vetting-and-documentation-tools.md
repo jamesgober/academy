@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 04](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 04](./README.md)
 
 ---
 
@@ -77,10 +73,7 @@ Run `go doc fmt` and identify one function you recognize from earlier lessons.
 
 ---
 
-<div align="center">
+[**Next ->** A Beginner-Friendly Go Quality Workflow](./05-a-beginner-friendly-go-quality-workflow.md)
+[**<- Previous** Reading Test Failures and Debugging Faster](./03-reading-test-failures-and-debugging-faster.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Reading Test Failures and Debugging Faster](./03-reading-test-failures-and-debugging-faster.md) | [Chapter 04](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [A Beginner-Friendly Go Quality Workflow →](./05-a-beginner-friendly-go-quality-workflow.md) |
 
-</div>

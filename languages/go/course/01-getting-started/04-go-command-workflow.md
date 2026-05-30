@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -72,10 +68,7 @@ looks clean. Then run `go run .` again.
 
 ---
 
-<div align="center">
+[**Next ->** Go Modules and Dependencies](./05-go-modules-and-dependencies.md)
+[**<- Previous** How Go Files, Packages, and `main` Work](./03-how-go-files-packages-and-main-work.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← How Go Files, Packages, and `main` Work](./03-how-go-files-packages-and-main-work.md) | [Chapter 01](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Go Modules and Dependencies →](./05-go-modules-and-dependencies.md) |
 
-</div>

@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -140,10 +136,7 @@ that Go keeps toolchain and workspace information separate.
 
 ---
 
-<div align="center">
+[**Next ->** Your First Go Program](./02-your-first-go-program.md)
+[**<- Previous** Chapter Start](./README.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Chapter Start](./README.md) | [Chapter 01](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Your First Go Program →](./02-your-first-go-program.md) |
 
-</div>

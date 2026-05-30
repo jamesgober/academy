@@ -50,4 +50,5 @@ dotnet format --verify-no-changes
 
 ---
 
-[← C# Reference](./README.md)
+[C# Reference](./README.md)
+

@@ -4,12 +4,7 @@
     <b>C#</b>
 </h1>
 
-<!-- ===== HEAD NAV ===== -->
-<div align="center">
-
-[Home](../../../../README.md) · [C#](../../README.md) · [Chapter 03](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C#](../../README.md) / [Chapter 03](./README.md)
 
 ---
 
@@ -47,11 +42,7 @@ Refactor one class to use an interface dependency instead of direct concrete typ
 
 ---
 
-<!-- ===== FOOT NAV ===== -->
-<div align="center">
+[**Next ->** Collections, Exceptions, and Data](../04-collections-exceptions-and-data/README.md)  
+[**<- Previous** Records, Structs, and When to Use Them](./04-records-structs-and-when-to-use-them.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Records, Structs, and When to Use Them](./04-records-structs-and-when-to-use-them.md) | [Chapter](./README.md) · [Track](../../README.md) · [Home](../../../../README.md) | [Collections, Exceptions, and Data →](../04-collections-exceptions-and-data/README.md) |
 
-</div>

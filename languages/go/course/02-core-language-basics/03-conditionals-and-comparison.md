@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="Go logo" src="../../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [Go](../../README.md) · [Chapter 02](./README.md)
-
-</div>
+[Home](../../../../README.md) / [Go](../../README.md) / [Chapter 02](./README.md)
 
 ---
 
@@ -134,10 +130,7 @@ Write a small program that prints `warm` if the temperature is above `20` and
 
 ---
 
-<div align="center">
+[**Next ->** Loops and Repetition in Go](./04-loops-and-repetition-in-go.md)
+[**<- Previous** Functions, Parameters, and Returns](./02-functions-parameters-and-returns.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Functions, Parameters, and Returns](./02-functions-parameters-and-returns.md) | [Chapter 02](./README.md) · [Go](../../README.md) · [Home](../../../../README.md) | [Loops and Repetition in Go →](./04-loops-and-repetition-in-go.md) |
 
-</div>

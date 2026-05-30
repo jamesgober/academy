@@ -1,18 +1,14 @@
-<h1 align="center">
+﻿<h1 align="center">
 	<img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
 	<br>
 	<b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md)
 
 ---
 
-# Chapter 05 — Build, Test, and Debug Basics
+# Chapter 05 : Build, Test, and Debug Basics
 
 Learn the practical workflow that keeps C projects reliable: warning flags,
 runtime tools, leak detection, debugging habits, and release-readiness checks.
@@ -32,4 +28,6 @@ After this chapter, continue with project tutorials and language references.
 
 ---
 
-[← C Course](../README.md) · [C](../../README.md) · [Home](../../../../README.md)
+[C Course](../README.md)  /  [C](../../README.md)  /  [Home](../../../../README.md)
+
+

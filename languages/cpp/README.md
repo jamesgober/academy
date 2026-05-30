@@ -1,6 +1,6 @@
-<div align="center">
+﻿<div align="center">
 
-[← Languages](../README.md) · [Academy Home](../../README.md)
+[Languages](../README.md)  /  [Academy Home](../../README.md)
 
 </div>
 
@@ -31,5 +31,6 @@ classes, ownership, RAII, and professional debugging/testing workflow.
 ---
 
 <div align="center">
-<sub><a href="../README.md">Languages</a> · <a href="../../README.md">Academy Home</a></sub>
+<sub><a href="../README.md">Languages</a>  /  <a href="../../README.md">Academy Home</a></sub>
 </div>
+

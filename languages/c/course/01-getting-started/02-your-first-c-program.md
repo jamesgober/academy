@@ -1,14 +1,10 @@
-<h1 align="center">
+﻿<h1 align="center">
     <img width="99" alt="C logo" src="../../../../_assets/logos/c.svg">
     <br>
     <b>C</b>
 </h1>
 
-<div align="center">
-
-[Home](../../../../README.md) · [C](../../README.md) · [Chapter 01](./README.md)
-
-</div>
+[Home](../../../../README.md) / [C](../../README.md) / [Chapter 01](./README.md)
 
 ---
 
@@ -60,10 +56,7 @@ Change the text to print your name and favorite tool.
 
 ---
 
-<div align="center">
+[**Next ->** Compiling and Running Step by Step](./03-compiling-and-running-step-by-step.md)
+[**<- Previous** Installing a C Compiler](./01-installing-a-c-compiler.md)
 
-| Previous | Up | Next |
-|:---------|:--:|-----:|
-| [← Installing a C Compiler](./01-installing-a-c-compiler.md) | [Chapter 01](./README.md) · [C](../../README.md) · [Home](../../../../README.md) | [Compiling and Running Step by Step →](./03-compiling-and-running-step-by-step.md) |
 
-</div>

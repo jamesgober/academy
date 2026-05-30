@@ -1,7 +1,6 @@
 <div align="center">
 
-[← Languages](../README.md) · [Academy Home](../../README.md)
-
+[Languages](../README.md) / [Academy Home](../../README.md)
 </div>
 
 ---
@@ -36,5 +35,6 @@ This track follows [Language Testing and Quality Standards](../testing-and-quali
 ---
 
 <div align="center">
-<sub><a href="../README.md">Languages</a> · <a href="../../README.md">Academy Home</a></sub>
+<sub><a href="../README.md">Languages</a>  /  <a href="../../README.md">Academy Home</a></sub>
 </div>
+
