@@ -8,70 +8,86 @@
 
 ---
 
-# Methods, Parameters, and Returns
+# Methods, Parameters, And Returns
 
-> Methods let you name logic once and reuse it safely.
+> Methods let you name behavior. A good method says what it needs, what it
+> returns, and what rule it protects.
 
 **You will learn:**
-- Method signatures and return types
-- Parameter options: value, `ref`, `out`, and optional parameters
-- When to return values versus changing parameters
+- How method signatures work
+- How parameters work
+- How return values work
+- When to use `out`
+- Why `ref` should be rare
+- How optional parameters work
+- How overloads work
+- How to design beginner-friendly methods
 
-**Before this page, you should know:** variables and basic types.
+**Before this page, you should know:** [Types, Variables, And Strings](./01-types-variables-and-strings.md)
 
 ---
 
-## Method signature
+## Basic Method
 
 ```csharp
-static int Add(int a, int b)
+static int Add(int left, int right)
 {
-    return a + b;
+    return left + right;
 }
 ```
 
-Signature includes visibility, return type, name, and parameters.
+Read:
 
-## Parameter alternatives
+```text
+Add takes two ints.
+Add returns an int.
+```
+
+Call:
 
 ```csharp
-static void Increment(ref int value) => value++;
+int total = Add(2, 3);
+```
 
-static bool TryParseId(string input, out int id)
-{
-    return int.TryParse(input, out id);
-}
+---
 
-static void Log(string message, string level = "Info")
-{
-    Console.WriteLine($"[{level}] {message}");
-}
+## Method Signature
 
-static bool IsInRange(in int value, int min, int max)
-{
-    return value >= min && value <= max;
-}
+```text
+static int Add(int left, int right)
+       |   |   |
+       |   |   parameters
+       |   name
+       return type
+```
 
-static decimal Sum(params decimal[] values)
+`static` means this method belongs to the type/program, not an object instance.
+You will use many `static` methods in early console examples.
+
+---
+
+## `void`
+
+Use `void` when the method does not return a value.
+
+```csharp
+static void PrintError(string message)
 {
-    decimal total = 0;
-    foreach (var value in values)
-        total += value;
-    return total;
+    Console.WriteLine($"Error: {message}");
 }
 ```
 
-Use:
-- value parameters by default
-- `ref` only when caller variable must change
-- `out` for try-pattern methods
-- optional parameters for simple defaults
-- `in` for readonly pass-by-reference semantics
-- `params` for variable argument count APIs
+Call:
 
-## Return style guidelines
+```csharp
+PrintError("Invalid quantity");
+```
 
-Prefer returning values instead of mutating input parameters when possible:
+---
+
+## Return Values Are Usually Better Than Mutation
+
+Prefer:
 
 ```csharp
 static decimal ApplyDiscount(decimal price, decimal percent)
@@ -80,45 +96,245 @@ static decimal ApplyDiscount(decimal price, decimal percent)
 }
 ```
 
-Mutation-based APIs are harder to reason about, especially in larger teams.
-
-## Overloads versus optional parameters
-
-Both are valid, but use them intentionally:
-
-- Overloads when behavior meaningfully differs.
-- Optional parameters when behavior is the same and only defaults vary.
-
-Example overload pair:
+Over:
 
 ```csharp
-static string FormatUser(string first, string last) => $"{first} {last}";
-static string FormatUser(string first, string last, string title) => $"{title} {first} {last}";
+static void ApplyDiscount(ref decimal price, decimal percent)
+{
+    price = price - (price * percent);
+}
 ```
 
-## Parameter decision checklist
+Returning values is easier to read and test.
 
-1. Start with value parameters.
-2. Add return type for primary result.
-3. Use `out` only for try-pattern or multi-result need.
-4. Avoid `ref` unless required by API intent.
-5. Keep signatures short and readable.
+---
+
+## `out` And Try Methods
+
+`out` is common in the Try pattern.
+
+```csharp
+static bool TryReadPositiveInt(string? input, out int value)
+{
+    value = 0;
+
+    if (!int.TryParse(input, out int parsed))
+    {
+        return false;
+    }
+
+    if (parsed <= 0)
+    {
+        return false;
+    }
+
+    value = parsed;
+    return true;
+}
+```
+
+Use:
+
+```csharp
+if (TryReadPositiveInt(Console.ReadLine(), out int quantity))
+{
+    Console.WriteLine($"Quantity: {quantity}");
+}
+else
+{
+    Console.WriteLine("Quantity must be positive.");
+}
+```
+
+`out` means the method will assign the variable before returning.
+
+---
+
+## `ref`
+
+`ref` lets a method modify the caller's variable.
+
+```csharp
+static void ClampToZero(ref int value)
+{
+    if (value < 0)
+    {
+        value = 0;
+    }
+}
+```
+
+Use:
+
+```csharp
+int stock = -5;
+ClampToZero(ref stock);
+```
+
+Use `ref` rarely. Most beginner methods should return a value instead.
+
+---
+
+## Optional Parameters
+
+```csharp
+static void Log(string message, string level = "Info")
+{
+    Console.WriteLine($"[{level}] {message}");
+}
+```
+
+Calls:
+
+```csharp
+Log("Started");
+Log("Disk almost full", "Warning");
+```
+
+Use optional parameters when the behavior is the same and only a default varies.
+
+---
+
+## Overloads
+
+Overloads are methods with the same name but different parameter lists.
+
+```csharp
+static string FormatUser(string first, string last)
+{
+    return $"{first} {last}";
+}
+
+static string FormatUser(string first, string last, string title)
+{
+    return $"{title} {first} {last}";
+}
+```
+
+Use overloads when the method concept is the same but inputs differ.
+
+---
+
+## `params`
+
+`params` allows a variable number of arguments.
+
+```csharp
+static decimal Sum(params decimal[] values)
+{
+    decimal total = 0m;
+
+    foreach (decimal value in values)
+    {
+        total += value;
+    }
+
+    return total;
+}
+```
+
+Use:
+
+```csharp
+decimal total = Sum(1m, 2m, 3m);
+```
+
+Do not overuse `params`; normal arrays/lists are often clearer for real data.
+
+---
+
+## Real Example: Order Line Methods
+
+```csharp
+static bool IsValidOrderLine(string sku, int quantity, decimal unitPrice)
+{
+    return !string.IsNullOrWhiteSpace(sku)
+        && quantity > 0
+        && unitPrice >= 0m;
+}
+
+static decimal CalculateLineTotal(int quantity, decimal unitPrice)
+{
+    return quantity * unitPrice;
+}
+
+static string FormatLine(string sku, int quantity, decimal unitPrice)
+{
+    decimal total = CalculateLineTotal(quantity, unitPrice);
+    return $"{sku}: {quantity} x {unitPrice:C} = {total:C}";
+}
+```
+
+Use:
+
+```csharp
+string sku = "KB-100";
+int quantity = 2;
+decimal unitPrice = 49.99m;
+
+if (!IsValidOrderLine(sku, quantity, unitPrice))
+{
+    Console.WriteLine("Invalid order line.");
+    return;
+}
+
+Console.WriteLine(FormatLine(sku, quantity, unitPrice));
+```
+
+---
+
+## Common Mistakes
+
+### Mistake 1: Too Many Parameters
+
+If a method takes six related values, you may need a class or record soon.
+
+### Mistake 2: `ref` For Convenience
+
+Do not use `ref` just to avoid returning a value.
+
+### Mistake 3: Method Does Too Much
+
+A method that parses input, validates, calculates, saves, and prints should be
+split.
+
+---
+
+## Chapter Checkpoint
+
+You should now be able to answer:
+
+- What is a method signature?
+- What does a return type mean?
+- What does `void` mean?
+- When should you use `out`?
+- Why should `ref` be rare?
+- When are optional parameters useful?
+- What are overloads?
+- Why are small methods easier to test?
 
 ---
 
 ## Recap
 
-- Keep signatures explicit and readable.
-- Prefer return values over side effects when possible.
-- Use `ref`/`out` sparingly and intentionally.
+- Methods name reusable behavior.
+- Return values are usually clearer than mutating inputs.
+- `out` fits Try-pattern methods.
+- `ref` should be rare and intentional.
+- Optional parameters provide simple defaults.
+- Overloads support related behaviors with different inputs.
 
-## Try it yourself
+## Try It Yourself
 
-Write one method that returns a computed value and one `Try...` method using `out`.
+Write:
+
+- `IsValidOrderLine`
+- `CalculateLineTotal`
+- `TryReadPositiveQuantity`
+
+Then use them from a console program.
 
 ---
 
-[**Next ->** Conditionals, Switch, and Pattern Matching](./03-conditionals-switch-and-pattern-matching.md)  
-[**<- Previous** Types, Variables, and Strings](./01-types-variables-and-strings.md)
-
-
+[**Next ->** Conditionals, Switch, And Pattern Matching](./03-conditionals-switch-and-pattern-matching.md)  
+[**<- Previous** Types, Variables, And Strings](./01-types-variables-and-strings.md)

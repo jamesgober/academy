@@ -1,4 +1,4 @@
-﻿<h1 align="center">
+<h1 align="center">
     <img width="99" alt="Go logo" src="../../../_assets/logos/go.svg">
     <br>
     <b>Go</b>
@@ -8,18 +8,28 @@
 
 ---
 
-# Testing and Tooling Cheat Sheet
+# Go Testing And Tooling Cheat Sheet
 
-> Fast lookup for beginner-safe Go quality habits.
+Use this page when writing or running Go tests. For the guided lessons, see
+[Reading and Writing Basic Tests](../course/04-testing-and-tooling/01-reading-and-writing-basic-tests.md) and [A Beginner-Friendly Go Quality Workflow](../course/04-testing-and-tooling/05-a-beginner-friendly-go-quality-workflow.md).
 
-## Common workflow
+## Common Workflow
 
 ```bash
-go fmt ./...
+gofmt -w .
+go vet ./...
 go test ./...
 ```
 
-## Basic test pattern
+## Test File Rules
+
+Test files end with:
+
+```text
+_test.go
+```
+
+Test functions start with `Test` and receive `*testing.T`:
 
 ```go
 func TestAdd(t *testing.T) {
@@ -32,26 +42,108 @@ func TestAdd(t *testing.T) {
 }
 ```
 
-## Important reminders
+## Table-Driven Test Pattern
 
-- test files end with `_test.go`
-- tests usually use the standard `testing` package first
-- beginners do not need an assertion library to write good tests
-- clear failure messages matter
+```go
+func TestDescribeStatus(t *testing.T) {
+    cases := []struct {
+        name string
+        used int
+        capacity int
+        want string
+    }{
+        {name: "empty", used: 0, capacity: 3, want: "empty"},
+        {name: "full", used: 3, capacity: 3, want: "full"},
+    }
 
-## Quick diagnostic prompts
+    for _, tc := range cases {
+        t.Run(tc.name, func(t *testing.T) {
+            got := DescribeStatus(tc.used, tc.capacity)
+            if got != tc.want {
+                t.Fatalf("got %q, want %q", got, tc.want)
+            }
+        })
+    }
+}
+```
 
-- did the file name end with `_test.go`?
-- did the test function start with `Test`?
-- does the failure message explain both got and want?
+## Focused Test Commands
+
+Run current package:
+
+```bash
+go test
+```
+
+Run all packages:
+
+```bash
+go test ./...
+```
+
+Run one test:
+
+```bash
+go test -run TestDescribeStatus
+```
+
+Verbose output:
+
+```bash
+go test -v ./...
+```
+
+Race detector for concurrent code:
+
+```bash
+go test -race ./...
+```
+
+## Tooling Commands
+
+Format:
+
+```bash
+gofmt -w .
+```
+
+Vet:
+
+```bash
+go vet ./...
+```
+
+Docs:
+
+```bash
+go doc fmt.Println
+go doc ./garage
+```
+
+## Good Failure Messages
+
+Prefer:
+
+```go
+t.Fatalf("got %d, want %d", got, want)
+```
+
+Avoid:
+
+```go
+t.Fatal("failed")
+```
+
+The future reader needs to know what differed.
+
+## Risk Notices
+
+- Do not forget `_test.go`.
+- Do not name helper functions `TestSomething` unless they are real tests.
+- Do not rely only on `go run`; tests are repeatable checks.
+- Do not use sleeps to make concurrent tests pass.
+- Do not hide unclear failures behind vague assertion text.
 
 ---
 
-<div align="center">
-
-[Reference Index](./README.md)  /  [Go](../README.md)  /  [Home](../../../README.md)
-
-</div>
-
-
-
+[Reference Index](./README.md) / [Go](../README.md) / [Home](../../../README.md)

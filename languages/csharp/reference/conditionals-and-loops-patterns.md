@@ -1,18 +1,36 @@
-# Conditionals and Loops Patterns
+# C# Conditionals And Loops Patterns
 
-## If and else-if chain
+[C# Reference](./README.md) / [C#](../README.md)
 
-```csharp
-if (x > 10) { }
-else if (x > 5) { }
-else { }
-```
+Use this page when choosing between `if`, ternary, switch expressions, pattern
+matching, and loop types. For the guided lesson, see [Conditionals, Switch, and Pattern Matching](../course/02-core-language-basics/03-conditionals-switch-and-pattern-matching.md).
 
-Guard-clause pattern (if without else):
+## `if` / `else`
 
 ```csharp
-if (user is null) return;
+if (score >= 60)
+{
+    Console.WriteLine("Pass");
+}
+else
+{
+    Console.WriteLine("Needs practice");
+}
 ```
+
+Use for a clear two-path decision.
+
+## Guard Clause
+
+```csharp
+if (user is null)
+{
+    return;
+}
+```
+
+Guard clauses handle invalid or special cases early so the normal path stays
+less nested.
 
 ## Ternary
 
@@ -20,18 +38,25 @@ if (user is null) return;
 string state = isReady ? "Ready" : "Pending";
 ```
 
-## Switch expression
+Use ternary for short value selection. Avoid nested ternaries in beginner and
+production code unless the expression is truly obvious.
+
+## Switch Expression
 
 ```csharp
-string size = n switch
+string size = total switch
 {
-    < 10 => "S",
-    < 100 => "M",
-    _ => "L"
+    < 50m => "Small",
+    < 200m => "Medium",
+    _ => "Large"
 };
 ```
 
-Switch statement variant:
+Switch expressions are good when you are choosing a value.
+
+The `_` arm means default.
+
+## Switch Statement
 
 ```csharp
 switch (command)
@@ -48,32 +73,82 @@ switch (command)
 }
 ```
 
-Pattern matching variant:
+Switch statements are useful when each case performs actions.
+
+## Pattern Matching
 
 ```csharp
-string Describe(object value) => value switch
+string Describe(object? value) => value switch
 {
-    int n when n < 0 => "Negative int",
-    int _ => "Int",
-    string s => $"String({s.Length})",
     null => "Null",
+    int number when number < 0 => "Negative int",
+    int => "Int",
+    string text => $"String({text.Length})",
     _ => "Other"
 };
 ```
 
-## Loop choices
+Patterns let decisions consider type, value, and extra conditions.
 
-- `for`: index-based iteration
-- `foreach`: element-based iteration
-- `while`: condition-driven repetition
+## Loop Choices
 
-Loop control:
-- `break`: exit current loop
-- `continue`: skip to next iteration
+Use `for` when you need an index:
 
-Use descriptive loop variable names when logic is non-trivial.
+```csharp
+for (int index = 0; index < totals.Length; index++)
+{
+    Console.WriteLine(totals[index]);
+}
+```
+
+Use `foreach` when you only need each item:
+
+```csharp
+foreach (decimal total in totals)
+{
+    Console.WriteLine(total);
+}
+```
+
+Use `while` when repetition depends on a condition:
+
+```csharp
+while (isRunning)
+{
+    ReadNextCommand();
+}
+```
+
+## Loop Control
+
+```csharp
+break;     // exit current loop
+continue;  // skip to next iteration
+```
+
+Use these sparingly. If a loop has many exits, consider extracting a method.
+
+## LINQ Alternative
+
+Some loops can become readable LINQ:
+
+```csharp
+List<decimal> largeTotals = totals
+    .Where(total => total >= 200m)
+    .ToList();
+```
+
+Use LINQ when it improves readability. Use loops when step-by-step mutation or
+debugging is clearer.
+
+## Risk Notices
+
+- Avoid nested ternary expressions.
+- Order matters in switch expressions; earlier arms can capture later cases.
+- Handle `null` explicitly when input may be nullable.
+- Prefer `foreach` when the index is not needed.
+- Avoid modifying a collection while iterating it with `foreach`.
 
 ---
 
-[C# Reference](./README.md)
-
+[C# Reference](./README.md) / [C#](../README.md)

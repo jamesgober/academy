@@ -10,6 +10,15 @@ JSON, async, xUnit testing, and the console order-tracker capstone.
 
 ## Course Areas Improved
 
+- Rebuilt Chapter 01 first-program, project-command, and checkpoint pages around
+  modern top-level statements, classic `Main`, `.csproj` structure, `bin/` and
+  `obj/`, `dotnet new/build/run/clean`, diagnostic IDs, and a deliberate
+  break/fix workflow.
+- Rebuilt the C# diagnostics lesson around compiler output anatomy, common
+  first errors, nullability warnings, triage loops, and deliberate practice.
+- Expanded C# command and conditional/loop references with `dotnet` command
+  semantics, working-directory notes, quality loops, switch expressions, pattern
+  matching, loop choices, LINQ alternatives, and risk notices.
 - Rebuilt class/property guidance around fields, properties, validation,
   `private set`, constructors, invariants, object lifecycle, `IDisposable`, and
   `using`.
@@ -28,6 +37,14 @@ JSON, async, xUnit testing, and the console order-tracker capstone.
   structured logging, log levels, bug-to-test workflow, and safety notices.
 - Expanded reference pages for OOP/type design, collections/LINQ, and
   errors/debugging with lesson cross-links, examples, and risk notices.
+- Rebuilt Chapter 02 fundamentals around variables, numeric type choice,
+  `decimal` for money, `var`, nullable values, string handling, `TryParse`,
+  method signatures, `out`, `ref`, optional parameters, overloads, `params`,
+  loop selection, filtering, accumulation, and command-loop patterns.
+- Rebuilt the Chapter 02, 03, and 04 checkpoints as guided integration builds:
+  an order-total reporter, an invoice object model, and an inventory JSON loader.
+- Expanded the types/strings reference with lesson links, examples, nullable
+  guidance, parsing patterns, and risk notices.
 
 ## Validation
 
